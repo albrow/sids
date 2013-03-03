@@ -210,7 +210,7 @@ Devise.setup do |config|
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development? 
 
   # these are the development keys. We'll need to set up production ones later
-  config.omniauth :facebook, "459500930789936", "d89425ee0037ac7f313b6b3132ab770d",
+  config.omniauth :facebook, Rails.application.config.facebook_app_id, Rails.application.config.facebook_app_secret,
   {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}} 
 
   # ==> Warden configuration
