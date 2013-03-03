@@ -1,0 +1,104 @@
+    <article class="container" id="level1" data-bind="foreach: levels['1']()">
+        <div class="row">
+            <div class="span12">
+                <!-- ko foreach: players -->
+                <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '1') }">
+                    <img data-bind="attr: {src: image}"/>
+                    <span data-bind="text: name"></span>
+                </a>
+                <!-- /ko -->
+                <span data-bind="if: typeof winner() !== 'undefined'">
+                    <span data-bind="text: winner().name"></span>
+                </span>
+            </div>
+        </div>
+    </article>
+
+    <article class="container" id="level2" data-bind="foreach: levels['2']()">
+        <div class="row">
+            <div class="span12">
+                <!-- ko foreach: players -->
+                <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '2') }">
+                    <img data-bind="attr: {src: image}"/>
+                    <span data-bind="text: name"></span>
+                </a>
+                <!-- /ko -->
+                <span data-bind="if: typeof winner() !== 'undefined'">
+                    <span data-bind="text: winner().name"></span>
+                </span>
+            </div>
+        </div>
+    </article>
+
+    <article class="container" id="level3" data-bind="foreach: levels['3']()">
+        <div class="row">
+            <div class="span12">
+                <!-- ko foreach: players -->
+                <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '3') }">
+                    <img data-bind="attr: {src: image}"/>
+                    <span data-bind="text: name"></span>
+                </a>
+                <!-- /ko -->
+                <span data-bind="if: typeof winner() !== 'undefined'">
+                    <span data-bind="text: winner().name"></span>
+                </span>
+            </div>
+        </div>
+    </article>
+
+    <article class="container" id="level4" data-bind="foreach: levels['4']()">
+        <div class="row">
+            <div class="span12">
+                <!-- ko foreach: players -->
+                <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '4') }">
+                    <img data-bind="attr: {src: image}"/>
+                    <span data-bind="text: name"></span>
+                </a>
+                <!-- /ko -->
+                <span data-bind="if: typeof winner() !== 'undefined'">
+                    <span data-bind="text: winner().name"></span>
+                </span>
+            </div>
+        </div>
+    </article>
+
+    <article class="container" id="level5" data-bind="foreach: levels['5']()">
+        <div class="row">
+            <div class="span12">
+                <!-- ko foreach: players -->
+                <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '5') }">
+                    <img data-bind="attr: {src: image}"/>
+                    <span data-bind="text: name"></span>
+                </a>
+                <!-- /ko -->
+                <span data-bind="if: typeof winner() !== 'undefined'">
+                    <span data-bind="text: winner().name"></span>
+                </span>
+            </div>
+        </div>
+    </article>
+
+    <article class="container" id="level6" data-bind="foreach: levels['6']()">
+        <div class="row">
+            <div class="span12">
+                <!-- ko foreach: players -->
+                <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '6') }">
+                    <img data-bind="attr: {src: image}"/>
+                    <span data-bind="text: name"></span>
+                </a>
+                <!-- /ko -->
+                <span data-bind="if: typeof winner() !== 'undefined'">
+                    <span data-bind="text: winner().name"></span>
+                </span>
+            </div>
+        </div>
+    </article>
+
+    <article class="container" id="level7" data-bind="if: levels['7']().length === 1">
+        <div class="row">
+            <div class="span12">
+                <h1>Winner - <span data-bind="text: levels['7']()[0].name"></span></h1>
+                <img data-bind="attr: {src: levels['7']()[0].image}" width="300" height="300"/>
+            </div>
+        </div>
+    </article>
