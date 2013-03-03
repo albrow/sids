@@ -163,6 +163,20 @@ body{
 .navbar{
   background:url("../img/subtle_carbon.png") repeat #1c1c1c;
 }
+.navbar .brand h1{
+  font-size: 24px;
+  display: inline;
+  position: relative;
+  top: 5px;
+}
+.navbar .nav li{
+  position: relative;
+  top: 20px;
+}
+.navbar .nav .dropdown li{
+  position: relative;
+  top: 0px;
+}
 .devise-errors #error_explanation h2{
   font-size: 16px;
   color: #EE1527;
@@ -177,4 +191,11 @@ body{
   text-align: center;
   background-color: #cccccc;
   padding: 2px 2px 2px 2px;
+}
+#remember_me label{
+  display: inline;
+}
+#remember_me input{
+  position: relative;
+  bottom: 3px;
 }
