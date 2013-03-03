@@ -58,6 +58,12 @@
                                 <i class="icon-bar-chart icon-feature" rel="tooltip" title="220 beautiful icons provided by Font Awesome, the iconic font designed for use with Twitter Bootstrap." data-placement="bottom"></i>
                                 <p>12 awesome landing pages included (3 landing page layouts with 4 unique color combinations each). </p>
                                 <p><a class="btn btn-outline btn-dark margin-verticals" href="#" rel="tooltip" title="Elegant buttons. 4 distinct color combinations (and inverses) are included." data-placement="right">View details &raquo;</a></p>
+                                <ul>
+	<li><%= link_to "Sign Up", new_user_registration_path %></li>
+	<li><%= link_to "Sign In", new_user_session_path %></li>
+	<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+
+</ul>
                             </div>
                         </div>
                     </div>
