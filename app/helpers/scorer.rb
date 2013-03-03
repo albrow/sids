@@ -9,9 +9,8 @@ def sample_parse()
 	sample = '{"menu": {"id": "file","value": "File","popup": {"menuitem": [{"value": "New", "onclick": "CreateNewDoc()"},{"value": "Open", "onclick": "OpenDoc()"},{"value": "Close", "onclick": "CloseDoc()"}]}}}'
 	sampleUser = '{"round": [{"picks": [1,2,3]},{"picks": [1,2,3]}]}'
 	sampleOfficial = '{"round": [{"picks": [1,2,3]},{"picks": [1,2,3]}]}'
-	result = JSON.parse(sample);
+	result = JSON.parse(sample)
 	puts result['menu']['popup']['menuitem'][1]
-
 	puts result.length
 	puts result['menu'].length
 end
@@ -31,8 +30,8 @@ end
 #returns the score of the bracket
 def score_bracket(userURL, officialURL)
 	score = 0
-	sampleUser = '{"round": [{"picks": [1,2,3]},{"picks": [1,2,3]}]}'
-	sampleOfficial = '{"round": [{"picks": [1,2,3]},{"picks": [1,5,3]}]}'
+	sampleUser = '{"round": [{"picks": [1,2,3,5]},{"picks": [1,2,3]}]}'
+	sampleOfficial = '{"round": [{"picks": [1,2,3,2]},{"picks": [1,5,3]}]}'
 	user_bracket = JSON.parse(sampleUser)
 	official_bracket = JSON.parse(sampleOfficial)
 	#user_bracket = get_user_bracket(userURL)
@@ -48,8 +47,9 @@ def score_bracket(userURL, officialURL)
    		user_picks = user_bracket['round'][i-1]['picks']
    		official_picks = official_bracket['round'][i-1]['picks']
    		picks = user_picks.length
-   		if user_bracket['round'].length != official_bracket['round'].length
-     		 raise "ERROR: In round" + i + " the user and official bracket have a different number of games"
+   		if user_picks.length != official_picks.length
+     		raise "ERROR: In round" + i.to_s() + " the user and official bracket have a different number of games"
+     		return -1
    		end
    		for j in 1..picks
    			if user_picks[j-1] == official_picks[j-1]
@@ -61,9 +61,6 @@ def score_bracket(userURL, officialURL)
    	return score
 end
 
-
-
-#Testintg
-#ans = score_bracket()
-#puts ans
+ans = score_bracket("","")
+puts ans
 
