@@ -5,15 +5,6 @@ require 'net/http'
 
 
 
-def sample_parse()
-	sample = '{"menu": {"id": "file","value": "File","popup": {"menuitem": [{"value": "New", "onclick": "CreateNewDoc()"},{"value": "Open", "onclick": "OpenDoc()"},{"value": "Close", "onclick": "CloseDoc()"}]}}}'
-	sampleUser = '{"round": [{"picks": [1,2,3]},{"picks": [1,2,3]}]}'
-	sampleOfficial = '{"round": [{"picks": [1,2,3]},{"picks": [1,2,3]}]}'
-	result = JSON.parse(sample)
-	puts result['menu']['popup']['menuitem'][1]
-	puts result.length
-	puts result['menu'].length
-end
 
 #Returns a ruby hash filled with the official bracket
 def get_official_bracket(url)
@@ -27,9 +18,10 @@ def get_user_bracket(url)
 
 end
 
-#returns the score of the bracket
+#returns the score of the bracket given the URL for the get request for the user and official bracket
 def score_bracket(userURL, officialURL)
 	score = 0
+	#DELETE THESE WHEN GET/POst methods have been
 	sampleUser = '{"round": [{"picks": [1,2,3,5]},{"picks": [1,2,3]}]}'
 	sampleOfficial = '{"round": [{"picks": [1,2,3,2]},{"picks": [1,5,3]}]}'
 	user_bracket = JSON.parse(sampleUser)
@@ -61,6 +53,7 @@ def score_bracket(userURL, officialURL)
    	return score
 end
 
-ans = score_bracket("","")
-puts ans
+#testing code
+#ans = score_bracket("","")
+#puts ans
 
