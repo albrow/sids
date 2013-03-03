@@ -172,3 +172,9 @@ body{
   text-align: center;
   color: #EE1527;
 }
+.notice, .alert{
+  color: #000000;
+  text-align: center;
+  background-color: #cccccc;
+  padding: 2px 2px 2px 2px;
+}
