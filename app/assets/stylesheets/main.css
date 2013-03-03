@@ -160,3 +160,6 @@ body{
 #load #mission, #load #team{
   background-color: rgb(245, 245, 245);
 }
+.navbar{
+  background:url("../img/subtle_carbon.png") repeat #1c1c1c;
+}
