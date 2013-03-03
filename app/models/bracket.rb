@@ -17,7 +17,7 @@ class Bracket < ActiveRecord::Base
 				pred = Prediction.new
 				pred.bracket = bracket
 				pred.round_id = index
-				pred.team = Team.find(match["winner"]["id"])
+				pred.winner = Team.find(match["winner"]["id"])
 				pred.save
 			end
 		end
