@@ -1,11 +1,6 @@
-function ModelView() {
-
-    $.get('/getgames.json', function(data) {
-        doAction(data);
-    });
-
-    
-}
+$.get('/getgames.json', function(data) {
+    ko.applyBindings(new doAction(data));
+});
 
 function doAction(json) {
 
@@ -79,7 +74,3 @@ function doAction(json) {
     };
 
 }
-
-$(document).ready(function() {
-    ko.applyBindings(new ModelView());
-});
