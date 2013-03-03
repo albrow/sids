@@ -2,6 +2,7 @@ Sids::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   match '/about' => 'home#about'
+  match '/getgames' => 'game#getGames'
   resources :photos
 
   # The priority is based upon order of creation:

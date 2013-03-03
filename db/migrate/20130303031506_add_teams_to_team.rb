@@ -67,5 +67,6 @@ class AddTeamsToTeam < ActiveRecord::Migration
   end
 
   def down
+  	Team.destroy_all
   end
 end

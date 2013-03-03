@@ -1,10 +1,18 @@
 class GameController < ApplicationController
 
 	def getGames
+		@returnData = Array.new
 		games = Game.all
 		for game in games
-			team1 = Team.find(game.team1)
-			team2 = Team.find(game.team2)
+			match = Array.new
+			match << Team.find(game.team1)
+			match << Team.find(game.team2)
+			@returnData << match
+		end
+		respond_to do |format|
+	    format.json{
+	      render :json => @returnData.to_json(:only => [:id, :name, :image])
+	    }
 		end
 	end
 
