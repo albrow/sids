@@ -3,7 +3,7 @@ Sids::Application.routes.draw do
 
   match '/about' => 'home#about'
   match '/choice' => 'home#choice'
-  match '/getgames' => 'game#getGames'
+  match '/getgames' => 'games#getGames'
   resources :brackets
   
   # The priority is based upon order of creation:
