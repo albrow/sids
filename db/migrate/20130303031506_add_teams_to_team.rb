@@ -38,25 +38,25 @@ class AddTeamsToTeam < ActiveRecord::Migration
 	Team.create :name => 'Tennessee', :image => '/images/tennessee_logo.jpg', :id => 36
 	Team.create :name => 'Florida State', :image => '/images/floridast_logo.jpg', :id => 37
 	Team.create :name => 'Wisconsin', :image => '/images/winsconsin_logo.jpg', :id => 38
-	Team.create :name => 'Xavier', :image => '/images/xavier_logo.jpg'
-	Team.create :name => 'Portland State', :image => '/images/portlandst_logo.jpg', :id => 39
-	Team.create :name => 'UCLA', :image => '/images/UCLA_logo.jpg', :id => 40
-	Team.create :name => 'VCU', :image => '/images/VCU_logo.jpg', :id => 41
-	Team.create :name => 'Villanova', :image => '/images/villanova_logo.jpg', :id => 42
-	Team.create :name => 'American', :image => '/images/american_logo.jpg', :id => 43
-	Team.create :name => 'Texas', :image => '/images/texas_logo.jpg', :id => 44
-	Team.create :name => 'Minnesota', :image => '/images/minnesota_logo.jpg', :id => 45
-	Team.create :name => 'Duke', :image => '/images/duke_logo.jpg', :id => 46
-	Team.create :name => 'Binghamton', :image => '/images/binghamton_logo.jpg', :id => 47
-	Team.create :name => 'North Carolina', :image => '/images/northcarolina_logo.jpg', :id => 48
-	Team.create :name => 'Radford', :image => '/images/radford_logo.jpg', :id => 49
-	Team.create :name => 'LSU', :image => '/images/LSU_logo.jpg', :id => 50
-	Team.create :name => 'Butler', :image => '/images/butler_logo.jpg', :id => 51
-	Team.create :name => 'Illinois', :image => '/images/illinois_logo.jpg', :id => 52
-	Team.create :name => 'West Kentucky', :image => '/images/westkentucky_logo.jpg', :id => 53
-	Team.create :name => 'Gonzaga', :image => '/images/gonzaga_logo.jpg', :id => 54
-	Team.create :name => 'Akron', :image => '/images/akron_logo.jpg', :id => 55
-	Team.create :name => 'Arizona State', :image => '/images/arizonastate_logo.jpg', :id => 56
+	Team.create :name => 'Xavier', :image => '/images/xavier_logo.jpg', :id => 39
+	Team.create :name => 'Portland State', :image => '/images/portlandst_logo.jpg', :id => 40
+	Team.create :name => 'UCLA', :image => '/images/UCLA_logo.jpg', :id => 41
+	Team.create :name => 'VCU', :image => '/images/VCU_logo.jpg', :id => 42
+	Team.create :name => 'Villanova', :image => '/images/villanova_logo.jpg', :id => 43
+	Team.create :name => 'American', :image => '/images/american_logo.jpg', :id => 44
+	Team.create :name => 'Texas', :image => '/images/texas_logo.jpg', :id => 45
+	Team.create :name => 'Minnesota', :image => '/images/minnesota_logo.jpg', :id => 46
+	Team.create :name => 'Duke', :image => '/images/duke_logo.jpg', :id => 47
+	Team.create :name => 'Binghamton', :image => '/images/binghamton_logo.jpg', :id => 48
+	Team.create :name => 'North Carolina', :image => '/images/northcarolina_logo.jpg', :id => 49
+	Team.create :name => 'Radford', :image => '/images/radford_logo.jpg', :id => 50
+	Team.create :name => 'LSU', :image => '/images/LSU_logo.jpg', :id => 51
+	Team.create :name => 'Butler', :image => '/images/butler_logo.jpg', :id => 52
+	Team.create :name => 'Illinois', :image => '/images/illinois_logo.jpg', :id => 53
+	Team.create :name => 'West Kentucky', :image => '/images/westkentucky_logo.jpg', :id => 54
+	Team.create :name => 'Gonzaga', :image => '/images/gonzaga_logo.jpg', :id => 55
+	Team.create :name => 'Akron', :image => '/images/akron_logo.jpg', :id => 56
+	Team.create :name => 'Arizona State', :image => '/images/arizonastate_logo.jpg', :id => 57
 	Team.create :name => 'Temple', :image => '/images/temple_logo.jpg', :id => 58
 	Team.create :name => 'Syracuse', :image => '/images/syracuse_logo.jpg', :id => 59
 	Team.create :name => 'Stephen Faustin', :image => '/images/stephenfaustin_logo.jpg', :id => 60
