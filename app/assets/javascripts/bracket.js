@@ -60,6 +60,24 @@ function doAction(json) {
             $('#level' + type).fadeOut();
             levels['7'].push(winner);
             allPicks = ko.toJSON(self.levels);
+            // used for debugging
+            // remove the following line if we're done debugging
+            window.pickData = allPicks
+            $.ajax({
+                type: "POST",
+                url: "/brackets.json",
+                data: { bracket: allPicks },
+                headers: {
+                    'X-Transaction': 'POST Example',
+                    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+                }
+            }).done(function( msg ) {
+              if (eval(msg)) {
+                console.log("bracket was created!");
+            } else {
+                alert("there was a problem :(");
+            }
+        });
             return;
         }
 
@@ -73,4 +91,26 @@ function doAction(json) {
         }
     };
 
+}
+
+
+// used for debugging. You can call this method in console to submit
+// the data again without having to start over
+// remove the following method if we're done debugging
+function submitPicks() {
+    $.ajax({
+        type: "POST",
+        url: "/brackets.json",
+        data: { bracket: window.pickData },
+        headers: {
+            'X-Transaction': 'POST Example',
+            'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        }
+    }).done(function( msg ) {
+        if (eval(msg)) {
+            console.log("bracket was created!");
+        } else {
+            alert("there was a problem :(");
+        }
+    });
 }

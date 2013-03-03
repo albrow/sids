@@ -1,5 +1,7 @@
 class BracketsController < ApplicationController
 
+	before_filter :authenticate_user!
+
 	def index
 		# list all the brackets for the current user
 		@brackets = current_user.brackets
@@ -14,7 +16,15 @@ class BracketsController < ApplicationController
 	end
 
 	def create
-		# will create a new bracket for the user
+		respond_to do |format|
+	    format.html  # index.html.erb
+	    format.json  { 
+				@bracket = Bracket.create_from_json params[:bracket]
+				current_user.brackets << @bracket
+				current_user.save
+				render :text => "true"
+	    }
+	  end
 	end
 
 	def show

@@ -1,6 +1,6 @@
 class AddTeamsToTeam < ActiveRecord::Migration
   def up
-  	Team.create :name => 'Louisville', :image => '/assets/louisville_logo.jpg', :id => 1
+  Team.create :name => 'Louisville', :image => '/assets/louisville_logo.jpg', :id => 1
 	Team.create :name => 'Alabama State', :image => '/assets/alabamastate_logo.jpg', :id => 2
 	Team.create :name => 'Ohio State', :image => '/assets/ohiostate_logo.jpg', :id => 3
 	Team.create :name => 'Siena', :image => '/assets/siena_logo.jpg', :id => 4
