@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130303031506) do
+ActiveRecord::Schema.define(:version => 20130303091113) do
 
   create_table "brackets", :force => true do |t|
     t.string   "name"
@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(:version => 20130303031506) do
 
   create_table "games", :force => true do |t|
     t.integer  "round_id"
-    t.integer  "team1"
-    t.integer  "team2"
-    t.integer  "winner"
+    t.integer  "team1_id"
+    t.integer  "team2_id"
+    t.integer  "winner_id"
     t.integer  "team1_score"
     t.integer  "team2_score"
     t.datetime "created_at",  :null => false
