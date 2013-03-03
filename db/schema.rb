@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20130303031506) do
   add_index "brackets", ["user_id"], :name => "index_brackets_on_user_id"
 
   create_table "games", :force => true do |t|
+    t.integer  "round_id"
     t.integer  "team1"
     t.integer  "team2"
     t.integer  "winner"

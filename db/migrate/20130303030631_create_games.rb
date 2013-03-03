@@ -1,6 +1,7 @@
 class CreateGames < ActiveRecord::Migration
   def change
     create_table :games do |t|
+      t.integer :round_id
       t.integer :team1
       t.integer :team2
       t.integer :winner
