@@ -163,3 +163,12 @@ body{
 .navbar{
   background:url("../img/subtle_carbon.png") repeat #1c1c1c;
 }
+.devise-errors #error_explanation h2{
+  font-size: 16px;
+  color: #EE1527;
+}
+.devise-errors #error_explanation ul{
+  list-style-type: none;
+  text-align: center;
+  color: #EE1527;
+}
