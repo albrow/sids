@@ -131,17 +131,26 @@ footer .rights {
 .feature p {
   padding: 0 48px;
 }
+
+/* Arun's CSS */
+#about .container{
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+}
+#about .container .offset1{
+  margin-left: 0px;
+  width: 100%;
+}
+#about .container .row{
+  margin-left: 0px;
+}
 .video {
   padding-top: 0px;
   width: 100%;
   height: 100%;
-  /*max-width: 960px;*/
   margin: 0 auto;
 }
 .video iframe{
   width: 100%;
   height: 100%;
-}
-#load .container .{
-
 }

@@ -43,4 +43,8 @@ Sids::Application.configure do
 
   # Development email server for Devise
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  ### For facebook app connections...
+  config.facebook_app_id = "459500930789936"
+  config.facebook_app_secret = "d89425ee0037ac7f313b6b3132ab770d"
 end
