@@ -3,7 +3,7 @@
             <div class="span12">
                 <!-- ko foreach: players -->
                 <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '1') }">
-                    <img data-bind="attr: {src: image}"/>
+                    <img height="200px" width="200px" data-bind="attr: {src: image}"/>
                     <span data-bind="text: name"></span>
                 </a>
                 <!-- /ko -->
@@ -19,7 +19,7 @@
             <div class="span12">
                 <!-- ko foreach: players -->
                 <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '2') }">
-                    <img data-bind="attr: {src: image}"/>
+                    <img height="200px" width="200px" data-bind="attr: {src: image}"/>
                     <span data-bind="text: name"></span>
                 </a>
                 <!-- /ko -->
@@ -35,7 +35,7 @@
             <div class="span12">
                 <!-- ko foreach: players -->
                 <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '3') }">
-                    <img data-bind="attr: {src: image}"/>
+                    <img height="200px" width="200px" data-bind="attr: {src: image}"/>
                     <span data-bind="text: name"></span>
                 </a>
                 <!-- /ko -->
@@ -51,7 +51,7 @@
             <div class="span12">
                 <!-- ko foreach: players -->
                 <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '4') }">
-                    <img data-bind="attr: {src: image}"/>
+                    <img height="200px" width="200px" data-bind="attr: {src: image}"/>
                     <span data-bind="text: name"></span>
                 </a>
                 <!-- /ko -->
@@ -67,7 +67,7 @@
             <div class="span12">
                 <!-- ko foreach: players -->
                 <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '5') }">
-                    <img data-bind="attr: {src: image}"/>
+                    <img height="200px" width="200px" data-bind="attr: {src: image}"/>
                     <span data-bind="text: name"></span>
                 </a>
                 <!-- /ko -->
@@ -83,7 +83,7 @@
             <div class="span12">
                 <!-- ko foreach: players -->
                 <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '6') }">
-                    <img data-bind="attr: {src: image}"/>
+                    <img height="200px" width="200px" data-bind="attr: {src: image}"/>
                     <span data-bind="text: name"></span>
                 </a>
                 <!-- /ko -->
@@ -98,7 +98,7 @@
         <div class="row">
             <div class="span12">
                 <h1>Winner - <span data-bind="text: levels['7']()[0].name"></span></h1>
-                <img data-bind="attr: {src: levels['7']()[0].image}" width="300" height="300"/>
+                <img data-bind="attr: {src: levels['7']()[0].image}" height="300" height="300"/>
             </div>
         </div>
     </article>
