@@ -21,13 +21,20 @@
         <div class="container">
             <div class="row">
                 <div class="span12 center">
-                    <h2 class="cursive"> Start your 30 day free trial </h2>
-                    <div class="input-append">
-                        <input class="span5 input-large" placeholder="you@email.com" type="text">
-                        <button class="btn btn-outline btn-dark btn-large" type="button">
-                            Sign Up!
-                        </button>
-                    </div>
+                    <h2 class="cursive"> Get Started </h2>
+                    (These are just temporary links, and should be styled/changed.)
+                    <br/><br/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4 center">
+                    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+                </div>
+                <div class="span4 center">
+                    <%= link_to "Sign in with Email", new_user_registration_path %>
+                </div>  
+                <div class="span4 center">
+                    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
                 </div>
             </div>
         </div>
