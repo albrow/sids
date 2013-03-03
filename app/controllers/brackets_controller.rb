@@ -2,6 +2,12 @@ class BracketsController < ApplicationController
 
 def index
 	# list all the brackets for the current user
+	@brackets = current_user.brackets
+	raise @brackets.to_yaml
+	respond_to do |format|
+    format.html  # index.html.erb
+    format.json  { render :json => @brackets }
+  end
 end
 
 def new

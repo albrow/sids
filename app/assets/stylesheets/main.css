@@ -157,3 +157,6 @@ footer .rights {
 body{
   background:url("../img/subtle_carbon.png") repeat;
 }
+#load #mission, #load #team{
+  background-color: rgb(245, 245, 245);
+}
