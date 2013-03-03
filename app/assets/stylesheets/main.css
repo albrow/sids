@@ -142,6 +142,11 @@ footer .rights {
   width: 100%;
   height: 100%;
 }
-#load .container .{
-
+#load .container{
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+}
+#load .container .offset1{
+  margin: 0px 0px 0px 0px;
+  width: 100%;
 }
