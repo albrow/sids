@@ -1,3 +1,785 @@
-// Place all the styles related to the brackets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* bracket08.css */
+
+/* --------------- Round Headers ------------- */
+ul#roundheaders {
+    border: solid #dedede;
+    border-width: 1px 0 0 0;
+    font-size: 80%;
+    list-style: none;
+    margin: 10px 0 0 0;
+    overflow: auto;
+    padding: 20px 0 0 0;
+}
+
+.rh {
+    width: 83px;
+    text-align: center;
+}
+.rh strong {
+    display: block
+}
+
+.fl {
+    float: left;
+}
+/* --------------- end Round Headers ------------- */
+    
+    
+    
+    
+    
+#mc {height: 880px;}
+    
+#bracket {
+    background: #fff;
+    border: dashed #dedede;
+    border-width: 1px 0 0 0;
+    font-family: verdana,arial,helvetia,sans-serif;
+    font-size: 10px;
+    margin: 10px 0 0 0;
+    position: relative;
+    width: 919px;
+}
+
+#bracket A, #bracket A:VISITED {color: #000; text-decoration: none;}
+#bracket A:HOVER, #bracket A:HOVER:VISITED {color: #f00; text-decoration: underline;}
+
+
+
+
+
+
+
+
+
+
+/* -------------- Containers ------------- */
+#bracket .h1 {
+    float: right;
+    left: 0px;
+    top: 20px;
+    position: absolute;
+    }
+
+#bracket .h2 {
+    float: right;
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    }
+/* -------------- end Containers ------------- */
+
+
+/* -------------- Region ------------- */
+.region {
+    background: transparent;
+    height: 400px;
+    position: relative;
+    width: 494px;
+}
+
+.regtitle {
+    color: #666;
+    font-size: 27px;
+    font-weight: bold;
+    font-stretch: wider;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: right;
+    top: 158px;
+    width: 364px;
+    }
+
+#bracket .h2 .regtitle {
+    right: 0px;
+    text-align: left;
+    }
+/* -------------- end Region -------------- */
+
+
+
+
+/* -------------- Opening Round ------------ */
+#playingame {
+    position: absolute;
+    top: 740px;
+    left: 372px;
+    }
+#playingame .match {
+    border: solid #999;
+    border-width: 1px 0;
+    padding: 2px;
+    position: absolute;
+    width: 100px;
+    left: 20%;
+    * margin-top: 5px; /* IE only */
+}
+#playingame .match dt {
+    width: 62px;
+}
+
+/* -------------- end Opening Round ------------ */
+
+
+
+
+
+
+/* REGION BOX POSITIONING */
+/* -------------- round one -------------- */
+#match47, #match1, #match16, #match32 { 
+    top: 10px; 
+    }
+#match48, #match2, #match17, #match33 { 
+    top: 50px; 
+    }
+#match50, #match4, #match19, #match35 { 
+    top: 110px; 
+    }
+#match51, #match5, #match20, #match36 { 
+    top: 150px; 
+    }
+#match54, #match8, #match23, #match39 { 
+    top: 210px; 
+    }
+#match55, #match9, #match24, #match40 { 
+    top: 250px; 
+    }
+#match57, #match11, #match26, #match42 { 
+    top: 310px; 
+    }
+#match58, #match12, #match27, #match43 { 
+    top: 350px; 
+    }
+
+/* -------------- round two -------------- */
+#match49, #match3, #match18, #match34 { 
+    top: 30px; 
+    }
+#match52, #match6, #match21, #match37 { 
+    top: 130px; 
+    }
+#match56, #match10, #match25, #match41 { 
+    top: 230px; 
+    }
+#match59, #match13, #match28, #match44 { 
+    top: 330px; 
+    }
+
+/* -------------- round three -------------- */
+#match53, #match7, #match22, #match38 {top: 50px;}
+#match60, #match14, #match29, #match45 {top: 250px;}
+
+/* -------------- round four -------------- */
+#match61, #match15, #match30, #match46 {top: 95px;}
+
+/* -------------- final four -------------- */
+#bracket .h2 #match31, .h2 #match62 {
+    width: 86px;
+    }
+
+#bracket .h2 #match31 { 
+    border-width: 1px 1px 1px 0;
+    left: -53px; 
+    position: absolute; 
+    top: 190px; 
+    * top: 180px; /* IE only */
+    }
+#bracket .h2 #match31 dl {
+    left: -100px;
+    top: 160px;
+    * top: 180px; /* IE only */
+    width: 100px; 
+    }
+    
+#bracket .h2 #match62 { 
+    left: 33px;
+    position: absolute; 
+    top: 190px;  
+    * top: 180px; /* IE only */
+    }
+#bracket .h2 #match62 dl {
+    left: 80px;
+    top: 170px !important;
+    width: 100px; 
+    }
+    
+#bracket .h2 #match63 {
+    background: #fff;
+    border: 1px solid #999;
+    left: -21px; 
+    position: absolute; 
+    top: 350px;
+    width: 100px;
+    }
+#bracket .h2 #match63 dl {
+    position: absolute; 
+    top: 0px;
+    * top: 0px; /* IE only */
+    }
+/* -------------- end REGION BOX POSITIONING -------------- */
+    
+    
+    
+    
+
+/* -------------- venue names -------------- */
+#bracket .h1 .v1 {
+    position: absolute;
+    top: -5px;
+    margin: 0;
+    padding: 0;}
+#bracket .h1 .v2 {
+    position: absolute;
+    top: 95px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    }
+#bracket .h1 .v3 {
+    position: absolute;
+    top: 195px;
+    margin: 0;
+    padding: 0;}
+#bracket .h1 .v4 {
+    position: absolute;
+    top: 295px;
+    margin: 0;
+    padding: 0;}
+#bracket .h1 .v5 {
+    position: absolute;
+    top: 35px;
+    left: 242px;
+    margin: 0;
+    padding: 0;
+    }
+
+#bracket .h2 .v1 {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: -5px;
+    margin: 0;
+    padding: 0;}
+#bracket .h2 .v2 {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 95px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    }
+#bracket .h2 .v3 {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 195px;
+    margin: 0;
+    padding: 0;}
+#bracket .h2 .v4 {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 295px;
+    margin: 0;
+    padding: 0;}
+#bracket .h2 .v5 {
+    position: absolute;
+    top: 35px;
+    right: 242px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    }
+
+.venue {
+    font-weight: bold;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    width: 248px;
+}
+
+.semititle {
+    color:#000000;
+    font-size:11px;
+    font-stretch:wider;
+    font-weight:bold;
+    margin:0pt;
+    padding:0pt;
+    position:absolute;
+    text-align:right;
+    top:370px;
+    width:360px;
+}
+
+#bracket .h2 .semititle {
+    right:0px;
+    text-align:left;
+    width:370px;
+}
+
+.final {
+    left: -90px;
+    position: absolute;
+    top: 160px;
+    text-align: center;
+}
+/* -------------- end venue names -------------- */
+
+
+
+
+
+
+
+
+#finalfour {
+    left: 2px;
+    position: absolute;
+    top: 24px;
+    }
+
+.match {
+    border: 1px solid #999;
+    border-left: none;
+    line-height: 15px;
+    padding: 2px 2px 2px 0;
+    position: absolute;
+    width: 90px;
+}
+
+
+
+#bracket .h2 .match {
+    border: 1px solid #999;
+    border-right: none;
+    padding: 2px 0 2px 2px;
+}
+
+.match dl {
+    height: 30px;
+ 
+}
+
+.match dt {
+    width: 82px;
+    float: left;
+    padding-left: 2px;
+}
+
+.match dt img {
+    width: 50px;
+    }
+
+.match dd {
+    left: 100px;
+    width: 22px;
+    margin: 0;
+    padding-right: 2px;
+    float: right;
+    display: inline;
+    text-align: right;
+}
+
+.match dd:hover {
+    background: #d7d7d7;}
+
+
+
+
+
+
+
+.round { 
+    padding: 2px;
+    width: 125px; 
+    }
+#bracket .h1 .round1 {  
+    left: 1px; 
+    margin: 0;
+    position: absolute;
+    background: #ECECEC none repeat scroll 0%;
+    }
+#bracket .h1 .round2 { 
+    left: 94px; 
+    margin: 0;
+    position: absolute; 
+    background: #ECECEC none repeat scroll 0%;
+    }
+#bracket .h1 .round3 { 
+    height: 95px; 
+    left: 187px; 
+    margin: 0;
+    position: absolute;
+    }
+#bracket .h1 .round4 { 
+    height: 200px;  
+    left: 280px; 
+    margin: 0;
+    position: absolute;
+    }
+#bracket .h2 .round1 { 
+    margin: 0;
+    position: absolute; 
+    right: 1px; 
+    background: #ECECEC none repeat scroll 0%;
+    }
+#bracket .h2 .round2 { 
+    margin: 0;
+    position: absolute; 
+    right: 94px; 
+    background: #ECECEC none repeat scroll 0%;
+    }
+#bracket .h2 .round3 {  
+    height: 95px; 
+    margin: 0;
+    position: absolute; 
+    right: 187px;
+    }
+#bracket .h2 .round4 { 
+    height: 200px; 
+    margin: 0;
+    position: absolute; 
+    right: 280px; 
+    }
+.round5 { 
+    height: 390px;
+    left: 1px; 
+    margin: 0;
+    position: absolute;
+    }
+.round6 { 
+    height: 65px; 
+    left: 126px; 
+    margin: 0;
+    position: absolute;
+    }
+.r5 { 
+    left: 501px; 
+    height: 400px;
+    position: absolute;  
+    }
+.r6 { 
+    left: 626px; 
+    position: absolute; 
+    }
+
+.round3 dl { 
+    position: absolute; 
+    top: 25px; 
+    }
+.round4 dl { 
+    position: absolute; 
+    top: 90px; 
+    }
+.round5 dl {
+    position: absolute; 
+    top: 180px; 
+    }
+.round6 dl { 
+    position: absolute; 
+    top: 50px; 
+    }
+
+.region dl{height:30px;}
+
+
+/* Tourney10.css */
+
+@charset "UTF-8";
+/* CSS Document */
+
+.autoPageHeader {margin:0 10px;position:relative;}
+.rh {text-align:center;width:82px;}
+
+#bracket {width: 904px;}
+.h2 #match31, .h2 #match62 {width:75px;}
+.h2 #match31 {left:-38px;}
+.h2 #match62 {left:38px;}
+.h2 .round4 {right:280px;width:95px;}
+.h2 #match63 {width:100px;left: -22px;padding-left:10px; border: 3px solid #999;}
+
+#playingame {left:368px;}
+.tablehead td, .tableheadFixWidth td {padding:5px;}
+
+.round6 {height:50px;}
+
+#match1, #match16, #match31, #match46{ top: 10px !important; }
+#match2, #match17, #match32, #match47{ top: 50px !important; }
+#match3, #match18, #match33, #match48{ top: 110px !important; }
+#match4, #match19, #match34, #match49{ top: 150px !important; }
+#match5, #match20, #match35, #match50{ top: 210px !important; }
+#match6, #match21, #match36, #match51{ top: 250px !important; }
+#match7, #match22, #match37, #match52{ top: 310px !important; }
+#match8, #match23, #match38, #match53{ top: 350px !important; }
+#match9, #match24, #match39, #match54{ top: 30px !important; }
+#match10, #match25, #match40, #match55{ top: 130px !important; }
+#match11, #match26, #match41, #match56{ top: 230px !important; }
+#match12, #match27, #match42, #match57{ top: 330px !important; }
+#match13, #match28, #match43, #match58{ top: 50px !important; }
+#match14, #match29, #match44, #match59{ top: 250px !important; }
+#match15, #match30, #match45, #match60{ top: 95px !important; }
+
+.round3 dl { top: 30px !important; }
+#playingame .match { left: 17% }
+
+.h2 #match61{ width: 86px !important; }
+
+.h2 #match61 { 
+    border-width: 1px 1px 1px 0 !important;
+    left: -38px !important; 
+    position: absolute !important; 
+    top: 190px !important; 
+    * top: 180px !important; /* IE only */
+    }
+
+
+.ie6 .h2 #match61, .ie7 .h2 #match61, .ie6 .h2 #match62 dl, .ie7 .h2 #match62 dl { top: 170px !important; }
+
+.round3-winner { width: 50px; height: 50px; position: absolute; top: 75px; left: 300px; }
+.round4-winner { width: 50px; height: 50px; position: absolute; top: 170px; left: 400px; }
+.round5-winner { width: 50px; height: 50px; position: absolute; top: 350px; left: 50px; }
+
+
+/* Tourney.css */
+@charset "UTF-8";
+/* CSS Document */
+
+.rh, .rh-active {
+    text-align: center;
+    width: 82px;
+  padding: 10px 0;
+	background: #EEE;
+}
+
+.rh-active {background: #DDD;}
+.rh-active strong {display: block;}
+
+.region, .venue {font-size: 9px;}
+.venue {
+    font-weight: bold;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    width: 260px;
+}
+
+#bracket .h1 .round1, #bracket .h1 .round2, .round3 dl, #bracket .h2 .round1, #bracket .h2 .round2, .round3 dl {
+    padding: 0 0 0 5px;
+}
+
+.round1.match.winnertop, .round2.match.winnertop, .round3.match.winnertop dl, .round4.match.winnertop dl{
+	background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 20% #ECECEC !important;
+}
+.round1.match.winnerbot, .round2.match.winnerbot, .round3.match.winnerbot dl, .round4.match.winnerbot dl{
+	background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 85% #ECECEC !important;
+}
+
+.round3.match.winnertop dl, .round4.match.winnertop dl, .round3.match.winnerbot dl, .round4.match.winnerbot dl{
+	background-color: #fff !important;
+}
+
+#bracket .h2 #match63 {
+    background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 33% #FFFFFF;
+    border: 1px solid #999999;
+    left: -21px;
+    position: absolute;
+    top: 350px;
+    width: 115px;
+	padding: 0 0 0 5px;
+}
+
+.h2 #match63 dl {
+    width: 115px !important;
+}
+
+#bracket .h2 #match62 {
+    left: 40px;
+    position: absolute;
+    top: 175px;
+}
+
+#bracket .h1 .round2 {
+    left: 122px;
+	z-index: 500;
+}
+
+#bracket .h2 .round2 {
+	z-index: 500;
+	left: 251px;
+}
+
+#bracket .h2 .round4 {
+	width: 118px;
+}
+
+#bracket .h2 .match {
+    border-width: 1px medium 2px 1px;
+}
+
+#bracket .h2 #match62 {
+    border-width: 1px medium 1px 1px;
+}
+
+.h2 #match61 dl {
+    left: -120px !important;
+    top: 170px !important;
+    width: 115px !important;
+	/*background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 20% #FFFFFF;*/
+	background: #fff;
+	padding: 0px 0px 0px 5px;
+	border: 1px solid #999999;
+	border-width: 1px 1px 2px;
+}
+
+.h2 #match61.winnertop dl{
+	background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 20% #fff !important;
+}
+.h2 #match61.winnerbot dl{
+	background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 85% #fff !important;
+}
+
+#bracket .h2 #match62 dl {
+    left: 75px;
+    top: 170px !important;
+    width: 115px;
+	/*background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 20% #FFFFFF;*/
+	background: #fff;
+	padding: 0px 0px 0px 5px;
+	border: 1px solid #999999;
+	border-width: 1px 1px 2px;
+}
+
+.h2 #match62.winnertop dl{
+	background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 20% #fff !important;
+}
+.h2 #match62.winnerbot dl{
+	background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 85% #fff !important;
+}
+
+#bracket .h1 .round4 {
+    height: 200px;
+    left: 280px;
+    margin: 0;
+    position: absolute;
+    width: 118px;
+}
+
+#bracket .h1 .v5 {
+    left: 250px;
+    top: 31px;
+}
+
+#bracket .h2 .v5 {
+    right: 249px;
+    top: 31px;
+}
+
+.match, .round3 dl {
+    width: 115px;
+}
+
+.match {
+	border-width: 1px 1px 2px medium;
+	padding: 2px 5px 2px 0;
+}
+
+.round3 dl {
+	left: 0px;
+	top: 35px !important;
+	/*background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 20% #FFFFFF;*/
+	background: #fff;
+	z-index: 500;
+}
+
+.round4 dl {
+	left: 0px;
+	/*background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 20% #FFFFFF;*/
+	background: #fff;
+	z-index: 500;
+	padding: 0 0 0 5px;
+    top: 85px !important;
+	width: 115px;
+}
+
+.h2 #match61 {
+    border-width: 1px 1px 1px 0 !important;
+    left: -38px !important;
+    position: absolute !important;
+    top: 175px !important;
+}
+
+#bracket .h2 #match63 {
+    /*background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 33% #FDF0D3;*/
+    background: #FDF0D3;
+    border: 1px solid #c7a700;
+	border-width: 1px 1px 2px;
+    left: -21px;
+    padding: 0 0 0 5px;
+    position: absolute;
+    top: 346px;
+    width: 115px;
+}
+
+#bracket .h2 #match63.winnertop{
+	background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 33% #FDF0D3;
+}
+#bracket .h2 #match63.winnerbot{
+	background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 69% #FDF0D3;
+}
+
+
+#match13, #match28, #match43, #match58 {
+    top: 45px !important;
+}
+
+#match9, #match24, #match39, #match54 {
+    left: 251px;
+    top: 30px !important;
+}
+
+#match15, #match30 {padding-right: 2px;}
+
+.regtitle {
+    color: #BBBBBB;
+    font: bold 20px Helvetica,Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: right;
+    top: 186px;
+    width: 364px;
+}
+
+.final {
+    left: -90px;
+    position: absolute;
+    text-align: center;
+    top: 115px;
+}
+
+.playingames .match {
+    border-color: #999999;
+    border-style: solid;
+    border-width: 1px 0;
+    left: 0;
+    padding: 0 0 0 5px;
+    position: absolute;
+    width: 125px;
+}
+
+.playingames .match.winnertop {
+    background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 20% #FFFFFF;
+}
+.playingames .match.winnerbot {
+    background: url("http://a1.espncdn.com/prod/assets/scoreboard_arrow.gif") no-repeat scroll 0 85% #FFFFFF;
+}
+
+.h2 .regtitle{ width: 250px; margin-right: 0; }
+.h1 .regtitle{ width: 212px; margin-left: 0; }
+
+.round3-winner { left: 315px; }
+.round4-winner { left: 415px; }
