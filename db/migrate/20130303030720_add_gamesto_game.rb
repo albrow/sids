@@ -1,6 +1,6 @@
 class AddGamestoGame < ActiveRecord::Migration
   def up
-  	Game.create :team1 => 0, :team2 => 1
+  	Game.create :team1 => 64, :team2 => 1
   	Game.create :team1 => 2, :team2 => 3
   	Game.create :team1 => 4, :team2 => 5
   	Game.create :team1 => 6, :team2 => 7
