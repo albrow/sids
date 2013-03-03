@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   attr_accessible :provider, :uid
 
   # attr_accessible :title, :body
-  has_many :brackets
+  has_many :brackets, :dependent => :destroy
 
 
 
