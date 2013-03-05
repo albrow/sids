@@ -29,14 +29,8 @@ class BracketsController < ApplicationController
 
 	def show
 		@bracket = Bracket.find(params[:id])
-		@rounds = [
-			Game.where(:round_id => 0),
-			@bracket.predictions.where(:round_id => 1),
-			@bracket.predictions.where(:round_id => 2),
-			@bracket.predictions.where(:round_id => 3),
-			@bracket.predictions.where(:round_id => 4),
-			@bracket.predictions.where(:round_id => 5),
-			@bracket.predictions.where(:round_id => 6)
+		@east = [
+				Game.region
 		]
 		respond_to do |format|
 	    format.html  # index.html.erb

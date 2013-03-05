@@ -26,6 +26,16 @@ class Bracket < ActiveRecord::Base
 		return bracket
 	end
 
-	
+	def region r
+		self.predictions.region r
+	end
+
+	def match m
+		self.predictions.match m	
+	end
+
+	def round r
+		self.predictions.round r	
+	end
 
 end
