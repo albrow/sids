@@ -3,11 +3,11 @@ class Bracket < ActiveRecord::Base
   belongs_to :user
   has_many :predictions, :dependent => :destroy
 
-
 	def self.create_from_json json
 		require "colored"
 		data = ActiveSupport::JSON.decode(json)
 		bracket = Bracket.new
+		match_counter = 1
 		## This is only a temporary name. The user should be able to input this!
 		bracket.name = "Test Bracket"
 		(1..6).each do |index|
@@ -17,11 +17,15 @@ class Bracket < ActiveRecord::Base
 				pred = Prediction.new
 				pred.bracket = bracket
 				pred.round_id = index
+				pred.match_id = match_counter
+				match_counter += 1
 				pred.winner = Team.find(match["winner"]["id"])
 				pred.save
 			end
 		end
 		return bracket
 	end
+
+	
 
 end
