@@ -5,29 +5,34 @@
 <br/>
 
 
-
-<% @regions.each_pair do |name, region| %>
-	<h1><%= name.capitalize %></h1>
-	<ul class="round" id="south-1" data-region="south" data-round="1">
-		<% region[0].each do |match| %>
-			<li class="match" id="<%= match.match_id %>">
-				<ul class="teams">
-					<li class="team1"><%= match.team1.name %></li>
-					<li class="team2"><%= match.team2.name %></li>
+<div class="bracket">
+	<div class="clearfix"></div>
+	<% @regions.each_pair do |name, region| %>
+		<div class="region" id="<%= name %>" data-region="<%= name %>">
+			<ul class="round" id="<%= name %>-1" data-region="<%= name %>" data-round="1">
+				<% region[0].each do |match| %>
+					<li class="match" id="<%= match.match_id %>">
+						<ul class="teams">
+							<li class="team1"><%= match.team1.name %></li>
+							<li class="team2"><%= match.team2.name %></li>
+						</ul>
+					</li>
+				<% end %>
+			</ul>
+			<% region.drop(1)[0..2].each_with_index do |round, i| %>
+				<ul class="round round<%= i+2 %>" id="<%= name %>-<%= i+2 %>" data-region="<%= name %>" data-round="<%= i+2 %>">
+					<% region[i+1].each_slice(2).with_index do |preds, j| %>
+						<li class="match" id="<%= region[i+2][j].match_id %>">
+							<ul class="teams">
+								<li class="team1"><%= preds[0].winner.name %></li>
+								<li class="team2"><%= preds[1].winner.name %></li>
+							</ul>
+						</li>
+					<% end %>
 				</ul>
-			</li>
-		<% end %>
-	</ul>
-	<% region.drop(1)[0..2].each_with_index do |round, i| %>
-		<ul class="round" id="south-<%= i+2 %>" data-region="south" data-round="<%= i+2 %>">
-			<% region[i+1].each_slice(2).with_index do |preds, j| %>
-				<li class="match" id="<%= region[i+2][j].match_id %>">
-					<ul class="teams">
-						<li class="team1"><%= preds[0].winner.name %></li>
-						<li class="team2"><%= preds[1].winner.name %></li>
-					</ul>
-				</li>
 			<% end %>
-		</ul>
+			<div class="clearfix"></div>
+		</div>
 	<% end %>
-<% end %>
+	<div class="clearfix"></div>
+</div>

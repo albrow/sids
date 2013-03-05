@@ -1,0 +1,91 @@
+.bracket {
+	background-color: #fff;
+	width: 1200px;
+	margin: 0 auto;
+	font-size: 11px;
+	line-height: 13px;
+	ul, li {
+		margin: 0;
+		padding: 0;
+		line-height: 13px;
+	}
+	margin-bottom: 60px;
+}
+
+.region {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.region#south, .region#west {
+	float: left;
+	text-align: left;
+	ul.round {
+		float: left;
+		margin-right: 8px;
+	}
+	clear: left;
+	li.match {
+		border-left: none;
+	}
+}
+
+.region#east, .region#midwest {
+	float: right;
+	text-align: right;
+	ul.round {
+		float: right;
+		margin-left: 8px;
+	}
+	clear: right;
+	li.match {
+		border-right: none;
+	}
+}
+
+.region#east {
+	margin-top: -440px;
+}
+
+
+
+ul.round2 {
+	li.match {
+		margin-top: 28px;
+		margin-bottom: 30px + 15px + 2px;
+	}
+}
+
+ul.round3 {
+	li.match {
+		margin-top: 28px + 28px + 15px + 2px;
+		margin-bottom: 30px*3 + 15px*3 - 2px;
+	}
+}
+
+ul.round4 {
+	li.match {
+		margin-top: (160px);
+	}
+}
+
+li.match {
+	height: 28px;
+	width: 100px;
+	list-style: none;
+	padding: 5px;
+	margin-bottom: 5px;
+	border: 1px solid black;
+}
+
+ul.teams {
+	
+}
+
+li.team1, li.team2 {
+	list-style: none;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 100%;
+}
