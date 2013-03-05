@@ -19,7 +19,7 @@ module Brackets
 
 				return :west
 
-			elsif (match_id == 60)
+			elsif (match_id <= 60)
 
 				return :midwest
 

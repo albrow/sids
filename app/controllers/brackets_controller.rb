@@ -29,9 +29,40 @@ class BracketsController < ApplicationController
 
 	def show
 		@bracket = Bracket.find(params[:id])
-		@east = [
-				Game.region
+		@south = [
+				Game.region(:south).round(0),
+				@bracket.region(:south).round(1),
+				@bracket.region(:south).round(2),
+				@bracket.region(:south).round(3),
+				@bracket.region(:south).round(4)
 		]
+		@west = [
+				Game.region(:west).round(0),
+				@bracket.region(:west).round(1),
+				@bracket.region(:west).round(2),
+				@bracket.region(:west).round(3),
+				@bracket.region(:west).round(4)
+		]
+		@east = [
+				Game.region(:east).round(0),
+				@bracket.region(:east).round(1),
+				@bracket.region(:east).round(2),
+				@bracket.region(:east).round(3),
+				@bracket.region(:east).round(4)
+		]
+		@midwest = [
+				Game.region(:midwest).round(0),
+				@bracket.region(:midwest).round(1),
+				@bracket.region(:midwest).round(2),
+				@bracket.region(:midwest).round(3),
+				@bracket.region(:midwest).round(4)
+		]
+		@regions = {
+			:south => @south,
+			:west => @west,
+			:east => @east,
+			:midwest => @midwest
+		}
 		respond_to do |format|
 	    format.html  # index.html.erb
 	    format.json  { render :json => @bracket }
