@@ -8,7 +8,7 @@ class Prediction < ActiveRecord::Base
 
 	scope :region, lambda { |r| where(:region => r) }
 	scope :match, lambda { |m| where(:match_id => m) }
-	scope :round, lamda { |r| where(:round_id) => r }
+	scope :round, lamda { |r| where(:round_id => r) }
 
 	def set_region
 		require "brackets" # lib/brackets.rb
