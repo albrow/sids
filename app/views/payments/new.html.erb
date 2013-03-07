@@ -1,12 +1,24 @@
-<%= form_tag charges_path do %>
-  <article>
-    <label class="amount">
-      <span>Amount: $5.00</span>
-    </label>
-  </article>
+<div id="load">
+	<section class="center" id="mission">
+		<div class="container">
+			<div class="row">
+				<div class="span5 offset4">
+					<%= form_tag payments_path do %>
+					  <article>
+					    <label class="amount">
+					      <span>Amount: $2.00</span>
+					    </label>
+					  </article>
 
-  <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="One bracket to support Sudden Infant Death Syndrome"
-          data-amount="200"></script>
-<% end %> 
+					  <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
+					          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+					          data-description="1 bracket to support Sudden Infant Death Syndrome Research"
+					          data-amount="200"
+					          data-image="/assets/logo-black.png">
+					   </script>
+					<% end %> 
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
