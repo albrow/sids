@@ -1,12 +1,12 @@
-class GameController < ApplicationController
+class GamesController < ApplicationController
 
 	def getGames
 		@returnData = Array.new
 		games = Game.all
 		for game in games
 			match = Array.new
-			match << Team.find(game.team1)
-			match << Team.find(game.team2)
+			match << Team.find(game.team1.id)
+			match << Team.find(game.team2.id)
 			@returnData << match
 		end
 		respond_to do |format|

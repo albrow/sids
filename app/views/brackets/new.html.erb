@@ -1,103 +1,115 @@
-    <article class="container" id="level1" data-bind="foreach: levels['1']()">
-        <div class="row">
-            <div class="span12">
-                <!-- ko foreach: players -->
-                <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '1') }">
-                    <img height="200px" width="200px" data-bind="attr: {src: image}"/>
-                    <span data-bind="text: name"></span>
-                </a>
-                <!-- /ko -->
-                <span data-bind="if: typeof winner() !== 'undefined'">
-                    <span data-bind="text: winner().name"></span>
-                </span>
+<div id="load">
+    <section class="center" id="mission">
+        <div class="container">
+            <div class="row">
+                <div class="span8 offset2">
+                        <h1 id="bracket_instr">Begin by making your picks for round 1:</h1>
+                </div>
             </div>
-        </div>
-    </article>
+            <div class="row">
+                <div class="span8 offset2">
+                     <article class="container" id="level1" data-bind="foreach: levels['1']()">
+                        <div class="row">
+                            <div class="span12 game">
+                                <!-- ko foreach: players -->
+                                <a class="btn btn-primary btn-large team" data-bind="click: function() { $root.setWinner($parent, $data, '1') }">
+                                    <img class="teamLogo" data-bind="attr: {src: image}"/>
+                                    <div class="teamName" data-bind="text: name"></div>
+                                </a>
+                                <!-- /ko -->
+                                <div class="btn btn-primary btn-large team winner" data-bind="if: typeof winner() !== 'undefined'">
+                                    <img class="teamLogo" data-bind="attr: {src: winner().image}"/>
+                                    <div class="teamName" data-bind="text: winner().name"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-    <article class="container" id="level2" data-bind="foreach: levels['2']()">
-        <div class="row">
-            <div class="span12">
-                <!-- ko foreach: players -->
-                <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '2') }">
-                    <img height="200px" width="200px" data-bind="attr: {src: image}"/>
-                    <span data-bind="text: name"></span>
-                </a>
-                <!-- /ko -->
-                <span data-bind="if: typeof winner() !== 'undefined'">
-                    <span data-bind="text: winner().name"></span>
-                </span>
-            </div>
-        </div>
-    </article>
+                    <article class="container" id="level2" data-bind="foreach: levels['2']()">
+                        <div class="row">
+                            <div class="span12 game">
+                                <!-- ko foreach: players -->
+                                <a class="btn btn-primary btn-large team" data-bind="click: function() { $root.setWinner($parent, $data, '2') }">
+                                    <img class="teamLogo" data-bind="attr: {src: image}"/>
+                                    <div class="teamName" data-bind="text: name"></div>
+                                </a>
+                                <!-- /ko -->
+                                <div class="btn btn-primary btn-large team winner" data-bind="if: typeof winner() !== 'undefined'">
+                                    <img class="teamLogo" data-bind="attr: {src: winner().image}"/>
+                                    <div class="teamName" data-bind="text: winner().name"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-    <article class="container" id="level3" data-bind="foreach: levels['3']()">
-        <div class="row">
-            <div class="span12">
-                <!-- ko foreach: players -->
-                <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '3') }">
-                    <img height="200px" width="200px" data-bind="attr: {src: image}"/>
-                    <span data-bind="text: name"></span>
-                </a>
-                <!-- /ko -->
-                <span data-bind="if: typeof winner() !== 'undefined'">
-                    <span data-bind="text: winner().name"></span>
-                </span>
-            </div>
-        </div>
-    </article>
+                    <article class="container" id="level3" data-bind="foreach: levels['3']()">
+                        <div class="row">
+                            <div class="span12 game">
+                                <!-- ko foreach: players -->
+                                <a class="btn btn-primary btn-large team" data-bind="click: function() { $root.setWinner($parent, $data, '3') }">
+                                    <img class="teamLogo" data-bind="attr: {src: image}"/>
+                                    <div class="teamName" data-bind="text: name"></div>
+                                </a>
+                                <!-- /ko -->
+                                <div class="btn btn-primary btn-large team winner" data-bind="if: typeof winner() !== 'undefined'">
+                                    <img class="teamLogo" data-bind="attr: {src: winner().image}"/>
+                                    <div class="teamName" data-bind="text: winner().name"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-    <article class="container" id="level4" data-bind="foreach: levels['4']()">
-        <div class="row">
-            <div class="span12">
-                <!-- ko foreach: players -->
-                <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '4') }">
-                    <img height="200px" width="200px" data-bind="attr: {src: image}"/>
-                    <span data-bind="text: name"></span>
-                </a>
-                <!-- /ko -->
-                <span data-bind="if: typeof winner() !== 'undefined'">
-                    <span data-bind="text: winner().name"></span>
-                </span>
-            </div>
-        </div>
-    </article>
+                    <article class="container" id="level4" data-bind="foreach: levels['4']()">
+                        <div class="row">
+                            <div class="span12 game">
+                                <!-- ko foreach: players -->
+                                <a class="btn btn-primary btn-large team" data-bind="click: function() { $root.setWinner($parent, $data, '4') }">
+                                    <img class="teamLogo" data-bind="attr: {src: image}"/>
+                                    <div class="teamName" data-bind="text: name"></div>
+                                </a>
+                                <!-- /ko -->
+                                <div class="btn btn-primary btn-large team winner" data-bind="if: typeof winner() !== 'undefined'">
+                                    <img class="teamLogo" data-bind="attr: {src: winner().image}"/>
+                                    <div class="teamName" data-bind="text: winner().name"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-    <article class="container" id="level5" data-bind="foreach: levels['5']()">
-        <div class="row">
-            <div class="span12">
-                <!-- ko foreach: players -->
-                <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '5') }">
-                    <img height="200px" width="200px" data-bind="attr: {src: image}"/>
-                    <span data-bind="text: name"></span>
-                </a>
-                <!-- /ko -->
-                <span data-bind="if: typeof winner() !== 'undefined'">
-                    <span data-bind="text: winner().name"></span>
-                </span>
-            </div>
-        </div>
-    </article>
+                    <article class="container" id="level5" data-bind="foreach: levels['5']()">
+                        <div class="row">
+                            <div class="span12 game">
+                                <!-- ko foreach: players -->
+                                <a class="btn btn-primary btn-large team" data-bind="click: function() { $root.setWinner($parent, $data, '5') }">
+                                    <img class="teamLogo" data-bind="attr: {src: image}"/>
+                                    <div class="teamName" data-bind="text: name"></div>
+                                </a>
+                                <!-- /ko -->
+                                <div class="btn btn-primary btn-large team winner" data-bind="if: typeof winner() !== 'undefined'">
+                                    <img class="teamLogo" data-bind="attr: {src: winner().image}"/>
+                                    <div class="teamName" data-bind="text: winner().name"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-    <article class="container" id="level6" data-bind="foreach: levels['6']()">
-        <div class="row">
-            <div class="span12">
-                <!-- ko foreach: players -->
-                <a class="btn btn-primary btn-large" data-bind="click: function() { $root.setWinner($parent, $data, '6') }">
-                    <img height="200px" width="200px" data-bind="attr: {src: image}"/>
-                    <span data-bind="text: name"></span>
-                </a>
-                <!-- /ko -->
-                <span data-bind="if: typeof winner() !== 'undefined'">
-                    <span data-bind="text: winner().name"></span>
-                </span>
+                    <article class="container" id="level6" data-bind="foreach: levels['6']()">
+                        <div class="row">
+                            <div class="span12 game">
+                                <!-- ko foreach: players -->
+                                <a class="btn btn-primary btn-large team" data-bind="click: function() { $root.setWinner($parent, $data, '6') }">
+                                    <img class="teamLogo" data-bind="attr: {src: image}"/>
+                                    <div class="teamName" data-bind="text: name"></div>
+                                </a>
+                                <!-- /ko -->
+                                <div class="btn btn-primary btn-large team winner" data-bind="if: typeof winner() !== 'undefined'">
+                                    <img class="teamLogo" data-bind="attr: {src: winner().image}"/>
+                                    <div class="teamName" data-bind="text: winner().name"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
-    </article>
-
-    <article class="container" id="level7" data-bind="if: levels['7']().length === 1">
-        <div class="row">
-            <div class="span12">
-                <h2>Your Bracket Was Created Successfully!</h2>
-            </div>
-        </div>
-    </article>
+</div>

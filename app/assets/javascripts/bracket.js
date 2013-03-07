@@ -53,6 +53,7 @@ function doAction(json) {
     };
 
     window.levels = this.levels;
+    window.curr_level = 1;
 
     this.setWinner = function(data, winner, type) {
         data.winner(winner);
@@ -84,9 +85,12 @@ function doAction(json) {
         var bracket;
         if ((bracket = self.complete(type)) !== false) {
             if (confirm("Would you like to go to the next level?") === true) {
+                window.curr_level = window.curr_level + 1;
+                $('#bracket_instr').text("Make your picks for round "+window.curr_level+":");
                 $('#level' + type).fadeOut();
                 self.levels[+type+1](bracket);
                 $('#level' + (+type+1)).fadeIn();
+                $('html, body').animate({scrollTop:0}, 'fast');
             }
         }
     };
