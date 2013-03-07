@@ -14,7 +14,9 @@ class Game < ActiveRecord::Base
 	scope :round, lambda { |r| where(:round_id => r) }
 
 	def set_region
-		self.region = Brackets::BracketsHelper.get_region match_id
+		if defined(match_id)
+			self.region = Brackets::BracketsHelper.get_region match_id
+		end
 	end
 
 
