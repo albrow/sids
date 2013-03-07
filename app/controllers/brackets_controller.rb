@@ -22,7 +22,7 @@ class BracketsController < ApplicationController
 				@bracket = Bracket.create_from_json params[:bracket]
 				current_user.brackets << @bracket
 				current_user.save
-				render :text => "true"
+				redirect_to "/payment"
 	    }
 	  end
 	end
