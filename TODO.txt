@@ -2,8 +2,9 @@ TODO:
 
 
 - Add payments solution (stripe) = 3 Hours
-	- Accept credit card and allow user to choose donation amt
-	- Thank you page
+	- Clean amt input
+
+- Create bracket activation and a way to check if they have paid for it
 
 - Functionality of Picks = 15 mins
 	- Add name to a bracket
