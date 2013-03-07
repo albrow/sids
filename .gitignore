@@ -5,7 +5,7 @@
 #   git config --global core.excludesfile ~/.gitignore_global
 
 # Ignore Stripe sensitive API keys
-/config/initializers/stripe.rb
+# /config/initializers/stripe.rb
 
 # Ignore bundler config
 /.bundle
