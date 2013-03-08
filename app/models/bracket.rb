@@ -38,6 +38,19 @@ class Bracket < ActiveRecord::Base
     self.predictions.round r
   end
 
+  ##
+  # Calculates the score of the bracket using the official standings
+  #
+  # Points are awarded as:
+  # - The four play-in games prior to the first round will not be included
+  # - All incorrect predictions will result in 0 points
+  # - 1 for correct prediction in round 1
+  # - 2 for correct prediction in round 2
+  # - 4 for correct prediction in the sweet sixteen
+  # - 8 for correct prediction in the elite eight
+  # - 16 for correct prediction in the final four
+  # - 32 for correct prediction in the semi-finals
+  # - 64 for correct prediction in the championship game
   def score
     games = Hash.new([])
     official = Bracket.official_predictions
@@ -57,7 +70,11 @@ class Bracket < ActiveRecord::Base
     score
   end
 
+  ##
+  # The official standings of the tournament will be represented as a list of
+  # predictions. The winner_id of unplayed games is 0.
   def self.official_predictions
+    # UNIMPLEMENTED
     Bracket.last.predictions
   end
 
