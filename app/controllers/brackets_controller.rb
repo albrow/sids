@@ -18,12 +18,12 @@ class BracketsController < ApplicationController
 	def create
 		respond_to do |format|
 	    format.html  # index.html.erb
-	    format.json  { 
+	    format.json  {
 				@bracket = Bracket.create_from_json params[:bracket]
 				@bracket.name = params[:name]
 				current_user.brackets << @bracket
 				current_user.save
-				render :text => "true"
+				render json: @bracket
 	    }
 	  end
 	end
