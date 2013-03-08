@@ -3516,6 +3516,7 @@ input[type="submit"].btn.btn-mini {
   margin-top: 5px;
 }
 .nav {
+  height: 83px;
   margin-left: 0;
   margin-bottom: 22px;
   list-style: none;
