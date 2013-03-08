@@ -72,7 +72,7 @@ section.yellow {
   background: #fbcc71;
 }
 section.dark {
-  padding: 60px 0;
+  padding-bottom: 60px;
   background: #393939;
   color: white;
 }
@@ -213,11 +213,72 @@ body{
 }
 #story .img1{
   background: url(../img/michael.jpg);
-  height: 275px;
-  width: 400px;
+  height: 600px;
+  width: 900px;
 }
 #story .img2{
   background: url(../img/incube.jpg);
-  height: 275px;
-  width: 400px;
+  height: 600px;
+  width: 900px;
 }
+
+/* Ashley's CSS */
+
+/*Define Accordion box*/  
+.accordion {   
+ width:100%;  
+ overflow:hidden;     
+ padding:10px;  
+ color:#414141;  
+ margin-bottom: 0px; 
+}  
+
+.accordion section{   
+  float:left;  
+  overflow:hidden;    
+  cursor:pointer;      
+  margin:3px;   
+}  
+
+.accordion section p {   
+  display:none;   
+}    
+
+.accordion section:target {   
+  background-color: rgba(255,255,255,0.9);
+}  
+
+.accordion section:target p {
+  padding: 0 20px 20px 20px;
+  font-size: 18px;
+  line-height: 1.5; 
+  display:block;  
+} 
+
+.horizontal section{  
+  width:24%; 
+  height:100%;   
+  -moz-transition: width 0.2s ease-out;   
+  -webkit-transition:width 0.2s ease-out;  
+  -o-transition:width 0.2s ease-out;  
+  transition:width 0.2s ease-out;  
+}  
+
+/*Header of closed slide*/  
+.horizontal section h2 {
+  color:#FFF;    
+  font-size: 40px;
+  line-height:1.5;   
+  position:relative;    
+  margin-top:100px;  
+}   
+/*On mouse over open slide*/  
+.horizontal :target{   
+ width:74%;  
+ height:100%;   
+}  
+.horizontal :target h2{   
+ margin-top:20px;   
+ color:#333;
+ font-size: 28px;
+}  
