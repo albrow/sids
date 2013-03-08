@@ -102,6 +102,16 @@ function submitPicks(pickData) {
     });
 }
 
+function randomBracket() {
+    $('.game:visible').each(function () {
+        var team = Math.random() < .5 ? 0 : 1;
+        $(this).children('.team').eq(team).click();
+    });
+    if (curr_level < 7) {
+        setTimeout(randomBracket, 500);
+    }
+}
+
 // used for debugging. You can call the resubmit method in console to submit
 // the last data again without having to start over
 // remove the following method if we're done debugging
