@@ -38,7 +38,7 @@ class AddTeamsToTeam < ActiveRecord::Migration
 		Team.create :name => 'Oklahoma State', :image => '/assets/oklahomast_logo.jpg', :id => 35
 		Team.create :name => 'Tennessee', :image => '/assets/tennessee_logo.jpg', :id => 36
 		Team.create :name => 'Florida State', :image => '/assets/floridast_logo.jpg', :id => 37
-		Team.create :name => 'Wisconsin', :image => '/assets/winsconsin_logo.jpg', :id => 38
+		Team.create :name => 'Wisconsin', :image => '/assets/wisconsin_logo.jpg', :id => 38
 		Team.create :name => 'Xavier', :image => '/assets/xavier_logo.jpg', :id => 39
 		Team.create :name => 'Portland State', :image => '/assets/portlandst_logo.jpg', :id => 40
 		Team.create :name => 'UCLA', :image => '/assets/UCLA_logo.jpg', :id => 41

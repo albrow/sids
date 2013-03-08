@@ -23,7 +23,7 @@ class BracketsController < ApplicationController
 				@bracket.name = params[:name]
 				current_user.brackets << @bracket
 				current_user.save
-				redirect_to "/payments/new"
+				render :text => "true"
 	    }
 	  end
 	end
