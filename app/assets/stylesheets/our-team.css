@@ -31,7 +31,7 @@
 	position: relative;
 	cursor: default;
 	box-shadow: 
-	inset 0 0 0 0 rgba(200,95,66, 0.4),
+	inset 0 0 0 0 rgba(255,255,255, 0.4),
 	inset 0 0 0 16px rgba(255,255,255,0.6),
 	0 1px 2px rgba(0,0,0,0.1);
 
@@ -43,51 +43,55 @@
 }
 
 .ch-img-1 { 
-	background-image: url(../img/profile/1.jpg);
+	background-image: url(../img/profile/mike.jpg);
 }
 
 .ch-img-2 { 
-	background-image: url(../img/profile/2.jpg);
+	background-image: url(../img/profile/fabio.jpg);
 }
 
 .ch-img-3 { 
-	background-image: url(../img/profile/3.jpg);
+	background-image: url(../img/profile/alex.jpg);
 }
 
 .ch-img-4 { 
-	background-image: url(../img/profile/4.jpg);
+	background-image: url(../img/profile/jim.jpg);
 }
 
 .ch-img-5 { 
-	background-image: url(../img/profile/5.jpg);
+	background-image: url(../img/profile/christian.jpg);
 }
 
 .ch-img-6 { 
-	background-image: url(../img/profile/6.jpg);
+	background-image: url(../img/profile/josh.jpg);
 }
 
 .ch-img-7 { 
-	background-image: url(../img/profile/7.jpg);
+	background-image: url(../img/profile/deo.jpg);
 }
 
 .ch-img-8 { 
-	background-image: url(../img/profile/8.jpg);
+	background-image: url(../img/profile/arun.jpg);
 }
 
 .ch-img-9 { 
-	background-image: url(../img/profile/9.jpg);
+	background-image: url(../img/profile/devin.jpg);
 }
 
 .ch-img-10 { 
-	background-image: url(../img/profile/10.jpg);
+	background-image: url(../img/profile/ashley.jpg);
 }
 
 .ch-img-11 { 
-	background-image: url(../img/profile/11.jpg);
+	background-image: url(../img/profile/jamie.jpg);
 }
 
 .ch-img-12 { 
-	background-image: url(../img/profile/12.jpg);
+	background-image: url(../img/profile/alyssa.jpg);
+}
+
+.ch-img-13 { 
+	background-image: url(../img/profile/dimeji.jpg);
 }
 
 .ch-info {
@@ -157,7 +161,7 @@
 
 .ch-item:hover {
 	box-shadow: 
-	inset 0 0 0 110px rgba(200,95,66, 0.4),
+	inset 0 0 0 110px rgba(255,255,255, 0.4),
 	inset 0 0 0 16px rgba(255,255,255,0.8),
 	0 1px 2px rgba(0,0,0,0.1);
 }
