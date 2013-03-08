@@ -1,7 +1,9 @@
 $(function () {
-    $.get('/getgames.json', function(data) {
-        ko.applyBindings(new doAction(data));
-    });
+    if ($('.bracket-picker').length > 0) {
+        $.get('/getgames.json', function(data) {
+            ko.applyBindings(new doAction(data));
+        });
+    }
 });
 
 function doAction(json) {
