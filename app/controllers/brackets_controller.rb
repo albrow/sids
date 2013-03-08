@@ -1,100 +1,73 @@
 class BracketsController < ApplicationController
 
-	before_filter :authenticate_user!
+  before_filter :authenticate_user!
 
-	def index
-		# list all the brackets for the current user
-		@brackets = current_user.brackets
-		respond_to do |format|
-	    format.html  # index.html.erb
-	    format.json  { render :json => @brackets }
-	  end
-	end
-
-	def new
-		# render a new bracket page
-	end
-
-	def create
-		respond_to do |format|
-	    format.html  # index.html.erb
-	    format.json  {
-				@bracket = Bracket.create_from_json params[:bracket]
-				@bracket.name = params[:name]
-				current_user.brackets << @bracket
-				current_user.save
-				render json: @bracket
-	    }
-	  end
-	end
-
-	def show
-		@bracket = Bracket.find(params[:id])
-		@south = [
-				Game.region(:south).round(0),
-				@bracket.region(:south).round(1),
-				@bracket.region(:south).round(2),
-				@bracket.region(:south).round(3),
-				@bracket.region(:south).round(4),
-				@bracket.region(:south).round(5)
-		]
-		@west = [
-				Game.region(:west).round(0),
-				@bracket.region(:west).round(1),
-				@bracket.region(:west).round(2),
-				@bracket.region(:west).round(3),
-				@bracket.region(:west).round(4),
-				@bracket.region(:west).round(5)
-		]
-		@east = [
-				Game.region(:east).round(0),
-				@bracket.region(:east).round(1),
-				@bracket.region(:east).round(2),
-				@bracket.region(:east).round(3),
-				@bracket.region(:east).round(4),
-				@bracket.region(:east).round(5)
-		]
-		@midwest = [
-				Game.region(:midwest).round(0),
-				@bracket.region(:midwest).round(1),
-				@bracket.region(:midwest).round(2),
-				@bracket.region(:midwest).round(3),
-				@bracket.region(:midwest).round(4),
-				@bracket.region(:midwest).round(5)
-		]
-		@regions = {
-			:south => @south,
-			:west => @west,
-			:east => @east,
-			:midwest => @midwest
-		}
-
-		# --- FIX THIS ----
-		@south_east = @bracket.region(:south_east)
-		@west_midwest = @bracket.region(:west_midwest)
-		# -----------------
-
-		@championship = @bracket.region(:championship)
-
-		
-		respond_to do |format|
-	    format.html  # index.html.erb
-	    format.json  { render :json => @bracket }
-	  end
-	end
-
-	def edit
-		# render an edit page
-	end
-
-	def update
-		# will update a users bracket
-	end
-
-    def destroy
-      @bracket = Bracket.find(params[:id])
-      @bracket.destroy
-      redirect_to account_path
+  def index
+    # list all the brackets for the current user
+    @brackets = current_user.brackets
+    respond_to do |format|
+      format.html  # index.html.erb
+      format.json  { render :json => @brackets }
     end
+  end
+
+  def new
+    # render a new bracket page
+  end
+
+  def create
+    respond_to do |format|
+      format.html  # index.html.erb
+      format.json do
+        @bracket = Bracket.create(name: params[:name])
+        @bracket.create_predictions(params[:bracket])
+        current_user.brackets << @bracket
+        current_user.save
+        render json: @bracket
+      end
+    end
+  end
+
+  def show
+    @bracket = Bracket.includes(predictions: :winner).find(params[:id])
+    @games = Game.round(0).includes(:team1, :team2)
+
+    @regions = {}
+    ['south', 'west', 'east', 'midwest'].map do |region|
+      @regions[region] = [@games.select {|game| game.region == region}]
+      1.upto(5) do |round|
+        predictions = @bracket.predictions.select do |prediction|
+          prediction.region == region and prediction.round_id == round
+        end
+        @regions[region] << predictions
+      end
+    end
+
+    # --- FIX THIS ----
+    @south_east = @bracket.region(:south_east)
+    @west_midwest = @bracket.region(:west_midwest)
+    # -----------------
+
+    @championship = @bracket.region(:championship)
+
+    respond_to do |format|
+      format.html  # index.html.erb
+      format.json  { render :json => @bracket }
+    end
+  end
+
+  def edit
+    # render an edit page
+  end
+
+  def update
+    # will update a users bracket
+  end
+
+  def destroy
+    @bracket = Bracket.find(params[:id])
+    @bracket.destroy
+    redirect_to account_path
+  end
 
 end
