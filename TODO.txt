@@ -1,8 +1,9 @@
 TODO:
 
 
-- Add payments solution (stripe) = 3 Hours
-	- Clean amt input
+- Add payments solution (stripe) = 3 Hours  [DONE]
+
+- Bug loading Knockout.js sometimes
 
 - Create bracket activation and a way to check if they have paid for it
 
@@ -23,6 +24,8 @@ TODO:
 - Add post to facebook upon bracket creation for virality = 1 hour
 
 - Add all sharing buttons = 20 mins
+
+- Fix some of the team icons (Josh)
 
 Estimate: 12 hours (worst: 15 hours)
 
