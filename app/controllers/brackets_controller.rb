@@ -20,6 +20,7 @@ class BracketsController < ApplicationController
 	    format.html  # index.html.erb
 	    format.json  { 
 				@bracket = Bracket.create_from_json params[:bracket]
+				@bracket.name = params[:name]
 				current_user.brackets << @bracket
 				current_user.save
 				redirect_to "/payments/new"

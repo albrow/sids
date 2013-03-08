@@ -4,8 +4,6 @@ $.get('/getgames.json', function(data) {
 
 function doAction(json) {
 
-    console.log(json);
-
     self = this;
     this.levels = {
         '1': ko.observableArray(),
@@ -54,6 +52,7 @@ function doAction(json) {
 
     window.levels = this.levels;
     window.curr_level = 1;
+    window.bracket_name = "My First Bracket";
 
     this.setWinner = function(data, winner, type) {
         data.winner(winner);
@@ -86,7 +85,12 @@ function doAction(json) {
         if ((bracket = self.complete(type)) !== false) {
             if (confirm("Would you like to go to the next level?") === true) {
                 window.curr_level = window.curr_level + 1;
-                $('#bracket_instr').text("Make your picks for round "+window.curr_level+":");
+                $('h1#bracket_instr').text("Make your picks for round "+window.curr_level+":");
+                if(window.curr_level == 2) {
+                    window.bracket_name = $("#bracket_name").val();
+                    $("#bracket_naming").hide();
+                    $("#bracket_name").hide();
+                }
                 $('#level' + type).fadeOut();
                 self.levels[+type+1](bracket);
                 $('#level' + (+type+1)).fadeIn();
