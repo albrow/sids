@@ -12,13 +12,13 @@ class AddTeamsToTeam < ActiveRecord::Migration
 		Team.create :name => 'West Virginia', :image => '/assets/westvirginia_logo.jpg', :id => 9
 		Team.create :name => 'Dayton', :image => '/assets/dayton_logo.jpg', :id => 10
 		Team.create :name => 'Kansas', :image => '/assets/kansas_logo.jpg', :id => 11
-		Team.create :name => 'North Dakota State', :image => '/assets/ndstate_logo.jpg', :id => 12
+		Team.create :name => 'North Dakota State', :image => '/assets/northdakota_logo.jpg', :id => 12
 		Team.create :name => 'Boston College', :image => '/assets/bostoncollege_logo.jpg', :id => 13
 		Team.create :name => 'USC', :image => '/assets/USC_logo.jpg', :id => 14
 		Team.create :name => 'Michigan State', :image => '/assets/michiganstate_logo.jpg', :id => 15
 		Team.create :name => 'Robert Morris', :image => '/assets/robertmorris_logo.jpg', :id => 16
 		Team.create :name => 'Connecticut', :image => '/assets/connecticut_logo.jpg', :id => 17
-		Team.create :name => 'Chattanooga', :image => '/assets/chattanooga_logo.jpg', :id => 18
+		Team.create :name => 'Chattanooga', :image => '/assets/chatanooga_logo.jpg', :id => 18
 		Team.create :name => 'BYU', :image => '/assets/BYU_logo.jpg', :id => 19
 		Team.create :name => 'Texas A&M', :image => '/assets/texasAM_logo.jpg', :id => 20
 		Team.create :name => 'Purdue', :image => '/assets/purdue_logo.jpg', :id => 21
@@ -32,9 +32,9 @@ class AddTeamsToTeam < ActiveRecord::Migration
 		Team.create :name => 'California', :image => '/assets/california_logo.jpg', :id => 29
 		Team.create :name => 'Maryland', :image => '/assets/maryland_logo.jpg', :id => 30
 		Team.create :name => 'Memphis', :image => '/assets/memphis_logo.jpg', :id => 31
-		Team.create :name => 'Cal State Northridge', :image => '/assets/calstnorthridge_logo.jpg', :id => 32
+		Team.create :name => 'Cal State Northridge', :image => '/assets/calsttnorthridge_logo.png', :id => 32
 		Team.create :name => 'Pittsburgh', :image => '/assets/pittsburgh_logo.jpg', :id => 33
-		Team.create :name => 'East Tennessee State', :image => '/assets/easttenneseest_logo.jpg', :id => 34
+		Team.create :name => 'East Tennessee State', :image => '/assets/easttennesseest_logo.jpg', :id => 34
 		Team.create :name => 'Oklahoma State', :image => '/assets/oklahomast_logo.jpg', :id => 35
 		Team.create :name => 'Tennessee', :image => '/assets/tennessee_logo.jpg', :id => 36
 		Team.create :name => 'Florida State', :image => '/assets/floridast_logo.jpg', :id => 37
@@ -50,7 +50,7 @@ class AddTeamsToTeam < ActiveRecord::Migration
 		Team.create :name => 'Duke', :image => '/assets/duke_logo.jpg', :id => 47
 		Team.create :name => 'Binghamton', :image => '/assets/binghamton_logo.jpg', :id => 48
 		Team.create :name => 'North Carolina', :image => '/assets/northcarolina_logo.jpg', :id => 49
-		Team.create :name => 'Radford', :image => '/assets/radford_logo.jpg', :id => 50
+		Team.create :name => 'Radford', :image => '/assets/radford_logo.png', :id => 50
 		Team.create :name => 'LSU', :image => '/assets/LSU_logo.jpg', :id => 51
 		Team.create :name => 'Butler', :image => '/assets/butler_logo.jpg', :id => 52
 		Team.create :name => 'Illinois', :image => '/assets/illinois_logo.jpg', :id => 53
@@ -59,7 +59,7 @@ class AddTeamsToTeam < ActiveRecord::Migration
 		Team.create :name => 'Akron', :image => '/assets/akron_logo.jpg', :id => 56
 		Team.create :name => 'Arizona State', :image => '/assets/arizonastate_logo.jpg', :id => 57
 		Team.create :name => 'Temple', :image => '/assets/temple_logo.jpg', :id => 58
-		Team.create :name => 'Syracuse', :image => '/assets/syracuse_logo.jpg', :id => 59
+		Team.create :name => 'Syracuse', :image => '/assets/syracuse_logo.png', :id => 59
 		Team.create :name => 'Stephen Faustin', :image => '/assets/stephenfaustin_logo.jpg', :id => 60
 		Team.create :name => 'Clemson', :image => '/assets/clemson_logo.jpg', :id => 61
 		Team.create :name => 'Michigan', :image => '/assets/michigan_logo.jpg', :id => 62
