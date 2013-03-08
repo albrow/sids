@@ -15,12 +15,6 @@ class BracketsController < ApplicationController
 		# render a new bracket page
 	end
 
-    def destroy
-      @bracket = Bracket.find(params[:id])
-      @bracket.destroy
-      redirect_to account_path
-    end
-
 	def create
 		respond_to do |format|
 	    format.html  # index.html.erb
@@ -84,7 +78,10 @@ class BracketsController < ApplicationController
 		# will update a users bracket
 	end
 
-	def destroy
-		# delete the bracket (remove it from database)
-	end
+    def destroy
+      @bracket = Bracket.find(params[:id])
+      @bracket.destroy
+      redirect_to account_path
+    end
+
 end
