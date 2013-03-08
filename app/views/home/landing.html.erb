@@ -1,0 +1,53 @@
+<div id="load">
+    <section class="center" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="span10 offset1">
+                    <div class="hero ">
+                        <div class="video" rel="tooltip" title="Embed any product demos or promotional videos without worrying about if they will fit to different screen sizes. Don't want to include a video? Easy to remove with no side effects. " data-placement="right">
+                            <iframe width="420" height="315" src="http://www.youtube.com/embed/eLLc00ZBgJM" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="span8 offset2">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dark" id="signup">
+        <div class="container">
+            <div class="row">
+                <div class="span12 center">
+                    <h2 class="cursive"> Get Started </h2>
+                    <br/><br/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4 center">
+                    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), :class => 'btn' %>
+                </div>
+                <div class="span4 center">
+                    <%= link_to "Sign in with Email", new_user_registration_path, :class => 'btn' %>
+                </div>  
+                <div class="span4 center">
+                    <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn' %>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+  $("[rel=tooltip]").tooltip();
+  $("body").on('click', '.ajax', function() {
+    var url, theme;
+    url = $(this).data('target');
+    theme = $(this).data('theme'); 
+    $("body").removeAttr("class")
+    $("body").addClass(theme);
+    $("#load").load(url + ' .body', function(){
+      $(".video").fitVids();
+    });
+    return false
+  });
+  </script>
