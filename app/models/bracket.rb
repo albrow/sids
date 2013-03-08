@@ -3,28 +3,25 @@ class Bracket < ActiveRecord::Base
   belongs_to :user
   has_many :predictions, :dependent => :destroy
 
-  def self.create_from_json json
-    require "colored"
-    data = ActiveSupport::JSON.decode(json)
-    bracket = Bracket.new
-    match_counter = 0
 
-    ## This is only a temporary name. The user should be able to input this!
-    bracket.name = "Test Bracket"
+  ##
+  # Create predictions for this bracket from JSON data
+  def create_predictions(bracket_data)
+    require "colored"
+    data = ActiveSupport::JSON.decode(bracket_data)
+    match_counter = 0
     predictions = 1.upto(6).map do |index|
       round = data[index.to_s]
       round.map do |match|
         match_counter += 1
         {
-          bracket_id: bracket.id,
           round_id: index,
           match_id: match_counter,
           winner_id: match["winner"]["id"],
         }
       end
     end.flatten
-    Prediction.create(predictions)
-    return bracket
+    self.predictions.create(predictions)
   end
 
   def region r
