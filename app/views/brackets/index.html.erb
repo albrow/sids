@@ -1,6 +1,11 @@
 
 <ul>
 <% @brackets.each do |b| %>
-	<li><%= link_to b.name, b %></li>
+	<li>
+      <%= link_to b.name, b %>
+      <a href=<%= bracket_path(b) %> data-method="delete" data-confirm="Are you sure?">
+        <i class="icon-remove-circle"></i>
+      </a>
+    </li>
 <% end %>
 </ul>
