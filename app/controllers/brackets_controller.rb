@@ -15,6 +15,12 @@ class BracketsController < ApplicationController
 		# render a new bracket page
 	end
 
+    def destroy
+      @bracket = Bracket.find(params[:id])
+      @bracket.destroy
+      redirect_to account_path
+    end
+
 	def create
 		respond_to do |format|
 	    format.html  # index.html.erb
