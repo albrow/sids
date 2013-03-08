@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
+//= require knockout-2.2.1.debug
+//= require knockout.validation
+//= require jquery.fitvids
 //= require_tree .
