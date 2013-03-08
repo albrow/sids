@@ -7,22 +7,23 @@ class Bracket < ActiveRecord::Base
     require "colored"
     data = ActiveSupport::JSON.decode(json)
     bracket = Bracket.new
-    match_counter = 1
+    match_counter = 0
+
     ## This is only a temporary name. The user should be able to input this!
     bracket.name = "Test Bracket"
-    (1..6).each do |index|
+    predictions = 1.upto(6).map do |index|
       round = data[index.to_s]
-      puts round.inspect
-      round.each do |match|
-        pred = Prediction.new
-        pred.bracket = bracket
-        pred.round_id = index
-        pred.match_id = match_counter
+      round.map do |match|
         match_counter += 1
-        pred.winner = Team.find(match["winner"]["id"])
-        pred.save
+        {
+          bracket_id: bracket.id,
+          round_id: index,
+          match_id: match_counter,
+          winner_id: match["winner"]["id"],
+        }
       end
-    end
+    end.flatten
+    Prediction.create(predictions)
     return bracket
   end
 
