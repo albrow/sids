@@ -6,9 +6,10 @@ Sids::Application.routes.draw do
   match '/getgames' => 'games#getGames'
   match '/account' => 'account#myaccount'
   match '/landing' => 'home#landing'
-  resources :brackets
-  resources :payments
-  
+  resources :brackets do
+    resource :payment, only: [:new, :create]
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
