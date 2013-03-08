@@ -5,7 +5,7 @@
                 <div class="span10 offset1">
                     <div class="hero ">
                         <div class="video" rel="tooltip" title="Embed any product demos or promotional videos without worrying about if they will fit to different screen sizes. Don't want to include a video? Easy to remove with no side effects. " data-placement="right">
-                            <iframe width="420" height="315" src="http://www.youtube.com/embed/eLLc00ZBgJM" frameborder="0" allowfullscreen></iframe>
+                            <iframe src="http://player.vimeo.com/video/61319484" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -36,18 +36,3 @@
         </div>
     </section>
 </div>
-
-<script type="text/javascript">
-  $("[rel=tooltip]").tooltip();
-  $("body").on('click', '.ajax', function() {
-    var url, theme;
-    url = $(this).data('target');
-    theme = $(this).data('theme'); 
-    $("body").removeAttr("class")
-    $("body").addClass(theme);
-    $("#load").load(url + ' .body', function(){
-      $(".video").fitVids();
-    });
-    return false
-  });
-  </script>

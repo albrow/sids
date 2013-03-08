@@ -25,9 +25,13 @@ class PaymentsController < ApplicationController
 	    :currency    => 'usd'
 	  )
 
-	rescue Stripe::CardError => e
-	  flash[:error] = e.message
-	  redirect_to :action => "new"
+	  rescue Stripe::CardError => e
+	  	flash[:error] = e.message
+
+	  # flash[:success] = "Thank You for your contribution!"
+	  # redirect_to '/account'
+
 	end
+
 
 end
