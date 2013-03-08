@@ -199,3 +199,11 @@ body{
   position: relative;
   bottom: 3px;
 }
+#load p{
+  text-align: justify;
+}
+#story .img{
+  background: url(../img/michael.jpg);
+  height: 275px;
+  width: 400px;
+}
