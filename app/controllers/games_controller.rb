@@ -3,7 +3,7 @@ class GamesController < ApplicationController
   def getGames
     matches = Game.includes(:team1, :team2).all.map do |game|
       [game.team1, game.team2]
-    end.flatten
+    end
     @returnData = matches
     respond_to do |format|
       format.json{
