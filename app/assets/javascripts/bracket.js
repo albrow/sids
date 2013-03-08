@@ -94,7 +94,7 @@ function submitPicks(pickData) {
     return $.ajax({
         type: "POST",
         url: "/brackets.json",
-        data: { bracket: pickData },
+        data: {name: bracket_name, bracket: pickData},
         headers: {
             'X-Transaction': 'POST Example',
             'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
