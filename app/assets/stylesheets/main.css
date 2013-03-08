@@ -151,8 +151,10 @@ footer .rights {
   margin: 0 auto;
 }
 .video iframe{
-  width: 80%;
-  height: 80%;
+  /*width: 80%;
+  height: 80%;*/
+  width: 640px;
+  height: 480px;
 }
 body{
   background:url("../img/subtle_carbon.png") repeat;
