@@ -202,8 +202,13 @@ body{
 #load p{
   text-align: justify;
 }
-#story .img{
+#story .img1{
   background: url(../img/michael.jpg);
+  height: 275px;
+  width: 400px;
+}
+#story .img2{
+  background: url(../img/incube.jpg);
   height: 275px;
   width: 400px;
 }
