@@ -3,23 +3,57 @@
 //  - add styles for final four and championship
 //  - make everything prettier (or at least less plain)
 
+
+// --- CHANGABLE VARIABLES ----
+$bracket-width: 1200px;
+$bracket-font-size: 11px;
+$bracket-line-height: 13px;
+$match-padding: 5px 10px 5px 10px;
+$match-width: 110px;
+$region-margin-top: 60px;
+$r1-match-height: 28px;
+$r1-match-margin-bottom: 25px;
+$r1-team2-margin-top: ($r1-match-height - $bracket-line-height) - 1px;
+
+// --- DEPENDENT VARIABLES ---
+// (will update automatically based on above)
+
+// round2
+$r2-match-height: $r1-match-height + $r1-match-margin-bottom + 1px;
+$r2-match-margin-bottom: $r1-match-margin-bottom + $r1-match-height - 1px;
+$r2-match-margin-top: $r1-match-height/2;
+$r2-team2-margin-top: ($r2-match-height - $bracket-line-height) - 1px;
+
+// round3
+$r3-match-height: $r2-match-height + $r2-match-margin-bottom + 1px;
+$r3-match-margin-bottom: $r2-match-margin-bottom + $r2-match-height - 1px;
+$r3-match-margin-top: $r1-match-height/2 + $r2-match-height/2;
+$r3-team2-margin-top: ($r3-match-height - $bracket-line-height) - 1px;
+
+// round4
+$r4-match-height: $r3-match-height + $r3-match-margin-bottom + 1px;
+$r4-match-margin-bottom: $r3-match-margin-bottom + $r3-match-height - 1px;
+$r4-match-margin-top: $r1-match-height/2 + $r2-match-height/2 + $r3-match-height/2;
+$r4-team2-margin-top: ($r4-match-height - $bracket-line-height) - 1px;
+
 .bracket {
 	background-color: #fff;
-	width: 1200px;
+	width: $bracket-width;
 	margin: 0 auto;
-	font-size: 11px;
-	line-height: 13px;
+	font-size: $bracket-font-size;
+	line-height: $bracket-line-height;
 	ul, li {
 		margin: 0;
 		padding: 0;
-		line-height: 13px;
+		font-size: $bracket-font-size;
+		line-height: $bracket-line-height;
 	}
 	margin-bottom: 60px;
+	padding: 0px 40px 40px 40px;
 }
 
 .region {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: $region-margin-top;
 }
 
 .region#south, .region#west {
@@ -27,7 +61,6 @@
 	text-align: left;
 	ul.round {
 		float: left;
-		margin-right: 8px;
 	}
 	clear: left;
 	li.match {
@@ -40,7 +73,6 @@
 	text-align: right;
 	ul.round {
 		float: right;
-		margin-left: 8px;
 	}
 	clear: right;
 	li.match {
@@ -49,42 +81,85 @@
 }
 
 .region#east {
-	margin-top: -440px;
+	margin-top: -($r1-match-height*8 + $r1-match-margin-bottom*7);
 }
 
-
+ul.round1 {
+	li.match {
+		height: $r1-match-height;
+		margin-bottom: $r1-match-margin-bottom;
+		ul.teams li.team1, ul.teams li.team2 {
+			&:nth-child(2) {
+				margin-top: $r1-team2-margin-top;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
 
 ul.round2 {
 	li.match {
-		margin-top: 28px;
-		margin-bottom: 30px + 15px + 2px;
+		height: $r2-match-height;
+		margin-bottom: $r2-match-margin-bottom;
+		margin-top: $r2-match-margin-top;
+		ul.teams li.team1, ul.teams li.team2 {
+			&:nth-child(2) {
+				margin-top: $r2-team2-margin-top;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
 
 ul.round3 {
 	li.match {
-		margin-top: 28px + 28px + 15px + 2px;
-		margin-bottom: 30px*3 + 15px*3 - 2px;
+		height: $r3-match-height;
+		margin-bottom: $r3-match-margin-bottom;
+		margin-top: $r3-match-margin-top;
+		ul.teams li.team1, ul.teams li.team2 {
+			&:nth-child(2) {
+				margin-top: $r3-team2-margin-top;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
 
 ul.round4 {
 	li.match {
-		margin-top: (160px);
+		height: $r4-match-height;
+		margin-bottom: $r4-match-margin-bottom;
+		margin-top: $r4-match-margin-top;
+		ul.teams li.team1, ul.teams li.team2 {
+			&:nth-child(2) {
+				margin-top: $r4-team2-margin-top;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
 
 li.match {
-	height: 28px;
-	width: 100px;
+	width: $match-width;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;         
 	list-style: none;
-	padding: 5px;
-	margin-bottom: 5px;
+	padding: $match-padding;
 	border: 1px solid black;
 }
 
 ul.teams {
-	
+	position: relative;
+	margin-top: -20px;
 }
 
 li.team1, li.team2 {

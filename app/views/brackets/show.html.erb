@@ -9,7 +9,7 @@
 	<div class="clearfix"></div>
 	<% @regions.each_pair do |name, region| %>
 		<div class="region" id="<%= name %>" data-region="<%= name %>">
-			<ul class="round" id="<%= name %>-1" data-region="<%= name %>" data-round="1">
+			<ul class="round round1" id="<%= name %>-1" data-region="<%= name %>" data-round="1">
 				<% region[0].each do |match| %>
 					<li class="match" id="<%= match.match_id %>">
 						<ul class="teams">
