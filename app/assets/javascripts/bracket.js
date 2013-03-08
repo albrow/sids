@@ -4,6 +4,8 @@ $.get('/getgames.json', function(data) {
 
 function doAction(json) {
 
+    console.log(json);
+
     self = this;
     this.levels = {
         '1': ko.observableArray(),
@@ -66,7 +68,7 @@ function doAction(json) {
             $.ajax({
                 type: "POST",
                 url: "/brackets.json",
-                data: { bracket: allPicks },
+                data: { bracket: allPicks, name: window.bracket_name },
                 headers: {
                     'X-Transaction': 'POST Example',
                     'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
