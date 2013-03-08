@@ -64,25 +64,9 @@ function doAction(json) {
             $('#level' + type).fadeOut();
             levels['7'].push(winner);
             allPicks = ko.toJSON(self.levels);
-            // used for debugging
-            // remove the following line if we're done debugging
-            window.pickData = allPicks
-            $.ajax({
-                type: "POST",
-                url: "/brackets.json",
-                data: { bracket: allPicks },
-                headers: {
-                    'X-Transaction': 'POST Example',
-                    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-                }
-            }).done(function( bracket ) {
-              window.location = "/brackets/" + bracket.id + "/payment/new";
-              if (eval(msg)) {
-                console.log("bracket was created!");
-            } else {
-                alert("there was a problem :(");
-            }
-        });
+            submitPicks(allPicks).done(function (bracket) {
+                window.location = "/brackets/" + bracket.id + "/payment/new";
+            });
             return;
         }
 
@@ -106,24 +90,39 @@ function doAction(json) {
 
 }
 
-
-// used for debugging. You can call this method in console to submit
-// the data again without having to start over
-// remove the following method if we're done debugging
-function submitPicks() {
-    $.ajax({
+function submitPicks(pickData) {
+    return $.ajax({
         type: "POST",
         url: "/brackets.json",
-        data: { bracket: window.pickData },
+        data: { bracket: pickData },
         headers: {
             'X-Transaction': 'POST Example',
             'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
         }
-    }).done(function( msg ) {
-        if (eval(msg)) {
-            console.log("bracket was created!");
-        } else {
-            alert("there was a problem :(");
-        }
     });
 }
+
+// used for debugging. You can call the resubmit method in console to submit
+// the last data again without having to start over
+// remove the following method if we're done debugging
+(function () {
+    var lastPicks = undefined;
+
+    window.submitPicks = (function (original) {
+        return function (pickData) {
+            lastPicks = pickData;
+            return original.call(this, pickData);
+        }
+    })(window.submitPicks);
+
+    window.resubmit = function () {
+        console.log(lastPicks);
+        submitPicks(lastPicks).done(function( msg ) {
+            if (msg) {
+                console.log("bracket was created!");
+            } else {
+                alert("there was a problem :(");
+            }
+        });
+    };
+})();
