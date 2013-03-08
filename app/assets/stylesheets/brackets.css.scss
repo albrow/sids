@@ -9,7 +9,7 @@ $bracket-width: 1200px;
 $bracket-font-size: 11px;
 $bracket-line-height: 13px;
 $match-padding: 5px 10px 5px 10px;
-$match-width: 110px;
+$match-width: 95px;
 $region-margin-top: 60px;
 $r1-match-height: 28px;
 $r1-match-margin-bottom: 25px;
@@ -36,7 +36,20 @@ $r4-match-margin-bottom: $r3-match-margin-bottom + $r3-match-height - 1px;
 $r4-match-margin-top: $r1-match-height/2 + $r2-match-height/2 + $r3-match-height/2;
 $r4-team2-margin-top: ($r4-match-height - $bracket-line-height) - 1px;
 
+// region-winner
+$region-winner-margin-top: $r1-match-height/2 + $r2-match-height/2 + $r3-match-height/2 + $r4-match-height/2 - $bracket-line-height;
+
+// final four
+$final-four-margin-top: -($r1-match-height*8 + $r1-match-margin-bottom*7);
+$final-four-width: $bracket-width - 10*($match-width);
+$final-four-inner-height: $r1-match-height*8 + $r1-match-margin-bottom*7 + $region-margin-top + 1px;
+$final-four-inner-margin-top: $r1-match-height/2 + $r2-match-height/2 + $r3-match-height/2 + $r4-match-height/2 + $bracket-font-size - 1px;
+
+
+// ------- END VARIABLES ---------
+
 .bracket {
+	position: relative;
 	background-color: #fff;
 	width: $bracket-width;
 	margin: 0 auto;
@@ -49,7 +62,9 @@ $r4-team2-margin-top: ($r4-match-height - $bracket-line-height) - 1px;
 		line-height: $bracket-line-height;
 	}
 	margin-bottom: 60px;
+	margin-top: 60px;
 	padding: 0px 40px 40px 40px;
+	overflow: scroll;
 }
 
 .region {
@@ -80,9 +95,70 @@ $r4-team2-margin-top: ($r4-match-height - $bracket-line-height) - 1px;
 	}
 }
 
+.region {
+	position: relative;
+	* {
+		position: relative;
+		z-index: 100;
+	}
+}
+
 .region#east {
 	margin-top: -($r1-match-height*8 + $r1-match-margin-bottom*7);
 }
+
+.region#south {
+	&:before {
+		position: absolute;
+		display: block;
+		top: $r1-match-height*3.5 + $r1-match-margin-bottom*3.5 + 10px;
+		left: $match-width*2.2;
+		content: "SOUTH";
+		font-size: 32px;
+		color: #d9d9d9;
+		z-index: 10;
+	}
+}
+
+.region#west {
+	&:before {
+		position: absolute;
+		display: block;
+		top: $r1-match-height*3.5 + $r1-match-margin-bottom*3.5 + 10px;
+		left: $match-width*2.2;
+		content: "WEST";
+		font-size: 32px;
+		color: #d9d9d9;
+		z-index: 10;
+	}
+}
+
+.region#east {
+	&:before {
+		position: absolute;
+		display: block;
+		top: $r1-match-height*3.5 + $r1-match-margin-bottom*3.5 + 10px;
+		right: $match-width*2.2;
+		content: "EAST";
+		font-size: 32px;
+		color: #d9d9d9;
+		z-index: 10;
+	}
+}
+
+.region#midwest {
+	&:before {
+		position: absolute;
+		display: block;
+		top: $r1-match-height*3.5 + $r1-match-margin-bottom*3.5 + 10px;
+		right: $match-width*2.1;
+		content: "MIDWEST";
+		font-size: 32px;
+		color: #d9d9d9;
+		z-index: 10;
+	}
+}
+
 
 ul.round1 {
 	li.match {
@@ -169,3 +245,58 @@ li.team1, li.team2 {
 	text-overflow: ellipsis;
 	width: 100%;
 }
+
+li.region-winner {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	padding: $match-padding;
+	width: $match-width;
+	margin-top: $region-winner-margin-top;
+	border-bottom: 1px solid black;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;   
+}
+
+.final-four {
+	float: left;
+	width: $final-four-width;
+	margin-top: $final-four-margin-top;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;
+	.final-four-inner {
+		-webkit-box-sizing: border-box; 
+		-moz-box-sizing: border-box;    
+		box-sizing: border-box;
+		border-left: solid 1px black;
+		border-right: solid 1px black;
+		height: $final-four-inner-height;
+		margin-top: $final-four-inner-margin-top;
+
+
+		// ------- FIX THESE!! --------
+		.south-east, .west-midwest {
+			-webkit-box-sizing: border-box; 
+			-moz-box-sizing: border-box;    
+			box-sizing: border-box; 
+			padding: $match-padding;
+			border-bottom: 1px solid black;
+			width: $match-width;
+		}
+		.south-east {
+			margin-top: $r1-match-height*1.5 + $r1-match-margin-bottom*1.5;
+			float: left;
+		}
+		.west-midwest {
+			margin-top: $r1-match-height*6.5 + $r1-match-margin-bottom*6.5;
+			float: right;
+			text-align: right;
+		}
+		// --------------------------
+
+
+	}
+}
+
