@@ -5,6 +5,7 @@ Sids::Application.routes.draw do
   match '/choice' => 'home#choice'
   match '/getgames' => 'games#getGames'
   match '/account' => 'account#myaccount'
+  match '/landing' => 'home#landing'
   resources :brackets
   resources :payments
   
