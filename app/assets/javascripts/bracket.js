@@ -72,14 +72,20 @@ function doAction(json) {
 
         var bracket;
         if ((bracket = self.complete(type)) !== false) {
+            if (curr_level === 1) {
+                if ($("#bracket_name").val()) {
+                    window.bracket_name = $("#bracket_name").val();
+                }
+                else {
+                    window.bracket_name = prompt("Please enter a bracket name");
+                }
+                $("#bracket_naming").hide();
+                $("#bracket_name").hide();
+            }
+
             if (confirm("Would you like to go to the next level?") === true) {
                 window.curr_level = window.curr_level + 1;
                 $('h1#bracket_instr').text("Make your picks for round "+window.curr_level+":");
-                if(window.curr_level == 2) {
-                    window.bracket_name = $("#bracket_name").val();
-                    $("#bracket_naming").hide();
-                    $("#bracket_name").hide();
-                }
                 $('#level' + type).fadeOut();
                 self.levels[+type+1](bracket);
                 $('#level' + (+type+1)).fadeIn();
