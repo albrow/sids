@@ -22,12 +22,17 @@
                   <%= link_to "My Account", '/account' %>
                 </li>
                 <li>
+                  <%= link_to "My Brackets", brackets_path %>
+                </li>
+                <li>
                   <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
                 </li>
               </ul>
             </li>
           <% else %>
-            <li class="cursive btn-primary"><a href="#signups" data-toggle="modal"/>Get Started</li>
+          <li>
+            <%= link_to "Get Started", '#signups', :class => 'cursive btn-primary', :'data-toggle' => 'modal'%>
+          </li>
           <% end %>
         </ul>
       </div><!--/.nav-collapse -->
@@ -37,7 +42,7 @@
 
 <div class="modal hide fade" id="signups">
     <div class="modal-header" tabindex="-1" role="dialog" aria-hidden="true">
-        <button type="button" class="close" aria-hidden="true">&times;</button>
+        <button type="button" class="close" aria-hidden="true" data-dismiss="modal">&times;</button>
         <h3 class="cursive">Get Started</h3>
     </div>
     <div class="modal-body">
