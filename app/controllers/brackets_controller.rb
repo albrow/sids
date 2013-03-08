@@ -35,13 +35,20 @@ class BracketsController < ApplicationController
     @regions = {}
     ['south', 'west', 'east', 'midwest'].map do |region|
       @regions[region] = [@games.select {|game| game.region == region}]
-      1.upto(4) do |round|
+      1.upto(5) do |round|
         predictions = @bracket.predictions.select do |prediction|
           prediction.region == region and prediction.round_id == round
         end
         @regions[region] << predictions
       end
     end
+
+    # --- FIX THIS ----
+    @south_east = @bracket.region(:south_east)
+    @west_midwest = @bracket.region(:west_midwest)
+    # -----------------
+
+    @championship = @bracket.region(:championship)
 
     respond_to do |format|
       format.html  # index.html.erb
