@@ -72,6 +72,7 @@ function doAction(json) {
                     'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
                 }
             }).done(function( msg ) {
+              window.location = "/payments/new";
               if (eval(msg)) {
                 console.log("bracket was created!");
             } else {
