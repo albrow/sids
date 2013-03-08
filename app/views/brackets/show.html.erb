@@ -50,6 +50,14 @@
 			<div class="west-midwest">
 				<%= @west_midwest.first.winner.name %>
 			</div>
+			<div class="champion">
+				<div class="champion-inner">
+					<div class="champion-image-container">
+						<%= image_tag @championship.first.winner.image, :class => "champion-image" %>
+					</div>	
+					<%= @championship.first.winner.name %>
+				</div>
+			</div>
 		</div>
 		<div class="clearfix"></div>
 	</div>

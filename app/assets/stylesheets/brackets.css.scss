@@ -296,6 +296,25 @@ li.region-winner {
 		}
 		// --------------------------
 
+		.champion {
+			position: absolute;
+			top: $r1-match-height*8 + $r1-match-margin-bottom*8 + $region-margin-top - 30px;
+			left: 0;
+			right: 0;
+			text-align: center;
+			font-size: 18px;
+			font-weight: bold;
+			.champion-inner {
+				display: block;
+				width: 100%;
+				margin: 0 auto;
+				text-align: center;
+				.champion-image {
+					width: $match-width - 10px;
+					margin-bottom: 10px;
+				}
+			}
+		}
 
 	}
 }
