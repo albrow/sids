@@ -1,5 +1,7 @@
-$.get('/getgames.json', function(data) {
-    ko.applyBindings(new doAction(data));
+$(function () {
+    $.get('/getgames.json', function(data) {
+        ko.applyBindings(new doAction(data));
+    });
 });
 
 function doAction(json) {
