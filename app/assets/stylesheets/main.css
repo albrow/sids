@@ -91,6 +91,13 @@ footer .links li {
   display: inline-block;
   margin-left: 20px;
 }
+footer .share li {
+  display: inline;
+  margin-left: 5px;
+}
+footer .share li .twitter-follow-button {
+  vertical-align: text-bottom;
+}
 footer .rights {
   font-size: 13px;
 }

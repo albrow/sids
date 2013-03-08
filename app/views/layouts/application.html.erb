@@ -16,6 +16,7 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar">
+  <div id="fb-root"></div>
 
   <%= render "shared/navbar" %>
 
@@ -31,6 +32,14 @@
   <%= yield %>
 
   <footer>
+    <ul class="unstyled share center">
+      <li>
+        <div class="fb-like" data-href="https://www.facebook.com/brackets4life" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="arial"></div>
+      </li>
+      <li>
+        <a href="https://twitter.com/brackets4life" class="twitter-follow-button" data-show-count="false">Follow @brackets4life</a>
+      </li>
+    </ul>
     <ul  class="unstyled credit center">
       <li rel="tooltip" title="Any feedback is welcome. Reach out to me on twitter (@cameronmaske) or drop me an email cam[at]closedlooplabs.co.uk" data-placement="top"> 
         Built by <a href="http://incube.us"> InCube </a> from <a href="http://entrepreneurship.duke.edu/campus-resources"> Duke University </a>
