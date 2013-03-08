@@ -29,6 +29,8 @@ TODO:
 
 Estimate: 12 hours (worst: 15 hours)
 
+- REMOVE the ACTUAL FACEBOOK KEYS from the app before push to PRODUCTION!!!
+
 
 
 LATER:

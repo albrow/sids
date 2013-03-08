@@ -18,12 +18,12 @@ class BracketsController < ApplicationController
 	def create
 		respond_to do |format|
 	    format.html  # index.html.erb
-	    format.json  { 
+	    format.json  {
 				@bracket = Bracket.create_from_json params[:bracket]
 				@bracket.name = params[:name]
 				current_user.brackets << @bracket
 				current_user.save
-				render :text => "true"
+				render json: @bracket
 	    }
 	  end
 	end
@@ -35,28 +35,32 @@ class BracketsController < ApplicationController
 				@bracket.region(:south).round(1),
 				@bracket.region(:south).round(2),
 				@bracket.region(:south).round(3),
-				@bracket.region(:south).round(4)
+				@bracket.region(:south).round(4),
+				@bracket.region(:south).round(5)
 		]
 		@west = [
 				Game.region(:west).round(0),
 				@bracket.region(:west).round(1),
 				@bracket.region(:west).round(2),
 				@bracket.region(:west).round(3),
-				@bracket.region(:west).round(4)
+				@bracket.region(:west).round(4),
+				@bracket.region(:west).round(5)
 		]
 		@east = [
 				Game.region(:east).round(0),
 				@bracket.region(:east).round(1),
 				@bracket.region(:east).round(2),
 				@bracket.region(:east).round(3),
-				@bracket.region(:east).round(4)
+				@bracket.region(:east).round(4),
+				@bracket.region(:east).round(5)
 		]
 		@midwest = [
 				Game.region(:midwest).round(0),
 				@bracket.region(:midwest).round(1),
 				@bracket.region(:midwest).round(2),
 				@bracket.region(:midwest).round(3),
-				@bracket.region(:midwest).round(4)
+				@bracket.region(:midwest).round(4),
+				@bracket.region(:midwest).round(5)
 		]
 		@regions = {
 			:south => @south,
@@ -64,6 +68,15 @@ class BracketsController < ApplicationController
 			:east => @east,
 			:midwest => @midwest
 		}
+
+		# --- FIX THIS ----
+		@south_east = @bracket.region(:south_east)
+		@west_midwest = @bracket.region(:west_midwest)
+		# -----------------
+
+		@championship = @bracket.region(:championship)
+
+		
 		respond_to do |format|
 	    format.html  # index.html.erb
 	    format.json  { render :json => @bracket }

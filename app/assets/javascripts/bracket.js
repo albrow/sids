@@ -1,5 +1,7 @@
-$.get('/getgames.json', function(data) {
-    ko.applyBindings(new doAction(data));
+$(function () {
+    $.get('/getgames.json', function(data) {
+        ko.applyBindings(new doAction(data));
+    });
 });
 
 function doAction(json) {
@@ -71,8 +73,8 @@ function doAction(json) {
                     'X-Transaction': 'POST Example',
                     'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
                 }
-            }).done(function( msg ) {
-              window.location = "/payments/new";
+            }).done(function( bracket ) {
+              window.location = "/brackets/" + bracket.id + "/payment/new";
               if (eval(msg)) {
                 console.log("bracket was created!");
             } else {

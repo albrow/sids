@@ -1,15 +1,18 @@
-<h1>NOTE: This should be formatted prettily at some point. (Alex can do this)</h1>
-<h3>But for now all the data you need is heres</h3>
 
-<br/>
-<br/>
-
+<% if not @bracket.active %>
+<div class="alert alert-error">
+  <p>
+    The bracket is not active.
+    Click <%= link_to "here", new_bracket_payment_path(@bracket) %> to activate.
+  </p>
+</div>
+<% end %>
 
 <div class="bracket">
 	<div class="clearfix"></div>
 	<% @regions.each_pair do |name, region| %>
 		<div class="region" id="<%= name %>" data-region="<%= name %>">
-			<ul class="round" id="<%= name %>-1" data-region="<%= name %>" data-round="1">
+			<ul class="round round1" id="<%= name %>-1" data-region="<%= name %>" data-round="1">
 				<% region[0].each do |match| %>
 					<li class="match" id="<%= match.match_id %>">
 						<ul class="teams">
@@ -19,7 +22,7 @@
 					</li>
 				<% end %>
 			</ul>
-			<% region.drop(1)[0..2].each_with_index do |round, i| %>
+			<% region[1..3].each_with_index do |round, i| %>
 				<ul class="round round<%= i+2 %>" id="<%= name %>-<%= i+2 %>" data-region="<%= name %>" data-round="<%= i+2 %>">
 					<% region[i+1].each_slice(2).with_index do |preds, j| %>
 						<li class="match" id="<%= region[i+2][j].match_id %>">
@@ -31,8 +34,32 @@
 					<% end %>
 				</ul>
 			<% end %>
+			<ul class="round round5" id="<%= name %>-5" data-region="<%= name %>" data-round="5">
+				<li class="region-winner">
+					<%= region[4].first.winner.name %>
+				</li>
+			</ul>
 			<div class="clearfix"></div>
 		</div>
 	<% end %>
+	<div class="final-four">
+		<div class="final-four-inner">
+			<div class="south-east">
+				<%= @south_east.first.winner.name %>
+			</div>
+			<div class="west-midwest">
+				<%= @west_midwest.first.winner.name %>
+			</div>
+			<div class="champion">
+				<div class="champion-inner">
+					<div class="champion-image-container">
+						<%= image_tag @championship.first.winner.image, :class => "champion-image" %>
+					</div>	
+					<%= @championship.first.winner.name %>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
 	<div class="clearfix"></div>
 </div>
