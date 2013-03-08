@@ -75,7 +75,7 @@ class Bracket < ActiveRecord::Base
   # predictions. The winner_id of unplayed games is 0.
   def self.official_predictions
     # UNIMPLEMENTED
-    Bracket.last.predictions
+    []
   end
 
 end
