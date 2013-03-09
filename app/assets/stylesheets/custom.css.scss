@@ -10,22 +10,17 @@
 body {
   
 }
-
 *:not(input) {
   &:focus, &:active {
     outline: none;
     outline-color: none;
     outline-style: none;
-    fuck-you: yes;
   }
 }
-
 //--- moved from main.css (Arun's CSS)
-
 body{
   background-color: rgb(245, 245, 245);
 }
-
 .navbar{
   background:url("../img/subtle_carbon.png") repeat #1c1c1c;
 }
@@ -44,7 +39,6 @@ body{
   position: relative;
   top: 0px;
 }
-
 .notice, .alert{
   color: #000000;
   text-align: center;
@@ -54,11 +48,9 @@ body{
 footer{
   padding:40px 0 30px 0;
 }
-
 .navbar-transparent .nav .active > a, .navbar-transparent .nav .active > a:hover, .navbar-transparent .nav .active > a:focus{
   background-color:none;
 }
-
 .inline {
   display: inline;
 }
