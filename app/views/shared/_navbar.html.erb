@@ -9,7 +9,11 @@
       <a class="brand" href="/"><%= image_tag("logo.png")%><h1>Brackets4Life</h1></a>
       <div class="nav pull-right">
         <ul class="nav">
-          <li><a href="/">Home</a></li>
+          <% if current_user %>
+            <li><a href="/landing">Home</a></li>
+          <% else %>
+            <li><a href="/">Home</a></li>
+          <% end %>
           <li><a href="/about">About Us</a></li>
           <% if current_user %>
             <li class="dropdown">
@@ -18,9 +22,10 @@
                 <i class="icon-caret-down"></i>
               </a>
               <ul class="dropdown-menu">
-                <!-- <li>
+                <li>
                   <%= link_to "My Account", '/account' %>
                 </li>
+                <!--
                 <li>
                   <%= link_to "My Brackets", brackets_path %>
                 </li> -->
