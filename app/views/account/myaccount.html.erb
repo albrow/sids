@@ -6,14 +6,21 @@
 						<h1>Welcome to Brackets for Life!</h1>
 					</div>
 					<div class="waiting-info">
-						Thank you for creating an account. Selection Sunday will be on Sunday, March 17.
+						Thank you for creating an account. Selection Sunday will be on <strong>Sunday, March 17</strong>.
 						After all the teams have been selected for the tournament, you will be able to start
-						creating brackets. Use the form below if you would like to recieve a reminder via email.
+						creating brackets.
+						If you check the box below (and press submit), we will send you a reminder when it is time
+						to start creating your brackets.
 					</div>
-					<div class="waiting-list-form">
-						<%= form_tag do |f|%>
-							<%# TODO: add a form for changing email preferences %>
+					<div class="waiting-list-form-container">
+						<%= form_tag "/account/update_notification_prefs", :method => "post", :class => "form-inline waiting-list-form" do |f|%>
+							<%= check_box_tag(:should_notify_on_sunday, @should_notify, @should_notify) %> &nbsp;
+							<%= label_tag :should_notify_on_sunday, "Notify me when I can start making brackets", :class => "inline checkbox" %>
+							<br/>
+							<br/>
+							<%= submit_tag "Submit", :class => "btn" %>
 						<% end %>
+						<div class="clear-fix"></div>
 					</div>
 				</div>
 			</div>
