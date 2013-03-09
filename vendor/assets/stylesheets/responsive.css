@@ -7,8 +7,19 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-.clearfix {
-  *zoom: 1;
+
+
+/*
+
+==========================================
+  For now I've disabled responsiveness since it was breaking things and doing more harm
+  than good. If we really wanted to we can add it back in later.
+==========================================
+
+*/
+
+/*.clearfix {
+ *zoom: 1;
 }
 .clearfix:before,
 .clearfix:after {
@@ -999,3 +1010,4 @@ input.input-large {
   padding: 10px 12px 11px;
   height: auto;
 }
+*/

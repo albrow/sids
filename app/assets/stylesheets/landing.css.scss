@@ -1,0 +1,23 @@
+// Styles for the Landing Page
+// visit it at /landing
+
+
+//-- moved from main.css (Arun's CSS)
+
+.video {
+  padding-top: 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.video iframe{
+  /*width: 80%;
+  height: 80%;*/
+  width: 640px;
+  height: 480px;
+}
+//----
+
+#landing-video {
+	background-color: #000;
+}
