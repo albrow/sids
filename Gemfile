@@ -11,6 +11,7 @@ end
 group :production do
   gem 'thin'
   gem 'pg'
+  gem 'newrelic_rpm'
 end
 
 
