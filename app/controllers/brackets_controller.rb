@@ -1,6 +1,7 @@
 class BracketsController < ApplicationController
+  before_filter :authenticate_user!, except: [:edit, :update, :destroy]
+  before_filter :verify_bracket_user, only: [:edit, :update, :destroy]
 
-  before_filter :authenticate_user!
 
   def index
     # list all the brackets for the current user
@@ -65,9 +66,19 @@ class BracketsController < ApplicationController
   end
 
   def destroy
-    @bracket = Bracket.find(params[:id])
     @bracket.destroy
     redirect_to account_path
+  end
+
+
+  private
+
+  def verify_bracket_user
+    authenticate_user!
+    @bracket = Bracket.find(params[:id])
+    if @bracket.user != current_user
+      render nothing: true, status: :forbidden
+    end
   end
 
 end
