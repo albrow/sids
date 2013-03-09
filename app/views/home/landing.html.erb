@@ -1,7 +1,30 @@
     <section class="center" id="landing-video">
-        <div class="container">
-            <div class="video" rel="tooltip" data-placement="right">
-                <iframe class="video-right" src="http://player.vimeo.com/video/61319484" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-            </div>
-        </div>
+    	<div class="container">
+    		<div class="hero landing-hero">
+    			<h1>Create a bracket and help fight against Sudden Infant Death Syndrome!</h1>
+    			<button class="btn btn-primary btn-large">
+    			<%= link_to "Get Started", '#signups', :'data-toggle' => 'modal'%>
+    		</button>
+    		</div>
+    		<div class="video" rel="tooltip" data-placement="right">
+    			<iframe src="http://player.vimeo.com/video/61319484" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    		</div>
+    	</div>
     </section>
+
+    <div class="modal hide fade" id="signups">
+    	<div class="modal-header" tabindex="-1" role="dialog" aria-hidden="true">
+    		<button type="button" class="close" aria-hidden="true" data-dismiss="modal">&times;</button>
+    		<h3 class="cursive">Get Started</h3>
+    	</div>
+    	<div class="modal-body">
+    		<article class="center">
+    			<%= link_to "  Sign in with Facebook", user_omniauth_authorize_path(:facebook), :class => 'btn icon-facebook' %>
+    		</article>
+    		<article class="center">
+    			<%= link_to "  Sign in with Email", new_user_registration_path, :class => 'btn icon-signin' %>
+    		</article>  
+    	</div>
+    	<div class="modal-footer">
+    	</div>
+    </div>

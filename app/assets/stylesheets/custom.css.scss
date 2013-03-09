@@ -11,6 +11,14 @@ body {
   
 }
 
+*:not(input) {
+  &:focus, &:active {
+    outline: none;
+    outline-color: none;
+    outline-style: none;
+    fuck-you: yes;
+  }
+}
 
 //--- moved from main.css (Arun's CSS)
 
@@ -28,6 +36,7 @@ body{
   top: 5px;
 }
 .navbar .nav li{
+  outline:none;
   position: relative;
   top: 20px;
 }
@@ -42,8 +51,13 @@ body{
   background-color: #cccccc;
   padding: 2px 2px 2px 2px;
 }
+footer{
+  padding:40px 0 30px 0;
+}
 
-//-----
+.navbar-transparent .nav .active > a, .navbar-transparent .nav .active > a:hover, .navbar-transparent .nav .active > a:focus{
+  background-color:none;
+}
 
 .inline {
   display: inline;
