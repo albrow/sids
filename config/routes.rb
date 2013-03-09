@@ -2,13 +2,12 @@ Sids::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   match '/about' => 'home#about'
-  match '/choice' => 'home#choice'
   match '/getgames' => 'games#getGames'
   match '/account' => 'account#myaccount'
   match '/landing' => 'home#landing'
-  resources :brackets do
-    resource :payment, only: [:new, :create]
-  end
+  # resources :brackets do
+  #   resource :payment, only: [:new, :create]
+  # end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

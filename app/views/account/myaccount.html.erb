@@ -1,58 +1,21 @@
-<div id="load">
-	<section class="center" id="mission">
-		<div class="container-fluid">
-			<div class="row-fluid">
-				<div class="span10 offset1">
+	<section class="center" id="account">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
 					<div class="hero ">
 						<h1>Welcome to Brackets for Life!</h1>
+					</div>
+					<div class="waiting-info">
+						Thank you for creating an account. Selection Sunday will be on Sunday, March 17.
+						After all the teams have been selected for the tournament, you will be able to start
+						creating brackets. Use the form below if you would like to recieve a reminder via email.
+					</div>
+					<div class="waiting-list-form">
+						<%= form_tag do |f|%>
+							<%# TODO: add a form for changing email preferences %>
+						<% end %>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="center" id="team">
-		<div class="container-fluid">
-			<div class="row-fluid">
-				<div class="span6 offset3">
-						<h2><a class="btn btn-large btn-block" href="/brackets/new">Make a new Bracket</a></h2>
-					<div class="widget widget-table table-half">
-           
-			          <div class="widget-header">
-			            <i class="icon-th-list"></i>
-			            <h3>My Brackets</h3>
-			          </div> <!-- /widget-header -->
-			          
-			          <div class="widget-content">
-			          
-			            <table class="table table-striped table-bordered">
-			              <thead>
-			                <tr>
-			                  <th>Name</th>
-			                  <th>Options</th>
-			                </tr>
-			              </thead>
-			              
-			              <tbody>
-			              	<% @brackets.each do |b| %>
-							<tr>
-								<td><%= link_to b.name, b %></td>
-						        <td>
-						        	<div class="center_remover">
-						        	<a href=<%= bracket_path(b) %> data-method="delete" data-confirm="Are you sure?">
-						        		<i class="icon-remove-circle"></i>
-						      		</a>
-						      		</div>
-						      	</td>
-						    </tr>
-						<% end %>
-			              </tbody>
-			            </table>
-			          
-			          </div> <!-- /widget-content -->
-			          
-			        </div>
-				</div>
-			</div>
-		</div>
-	</section>
-</div>

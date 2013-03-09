@@ -5,10 +5,16 @@ class AccountController < ApplicationController
   def myaccount
   	@user = current_user
   	# list all the brackets for the current user
-	@brackets = current_user.brackets
-	respond_to do |format|
+  	@brackets = current_user.brackets
+  	respond_to do |format|
 	    format.html  # index.html.erb
 	    format.json  { render :json => @brackets }
     end
   end
+
+  def update_notification_prefs
+    raise params.to_yaml
+  end
+
+
 end
