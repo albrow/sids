@@ -1,0 +1,43 @@
+// =============================================
+//
+// 	This is where we can apply custom css on top of
+// 	the bootswatch theme. If you're writing css that affects
+// 	every page, put it here!
+//
+// =============================================
+
+
+
+//--- moved from main.css (Arun's CSS)
+
+body{
+  background-color: rgb(245, 245, 245);
+}
+
+.navbar{
+  background:url("../img/subtle_carbon.png") repeat #1c1c1c;
+}
+.navbar .brand h1{
+  font-size: 24px;
+  display: inline;
+  position: relative;
+  top: 5px;
+}
+.navbar .nav li{
+  position: relative;
+  top: 20px;
+}
+.navbar .nav .dropdown li{
+  position: relative;
+  top: 0px;
+}
+
+.notice, .alert{
+  color: #000000;
+  text-align: center;
+  background-color: #cccccc;
+  padding: 2px 2px 2px 2px;
+}
+
+//-----
+

@@ -1,3 +1,20 @@
+/*
+===============================================================
+
+    This is from the bootswatch theme. DON'T EDIT THIS FILE!
+
+    For styles that affect the whole site:
+        - put them in custom.css.scss
+
+    For other styles affecting only certain pages:
+        - put them in the css file corresponding to the specific page
+          usually this the css file has the same name as the page.
+        - if there isn't a css file for that page, create one.
+
+===============================================================
+*/
+
+
 .clearfix {
   *zoom: 1;
 }
@@ -138,147 +155,3 @@ footer .rights {
 .feature p {
   padding: 0 48px;
 }
-
-/* Arun's CSS */
-#about .container{
-  margin: 0px 0px 0px 0px;
-  width: 100%;
-}
-#about .container .offset1{
-  margin-left: 0px;
-  width: 100%;
-}
-#about .container .row{
-  margin-left: 0px;
-}
-.video {
-  padding-top: 0px;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-}
-.video iframe{
-  /*width: 80%;
-  height: 80%;*/
-  width: 640px;
-  height: 480px;
-}
-body{
-  background:url("../img/subtle_carbon.png") repeat;
-}
-#load #mission, #load #team{
-  background-color: rgb(245, 245, 245);
-}
-.navbar{
-  background:url("../img/subtle_carbon.png") repeat #1c1c1c;
-}
-.navbar .brand h1{
-  font-size: 24px;
-  display: inline;
-  position: relative;
-  top: 5px;
-}
-.navbar .nav li{
-  position: relative;
-  top: 20px;
-}
-.navbar .nav .dropdown li{
-  position: relative;
-  top: 0px;
-}
-.devise-errors #error_explanation h2{
-  font-size: 16px;
-  color: #EE1527;
-}
-.devise-errors #error_explanation ul{
-  list-style-type: none;
-  text-align: center;
-  color: #EE1527;
-}
-.notice, .alert{
-  color: #000000;
-  text-align: center;
-  background-color: #cccccc;
-  padding: 2px 2px 2px 2px;
-}
-#remember_me label{
-  display: inline;
-}
-#remember_me input{
-  position: relative;
-  bottom: 3px;
-}
-#load p{
-  text-align: justify;
-}
-#story .img1{
-  background: url(../img/michael.jpg);
-  height: 600px;
-  width: 900px;
-}
-#story .img2{
-  background: url(../img/incube.jpg);
-  height: 600px;
-  width: 900px;
-}
-
-/* Ashley's CSS */
-
-/*Define Accordion box*/  
-.accordion {   
- width:100%;  
- overflow:hidden;     
- padding:10px;  
- color:#414141;  
- margin-bottom: 0px; 
-}  
-
-.accordion section{   
-  float:left;  
-  overflow:hidden;    
-  cursor:pointer;      
-  margin:3px;   
-}  
-
-.accordion section p {   
-  display:none;   
-}    
-
-.accordion section:target {   
-  background-color: rgba(255,255,255,0.9);
-}  
-
-.accordion section:target p {
-  padding: 0 20px 20px 20px;
-  font-size: 18px;
-  line-height: 1.5; 
-  display:block;  
-} 
-
-.horizontal section{  
-  width:24%; 
-  height:100%;   
-  -moz-transition: width 0.2s ease-out;   
-  -webkit-transition:width 0.2s ease-out;  
-  -o-transition:width 0.2s ease-out;  
-  transition:width 0.2s ease-out;  
-}  
-
-/*Header of closed slide*/  
-.horizontal section h2 {
-  color:#FFF;    
-  font-size: 40px;
-  line-height:1.5;   
-  position:relative;    
-  margin-top:100px;  
-}   
-/*On mouse over open slide*/  
-.horizontal :target{   
- width:74%;  
- height:100%;   
-}  
-.horizontal :target h2{   
- margin-top:20px;   
- color:#333;
- font-size: 28px;
-}  

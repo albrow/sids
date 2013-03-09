@@ -1,0 +1,23 @@
+// Styles for the devise pages: sign up, sign in, etc.
+// All the views affected are in /app/views/devise/
+
+
+//-- moved from main.css (Arun's css)
+
+.devise-errors #error_explanation h2{
+  font-size: 16px;
+  color: #EE1527;
+}
+.devise-errors #error_explanation ul{
+  list-style-type: none;
+  text-align: center;
+  color: #EE1527;
+}
+
+#remember_me label{
+  display: inline;
+}
+#remember_me input{
+  position: relative;
+  bottom: 3px;
+}
