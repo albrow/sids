@@ -20,4 +20,7 @@
 .button.button-primary {
 	background-color: #0088cc;
 	color: white;
+	&:hover {
+		background-color: lighten(#0088cc, 14%);
+	}
 }
