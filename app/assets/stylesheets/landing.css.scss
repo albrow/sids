@@ -60,3 +60,29 @@
 	position:relative;
 	top:1px;
 }
+
+.how-it-works {
+	margin: 60px 0px 60px 0px;
+}
+
+.step {
+	.step-description {
+		margin-top: 15px;
+	}
+	.step-image {
+		width: 150px;
+		padding: 25px;
+	}
+	p {
+		font-size: 20px;
+		line-height: 28px;
+	}
+}
+
+.additional-details {
+	margin-top: 40px;
+	p {
+		font-size: 20px;
+		line-height: 28px;
+	}
+}
