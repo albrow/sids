@@ -1,5 +1,4 @@
-<div id="load">
-	<section class="dark" id="story">
+	<section class="dark">
 		<div class="container">
 			<div class="row">
 				<div class="span12 center">
@@ -17,7 +16,7 @@
 					<div id="remember_me"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div><br/>
 					<% end -%>
 
-					<div><%= f.submit "Sign In" %></div>
+					<div><%= f.submit "Sign In", :class => "button button-primary cursive"%></div>
 					<% end %>
 
 					<div><%= render "devise/shared/links" %></div>
@@ -26,4 +25,3 @@
 			</div>
 		</div>
 	</section>
-</div>
