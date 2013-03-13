@@ -6,6 +6,10 @@ The two videos explains more about our story and our mission.
 
 Brackets will open up on March 17th, when the actual teams come out.
 
+
+More Information
+================
+
 The Website:
 http://www.brackets4life.com/
 
