@@ -5,9 +5,12 @@ Sids::Application.routes.draw do
   match '/getgames' => 'games#getGames'
   match '/account' => 'account#myaccount'
   match '/landing' => 'home#landing'
-  # resources :brackets do
-  #   resource :payment, only: [:new, :create]
-  # end
+
+  if !Rails.env.production?
+    resources :brackets do
+      resource :payment, only: [:new, :create]
+    end
+  end
 
   match '/account/update_notification_prefs' => 'account#update_notification_prefs'
 
