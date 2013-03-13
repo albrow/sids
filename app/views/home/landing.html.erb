@@ -1,58 +1,74 @@
-    <section class="center" id="landing-video">
-    	<div class="container">
-    		<div class="hero landing-hero">
-    			<h1>Create a bracket and help fight against Sudden Infant Death Syndrome!</h1>
-    			<%= link_to "Get Started", '#signups', :'data-toggle' => 'modal', :class => "landing-button cursive"%>
-    		</div>
-    		<div class="video" rel="tooltip" data-placement="right">
-    			<iframe src="http://player.vimeo.com/video/61319484?title=0&byline=0&portrait=0&color=#0088cc" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-    		</div>
-    	</div>
-    </section>
+<section class="center" id="landing-video">
+	<div class="container">
+		<div class="hero landing-hero">
+			<h1>Create a bracket and help fight against Sudden Infant Death Syndrome!</h1>
+			<%= link_to "Get Started", '#signups', :'data-toggle' => 'modal', :class => "button button-primary landing-button cursive"%>
+		</div>
+		<div class="video" rel="tooltip" data-placement="right">
+			<iframe src="http://player.vimeo.com/video/61319484?title=0&byline=0&portrait=0&color=0088cc" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		</div>
+	</div>
+</section>
 
-    <!-- <section class="how-it-works">
-        <div class="container">
-            <h1 class="center huge">How It Works</h1>
-            <div class="row step step1">
-                <div class="span3">
-                    <%= image_tag "http://placehold.it/200x200", :class => "step-image" %>
-                </div>
-                <div class="span9">
-
-                </div>
-            </div>
-            <div class="row step step2">
-                <div class="span3">
-                    <%= image_tag "http://placehold.it/200x200", :class => "step-image" %>
-                </div>
-                <div class="span9">
-
-                </div>
-            </div>
-            <div class="row step step3">
-                <div class="span3">
-                    <%= image_tag "http://placehold.it/200x200", :class => "step-image" %>
-                </div>
-                <div class="span9">
-
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <div class="modal hide fade" id="signups">
-    	<div class="modal-header" tabindex="-1" role="dialog" aria-hidden="true">
-    		<button type="button" class="close" aria-hidden="true" data-dismiss="modal">&times;</button>
-    		<h3 class="cursive">Get Started</h3>
-    	</div>
-    	<div class="modal-body">
-    		<article class="center">
-    			<%= link_to "  Sign in with Facebook", user_omniauth_authorize_path(:facebook), :class => 'btn icon-facebook' %>
-    		</article>
-    		<article class="center">
-    			<%= link_to "  Sign in with Email", new_user_registration_path, :class => 'btn icon-signin' %>
-    		</article>  
-    	</div>
-    	<div class="modal-footer">
-    	</div>
-    </div>
+<section class="how-it-works">
+	<div class="container">
+		<h1 class="center huge">How It Works</h1>
+		<div class="row step step1">
+			<div class="span3">
+				<%= image_tag "icon-step1.png", :class => "step-image" %>
+			</div>
+			<div class="span9 step-description">
+				<h2>1. Sign up with Facebook or Email</h2>
+				<p>
+					You can get started by
+					<%= link_to "connecting with Facebook", user_omniauth_authorize_path(:facebook) %>
+					or using an
+					<%= link_to "email/password combination", new_user_registration_path %>.
+					If you connect with Facebook, we
+					will never post to your wall without your permission.
+				</p>
+			</div>
+		</div>
+		<div class="row step step2">
+			<div class="span3">
+				<%= image_tag "icon-step2.png", :class => "step-image" %>
+			</div>
+			<div class="span9 step-description">
+				<h2>2. Pick your Winners and Create a Bracket</h2>
+				<p>
+					After Selection Sunday, March 17th, you can create one or more
+					"brackets." In other words, you can try to predict the winners of each
+					match in the NCAA Men's Basketball Tournament.
+				</p>
+			</div>
+		</div>
+		<div class="row step step3">
+			<div class="span3">
+				<%= image_tag "icon-step3.png", :class => "step-image" %>
+			</div>
+			<div class="span9 step-description">
+				<h2>3. Choose How Much You'd Like to Donate</h2>
+				<p>
+					The minimum donation for creating a bracket is $2, but you
+					can create as many brackets as you wish and donate as much as
+					you want. You can also donate directly without creating a bracket. 
+				</p>
+			</div>
+		</div>
+		<div class="row additional-details">
+			<div class="span9 offset3">
+				<h2>Additional Details</h2>
+				<p>
+					As the tournament progresses, you'll earn points for every prediction
+					you get right. We'll post a leaderboard of the users with the most
+					points.
+				</p>
+				<p>
+					The proceeds will be divided in half. 50% will go toward research
+					on Sudden Infant Death Syndrome. The top 5 users will each get to
+					donate 10% of the proceeds to the charity of their choice.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>

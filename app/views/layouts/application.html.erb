@@ -36,6 +36,11 @@
 
   <%= render "shared/footer" %>
 
+  <% if !current_user %>
+    <%= render "shared/sign_in_modal" %>
+  <% end %>
+
+
   <%= javascript_include_tag "application" %>
   <script src="https://checkout.stripe.com/v2/checkout.js"></script>
 

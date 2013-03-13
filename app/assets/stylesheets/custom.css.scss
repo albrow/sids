@@ -22,7 +22,7 @@ body{
   background-color: rgb(245, 245, 245);
 }
 .navbar{
-  background:url("../img/subtle_carbon.png") repeat #1c1c1c;
+  background:image-url("subtle_carbon.png") repeat #1c1c1c;
 }
 .navbar .brand h1{
   font-size: 24px;
@@ -53,5 +53,10 @@ footer{
 }
 .inline {
   display: inline;
+}
+
+h1.huge {
+  font-size: 70px;
+  line-height: 90px;
 }
 

@@ -1,0 +1,26 @@
+.button{
+	@extend .cursive;
+	color: #393939;
+	text-decoration: none;
+	padding: 18px 24px 14px 24px;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight:bold;
+	background-color: #ccc;
+	border: none;
+	text-shadow:1px 1px 0px rgba(50,50,50,0.2);
+	&:hover, &:active {
+		background-color: darken(#ccc, 14%);
+		text-decoration: none;
+		color: white;
+	}
+
+}
+
+.button.button-primary {
+	background-color: #0088cc;
+	color: white;
+	&:hover {
+		background-color: lighten(#0088cc, 14%);
+	}
+}

@@ -34,29 +34,31 @@
 }
 .landing-button {
 	margin-top: 10px;
-	border: none;
-	color: white;
-	text-decoration: none;
-	background-color:#0088cc;
-	display:inline-block;
-	color:#ffffff;
-	font-family:arial;
-	font-size:18px;
-	line-height: 18px;
-	font-weight:bold;
-	padding:18px 24px 14px 24px;
-	text-decoration:none;
-	text-shadow:1px 1px 0px #528ecc;
-	&:hover, &:active {
-		background-color: lighten(#0088cc, 14%);
-		text-decoration: none;
-		color: white;
+	display: inline-block;
+}
+
+.how-it-works {
+	margin: 60px 0px 60px 0px;
+}
+
+.step {
+	.step-description {
+		margin-top: 15px;
+	}
+	.step-image {
+		width: 150px;
+		padding: 25px;
+	}
+	p {
+		font-size: 20px;
+		line-height: 28px;
 	}
 }
-.landing-button:hover {
-	background-color:#378de5;
-}
-.landing-button:active {
-	position:relative;
-	top:1px;
+
+.additional-details {
+	margin-top: 40px;
+	p {
+		font-size: 20px;
+		line-height: 28px;
+	}
 }

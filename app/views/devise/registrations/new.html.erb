@@ -1,6 +1,4 @@
-
-<div id="load">
-	<section class="dark" id="story">
+	<section class="dark">
 		<div class="container">
 			<div class="row">
 				<div class="span12 center">
@@ -16,7 +14,7 @@
 
 					<div><%= f.password_field :password_confirmation, :placeholder => 'Password Confirmation' %></div><br/>
 
-					<div><%= f.submit "Sign up" %></div>
+					<div><%= f.submit "Sign Up", :class => "button button-primary cursive"%></div>
 					<% end %>
 
 					<div><%= render "devise/shared/links" %></div>
@@ -25,4 +23,3 @@
 			</div>
 		</div>
 	</section>
-</div>
