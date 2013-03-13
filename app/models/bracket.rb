@@ -15,6 +15,7 @@ class Bracket < ActiveRecord::Base
       round.map do |match|
         match_counter += 1
         {
+
           round_id: index,
           match_id: match_counter,
           winner_id: match["winner"]["id"],
@@ -51,11 +52,13 @@ class Bracket < ActiveRecord::Base
   # - 64 for correct prediction in the championship game
   def score
     games = Hash.new([])
-    official = Bracket.official_predictions
-    (predictions + official).each do |prediction|
-      key = [prediction.match_id,
-             prediction.round_id]
+    predictions.each do |prediction|
+      key = [prediction.match_id, prediction.round_id]
       games[key] += [prediction.winner_id]
+    end
+    Game.includes(:team1, :team2).find_each do |game|
+      key = [game.match_id, game.round_id]
+      games[key] += [game.winner.id] unless game.winner.nil?
     end
 
     score = 0
@@ -66,14 +69,6 @@ class Bracket < ActiveRecord::Base
       end
     end
     score
-  end
-
-  ##
-  # The official standings of the tournament will be represented as a list of
-  # predictions. The winner_id of unplayed games is 0.
-  def self.official_predictions
-    # UNIMPLEMENTED
-    []
   end
 
 end
