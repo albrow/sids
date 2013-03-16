@@ -45,6 +45,6 @@ Sids::Application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   ### For facebook app connections...
-  config.facebook_app_id = "459500930789936"
-  config.facebook_app_secret = "d89425ee0037ac7f313b6b3132ab770d"
+  config.facebook_app_id = ENV['B4L_FACEBOOK_APP_ID']
+  config.facebook_app_secret = ENV['B4L_FACEBOOK_APP_SECRET']
 end

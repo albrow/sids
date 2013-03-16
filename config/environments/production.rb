@@ -73,6 +73,6 @@ Sids::Application.configure do
 
 
   ### For facebook app connections...
-  config.facebook_app_id = "438396916236888"
-  config.facebook_app_secret = "fdc1fbbaeac7313d6d8f50d5d90e1f38"
+  config.facebook_app_id = ENV['B4L_FACEBOOK_APP_ID']
+  config.facebook_app_secret = ENV['B4L_FACEBOOK_APP_SECRET']
 end
