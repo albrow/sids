@@ -24,6 +24,9 @@ body{
 .navbar{
   background:url("/assets/subtle_carbon.png") repeat #1c1c1c;
 }
+.navbar-inner {
+  filter: none; // fix IE bug.
+}
 .navbar .brand h1{
   font-size: 24px;
   display: inline;
