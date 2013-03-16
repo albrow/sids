@@ -2,39 +2,40 @@
 	<section class="center" id="mission">
 		<div class="container">
 			<div class="row">
-				<div class="span8 offset2">
+				<div class="span12">
 					<h1>You are almost done!</h1>
 					<h2>The last step is to donate $2.00 to activate your bracket</h2>
-					<h4>Please consider donating an additional amount to help fund research for Sudden Infant Death Syndrome</h4>
 				</div>
 			</div>
 			<div class="row">
-				<div class="span5 offset4">
+				<div class="span12">
 					<div class="selDiv">
+						<h4>Please consider donating an additional amount to help fund research for Sudden Infant Death Syndrome</h4>
+						<form class="additional-donation-form">
 						<label>Additional Donation</label>
-						<select class="opts">
-							<option value="0">$0</option>
-							<option value="5">$5</option>
-							<option value="10">$10</option>
-							<option value="20">$20</option>
-							<option value="50">$50</option>
-							<option value="100">$100</option>
-							<option value="500">$500</option>
-							<option value="1000">$1,000</option>
-							<option value="5000">$5,000</option>
-						</select>
+							<select class="opts">
+								<option value="0">$0</option>
+								<option value="5">$5</option>
+								<option value="10">$10</option>
+								<option value="20">$20</option>
+								<option value="50">$50</option>
+								<option value="100">$100</option>
+								<option value="500">$500</option>
+								<option value="1000">$1,000</option>
+								<option value="5000">$5,000</option>
+							</select>
+						</form>
 					</div>
 					<%= form_tag bracket_payment_path(@bracket) do %>
 					  <input id="stripe_token" name="stripeToken" type="hidden" value="" />
 					  <input id="payment_amt" name="payment_amt" type="hidden" value="" />
 					  <article>
 					    <label class="amount">
-					      <label>Total</label>
-					      <span id="amt_shown">Amount: $2.00</span>
+					      <span id="amt_shown">Total: $2.00</span>
 					    </label>
 					  </article>
 
-					  <button id="customButton" class="btn-success btn">Purchase</button>
+					  <button id="customButton" class="btn-success btn">Donate</button>
 
 					<% end %>
 				</div>
