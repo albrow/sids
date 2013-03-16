@@ -8,7 +8,7 @@ $(function () {
             //console.log('Got token ID:', res.id);
 
         };
-
+        <% raise "Key not set!" if ENV['B4L_STRIPE_PUBLISHABLE_KEY'].blank? %>
         StripeCheckout.open({
             key:         "<%= ENV['B4L_STRIPE_PUBLISHABLE_KEY'] %>",
             amount:      bill_amt,
