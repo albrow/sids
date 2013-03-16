@@ -6,11 +6,12 @@ Sids::Application.routes.draw do
   match '/account' => 'account#myaccount'
   match '/landing' => 'home#landing'
 
-  if !Rails.env.production?
+  # temporary change for testing payments on production
+  #if !Rails.env.production?
     resources :brackets do
       resource :payment, only: [:new, :create]
     end
-  end
+  #end
 
   match '/account/update_notification_prefs' => 'account#update_notification_prefs'
 
