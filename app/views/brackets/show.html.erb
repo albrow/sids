@@ -8,6 +8,16 @@
 </div>
 <% end %>
 
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<h1 class="center bracket-name"><%= @bracket.name %></h1>
+		</div>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
 <div class="bracket">
 	<div class="clearfix"></div>
 	<% @regions.each_pair do |name, region| %>

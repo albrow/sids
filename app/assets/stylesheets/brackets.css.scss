@@ -47,9 +47,13 @@ $final-four-inner-margin-top: $r1-match-height/2 + $r2-match-height/2 + $r3-matc
 
 // ------- END VARIABLES ---------
 
+.bracket-name {
+	margin-top: 40px;
+}
+
 .bracket {
 	position: relative;
-	background-color: #fff;
+	background-color: #f5f5f5;
 	width: $bracket-width;
 	margin: 0 auto;
 	font-size: $bracket-font-size;
@@ -61,9 +65,8 @@ $final-four-inner-margin-top: $r1-match-height/2 + $r2-match-height/2 + $r3-matc
 		line-height: $bracket-line-height;
 	}
 	margin-bottom: 60px;
-	margin-top: 60px;
-	padding: 0px 40px 40px 40px;
-	overflow: scroll;
+	padding: 0;
+	//overflow: scroll;
 }
 
 .region {
