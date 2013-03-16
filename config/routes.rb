@@ -7,11 +7,11 @@ Sids::Application.routes.draw do
   match '/landing' => 'home#landing'
 
   # comment out the if statement if you want to do payment testing on production.
-  if !Rails.env.production?
+  # if !Rails.env.production?
     resources :brackets do
       resource :payment, only: [:new, :create]
     end
-  end
+  # end
 
   match '/account/update_notification_prefs' => 'account#update_notification_prefs'
 
