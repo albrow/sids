@@ -1,39 +1,9 @@
-TODO:
+This list shows optional future changes. Please use 
+https://github.com/stephenalexbrowne/sids/issues?state=open
+to track necessary TODO items, bugs, and other changes that
+need to be made.
 
-
-- Add payments solution (stripe) = 3 Hours  [DONE]
-
-- Bug loading Knockout.js sometimes
-
-- Create bracket activation and a way to check if they have paid for it
-
-- Functionality of Picks = 15 mins
-	- Add name to a bracket
-
-- UI for picks = 3 hours
-	- index  visit /brackets
-	- show (actual bracket) visit /brackets/:id
-
-- General Functionality = 3 hour
-	- Build a profile page (logged in user)
-	- Fix javascript errors (nothing works in production because of them)
-
-- Instructions = 30 mins
-	- Instructions to guide through how to make his picks in each step
-
-- Add post to facebook upon bracket creation for virality = 1 hour
-
-- Add all sharing buttons = 20 mins
-
-- Fix some of the team icons (Josh)
-
-Estimate: 12 hours (worst: 15 hours)
-
-- REMOVE the ACTUAL FACEBOOK KEYS from the app before push to PRODUCTION!!!
-
-
-
-LATER:
+LATER (optional):
 
 - Implement actual changes in bracket UI as games are won = 2 hours
 - Calculate and store user points so they can see how they are doing = 3 hours
