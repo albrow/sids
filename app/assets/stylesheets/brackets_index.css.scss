@@ -1,0 +1,32 @@
+.brackets-index {
+	margin-bottom: 80px;
+}
+
+.brackets-header {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.new-bracket-button {
+	margin-top: 15px;
+}
+
+.brackets-table {
+	margin-bottom: 60px;
+}
+
+.bracket-delete-button, .bracket-link {
+	color: #393939;
+	&:hover {
+		text-decoration: none;
+		color: #0088cc;
+	}
+}
+
+.bracket-delete-button {
+	margin-right: 10px;
+}
+
+.bracket-link {
+	margin-left: 10px;
+}

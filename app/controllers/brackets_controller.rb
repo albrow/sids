@@ -6,6 +6,9 @@ class BracketsController < ApplicationController
   def index
     # list all the brackets for the current user
     @brackets = current_user.brackets
+    if @brackets.empty?
+      flash[:notice] = "You don't have any brackets yet. <a href='/brackets/new'>Create One!</a>".html_safe
+    end
     respond_to do |format|
       format.html  # index.html.erb
       format.json  { render :json => @brackets }
@@ -67,7 +70,7 @@ class BracketsController < ApplicationController
 
   def destroy
     @bracket.destroy
-    redirect_to account_path
+    redirect_to brackets_path
   end
 
 

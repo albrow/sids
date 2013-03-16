@@ -1,11 +1,14 @@
-<div id="load">
-	<section class="center" id="mission">
-		<div class="container">
-			<div class="row">
-				<div class="span5 offset4">
-					<h2>Thanks, you paid <strong>$<%= (@amt.to_i / 100) %>.00</strong>!</h2>
-				</div>
+<div class="container">
+	<div class="bracket-payment-message">
+		<div class="clearfix"></div>
+		<div class="row">
+			<div class="span12">
+				<h2 class="center">Thanks, you paid <strong>$<%= (@amt.to_i / 100) %>.00</strong>!</h2>
+				<p class="center">
+					<%= link_to "View your new Bracket", @bracket %>
+				</p>
 			</div>
 		</div>
-	</section>
+		<div class="clearfix"></div>
+	</div>
 </div>
