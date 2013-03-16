@@ -7,7 +7,7 @@ class PaymentsController < ApplicationController
 	end
 
 	def create
-      @bracket = Bracket.find(params[:bracket_id])
+    @bracket = Bracket.find(params[:bracket_id])
 
 	  # Amount in cents
 	  @amt = params[:payment_amt]

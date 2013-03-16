@@ -9,8 +9,6 @@ $(function () {
 
         };
 
-        Stripe.setPublishableKey("<%= ENV['B4L_STRIPE_PUBLISHABLE_KEY'] %>");
-
         StripeCheckout.open({
             key:         "<%= ENV['B4L_STRIPE_PUBLISHABLE_KEY'] %>",
             amount:      bill_amt,
