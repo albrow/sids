@@ -7,6 +7,9 @@
 	h2{
 		font-size: 50px;
 	}
+	h3{
+		font-weight: 300px;
+	}
 }
 
 .brackets-header {
@@ -27,6 +30,7 @@
 }
 
 .bracket-delete-button, .bracket-link {
+	color:#393939;
 	&:hover {
 		text-decoration: none;
 		color: #0088cc;
@@ -38,5 +42,6 @@
 }
 
 .bracket-link {
+		color:#393939;
 	margin-left: 10px;
 }
