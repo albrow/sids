@@ -8,7 +8,10 @@ $(function () {
             //console.log('Got token ID:', res.id);
 
         };
-        <% raise "Key not set!" if ENV['B4L_STRIPE_PUBLISHABLE_KEY'].blank? %>
+        <% if ENV['B4L_STRIPE_PUBLISHABLE_KEY'].blank? %>
+            <% raise "ENV variable not set for stripe key! If you're on heroku,
+                    try this: https://devcenter.heroku.com/articles/labs-user-env-compile" %>
+        <% end %>
         StripeCheckout.open({
             key:         "<%= ENV['B4L_STRIPE_PUBLISHABLE_KEY'] %>",
             amount:      bill_amt,
