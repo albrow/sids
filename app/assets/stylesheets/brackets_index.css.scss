@@ -1,10 +1,18 @@
 .brackets-index {
 	margin-bottom: 80px;
+	.container-fluid{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	h2{
+		font-size: 50px;
+	}
 }
 
 .brackets-header {
 	margin-top: 15px;
 	margin-bottom: 15px;
+
 }
 
 .new-bracket-button {
@@ -12,11 +20,13 @@
 }
 
 .brackets-table {
+	width: 500px;
 	margin-bottom: 60px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .bracket-delete-button, .bracket-link {
-	color: #393939;
 	&:hover {
 		text-decoration: none;
 		color: #0088cc;

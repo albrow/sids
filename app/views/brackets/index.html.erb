@@ -1,44 +1,55 @@
 
 <div class="clearfix"></div>
 <div class="brackets-index">
-	<div class="container">
-		<div class="row">
+	<div class="container-fluid">
+		<div class="row-fluid">
 			<div class="span12 center brackets-header">
-				<h1>Brackets</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span8 offset2 center">
 				<div class="clearfix"></div>
+				<% if !@brackets.empty? %>
+				<div class="center">
+					<div class="hero">
+						<h1>My Brackets</h1>
+					</div>
+					<table class="table center table-bordered brackets-table">
+						<tr>
+							<th>
+								<h4 class="center cursive">Awesome! You've created <%= pluralize @brackets.count, "Bracket" %>!</h4>
+							</th>
+						</tr>
+						<% @brackets.each do |b| %>
+						<tr>
+							<td>
+								<%= link_to b.name, b, :class => "bracket-link" %>
+								<div class="pull-right">
+									<%= link_to bracket_path(b), :method => "delete", :confirm => "Are you sure you want to delete the bracket called #{b.name}? If you have already donated, we cannot issue a refund.", :class=> "bracket-delete-button" do %>
+									<i class="icon-remove"></i> &nbsp; delete
+									<% end %>
+								</div>
+							</td>
+						</tr>
+						<% end %>
+					</table>
 					<div class="clearfix"></div>
-						<% if !@brackets.empty? %>
-						<table class="table table-bordered brackets-table">
-							<tr>
-								<th>
-									<h4 class="center">Showing <%= pluralize @brackets.count, "Bracket" %></h4>
-								</th>
-							</tr>
-							<% @brackets.each do |b| %>
-								<tr>
-									<td>
-										<%= link_to b.name, b, :class => "bracket-link" %>
-										<div class="pull-right">
-											<%= link_to bracket_path(b), :method => "delete", :confirm => "Are you sure you want to delete the bracket called #{b.name}? If you have already donated, we cannot issue a refund.", :class=> "bracket-delete-button" do %>
-												<i class="icon-remove"></i> &nbsp; delete
-											<% end %>
-										</div>
-									</td>
-								</tr>
-							<% end %>
-						</table>
-						<% else %>
-							
-						<% end %>	
+					<%= link_to "Create Another Bracket", new_bracket_path, :class => "button button-primary center new-bracket-button cursive" %>
+					<div class="clearfix"></div>
+				</div>
+				<% else %>
+				<div class="hero center">
+					<h1>Welcome to Brackets for Life!</h1>
+				</div>
+				<section class="dark center">
+					<h2 class="hero">My Brackets</h2>
+					<h3>Oh darn, It seems like you don't have a bracket!</h3>
+					<h3>Why don't you make one now?</h3>
+					<br><br>
 					<div class="clearfix"></div>
 					<%= link_to "Create a Bracket", new_bracket_path, :class => "button button-primary center new-bracket-button cursive" %>
 					<div class="clearfix"></div>
+				</section>
+				<% end %>
 			</div>
 		</div>
+
 	</div>
 </div>
 

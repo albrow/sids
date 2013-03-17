@@ -10,6 +10,18 @@
 	float: left;
 	width: 150px;
 	height: 150px;
+	&:hover {
+		text-decoration: none;
+		background-color: darken(#ccc, 14%);
+	}
+}
+
+input{
+	margin-top: 20px;
+}
+
+h1{
+	margin-top: 60px;
 }
 
 
@@ -19,12 +31,15 @@
 }
 
 .teamName {
-
+	padding-top: 10px;
 }
 
 .winner {
 	margin: 10px;
 	margin-left: 100px;
+	&:hover {
+		background-color: none;
+	}
 }
 
 .btn {
