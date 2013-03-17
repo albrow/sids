@@ -33,24 +33,25 @@ class BracketsController < ApplicationController
   end
 
   def show
+    require "regions" # lib/regions.rb
+    @region_order = Regions::RegionsHelper.get_region_order
+    @final_four_order = Regions::RegionsHelper.get_final_four_order
+
     @bracket = Bracket.includes(predictions: :winner).find(params[:id])
     @games = Game.round(0).includes(:team1, :team2)
 
     @regions = {}
-    ['south', 'west', 'east', 'midwest'].map do |region|
-      @regions[region] = [@games.select {|game| game.region == region}]
-      1.upto(5) do |round|
-        predictions = @bracket.predictions.select do |prediction|
-          prediction.region == region and prediction.round_id == round
-        end
+    @region_order.map do |region|
+      @regions[region] = []
+      @regions[region] << @games.region(region)
+      1.upto(4) do |round|
+        predictions = @bracket.region(region).round(round)
         @regions[region] << predictions
       end
     end
 
-    # --- FIX THIS ----
-    @south_east = @bracket.region(:south_east)
-    @west_midwest = @bracket.region(:west_midwest)
-    # -----------------
+    @final_four_one = @bracket.region(@final_four_order[0])
+    @final_four_two = @bracket.region(@final_four_order[1])
 
     @championship = @bracket.region(:championship)
 

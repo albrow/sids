@@ -11,8 +11,13 @@ class Prediction < ActiveRecord::Base
 	scope :round, lambda { |r| where(:round_id => r) }
 
 	def set_region
-		require "brackets" # lib/brackets.rb
-		self.region = Brackets::BracketsHelper.get_region self.match_id
+		require "regions" # lib/regions.rb
+		self.region = Regions::RegionsHelper.get_region self.match_id
 	end
 
+	def set_region!
+		self.set_region
+		self.save
+	end
+	
 end

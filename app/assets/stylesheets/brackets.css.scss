@@ -73,7 +73,7 @@ $final-four-inner-margin-top: $r1-match-height/2 + $r2-match-height/2 + $r3-matc
 	margin-top: $region-margin-top;
 }
 
-.region#south, .region#west {
+.region.region1, .region.region2 {
 	float: left;
 	text-align: left;
 	ul.round {
@@ -85,7 +85,7 @@ $final-four-inner-margin-top: $r1-match-height/2 + $r2-match-height/2 + $r3-matc
 	}
 }
 
-.region#east, .region#midwest {
+.region.region3, .region.region4 {
 	float: right;
 	text-align: right;
 	ul.round {
@@ -105,59 +105,79 @@ $final-four-inner-margin-top: $r1-match-height/2 + $r2-match-height/2 + $r3-matc
 	}
 }
 
-.region#east {
+.region.region3 {
 	margin-top: -($r1-match-height*8 + $r1-match-margin-bottom*7);
 }
 
-.region#south {
+.region.region1 {
 	&:before {
 		position: absolute;
 		display: block;
 		top: $r1-match-height*3.5 + $r1-match-margin-bottom*3.5 + 10px;
 		left: $match-width*2.2;
-		content: "SOUTH";
 		font-size: 32px;
 		color: #d9d9d9;
 		z-index: 10;
 	}
 }
 
-.region#west {
+.region.region2 {
 	&:before {
 		position: absolute;
 		display: block;
 		top: $r1-match-height*3.5 + $r1-match-margin-bottom*3.5 + 10px;
 		left: $match-width*2.2;
-		content: "WEST";
 		font-size: 32px;
 		color: #d9d9d9;
 		z-index: 10;
 	}
 }
 
-.region#east {
+.region.region3 {
 	&:before {
 		position: absolute;
 		display: block;
 		top: $r1-match-height*3.5 + $r1-match-margin-bottom*3.5 + 10px;
 		right: $match-width*2.2;
-		content: "EAST";
 		font-size: 32px;
 		color: #d9d9d9;
 		z-index: 10;
 	}
 }
 
-.region#midwest {
+.region.region4 {
 	&:before {
 		position: absolute;
 		display: block;
 		top: $r1-match-height*3.5 + $r1-match-margin-bottom*3.5 + 10px;
 		right: $match-width*2.1;
-		content: "MIDWEST";
 		font-size: 32px;
 		color: #d9d9d9;
 		z-index: 10;
+	}
+}
+
+.region#east {
+	&:before {
+		content: "EAST";
+	}
+}
+
+.region#west {
+	&:before {
+		content: "WEST";
+	}
+}
+
+.region#south {
+	&:before {
+		content: "SOUTH";
+	}
+}
+
+.region#midwest {
+	&:before {
+		content: "MIDWEST";
 	}
 }
 
@@ -252,6 +272,9 @@ li.region-winner {
 	padding: 0;
 	margin: 0;
 	list-style: none;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 	padding: $match-padding;
 	width: $match-width;
 	margin-top: $region-winner-margin-top;
@@ -279,7 +302,7 @@ li.region-winner {
 
 
 		// ------- FIX THESE!! --------
-		.south-east, .west-midwest {
+		.final-four-one, .final-four-two {
 			-webkit-box-sizing: border-box; 
 			-moz-box-sizing: border-box;    
 			box-sizing: border-box; 
@@ -287,11 +310,11 @@ li.region-winner {
 			border-bottom: 1px solid black;
 			width: $match-width;
 		}
-		.south-east {
+		.final-four-one {
 			margin-top: $r1-match-height*1.5 + $r1-match-margin-bottom*1.5;
 			float: left;
 		}
-		.west-midwest {
+		.final-four-two {
 			margin-top: $r1-match-height*6.5 + $r1-match-margin-bottom*6.5;
 			float: right;
 			text-align: right;
