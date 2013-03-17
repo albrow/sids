@@ -27,8 +27,22 @@
 				<% region[0].each do |match| %>
 					<li class="match" id="<%= match.match_id %>">
 						<ul class="teams">
-							<li class="team1"><%= match.team1.name %></li>
-							<li class="team2"><%= match.team2.name %></li>
+							<li class="team1">
+								<span class="seed">
+									<%= match.team1.seed %>
+								</span>
+								<span class="team-name">
+									<%= match.team1.name %>
+								</span>
+							</li>
+							<li class="team2">
+								<span class="seed">
+									<%= match.team2.seed %>
+								</span>
+								<span class="team-name">
+									<%= match.team2.name %>
+								</span>
+							</li>
 						</ul>
 					</li>
 				<% end %>
@@ -38,8 +52,22 @@
 					<% region[i+1].each_slice(2).with_index do |preds, j| %>
 						<li class="match" id="<%= region[i+2][j].match_id %>">
 							<ul class="teams">
-								<li class="team1"><%= preds[0].winner.name %></li>
-								<li class="team2"><%= preds[1].winner.name %></li>
+								<li class="team1">
+									<span class="seed">
+										<%= preds[0].winner.seed %>
+									</span>
+									<span class="team-name">
+										<%= preds[0].winner.name %>
+									</span>
+								</li>
+								<li class="team2">
+									<span class="seed">
+										<%= preds[1].winner.seed %>
+									</span>
+									<span class="team-name">
+										<%= preds[1].winner.name %>
+									</span>
+								</li>
 							</ul>
 						</li>
 					<% end %>
@@ -47,7 +75,12 @@
 			<% end %>
 			<ul class="round round5" id="<%= name %>-5" data-region="<%= name %>" data-round="5">
 				<li class="region-winner">
-					<%= region[4].first.winner.name %>
+					<span class="seed">
+						<%= region[4].first.winner.seed %>
+					</span>
+					<span class="team-name">
+						<%= region[4].first.winner.name %>
+					</span>
 				</li>
 			</ul>
 			<div class="clearfix"></div>
@@ -56,10 +89,20 @@
 	<div class="final-four">
 		<div class="final-four-inner">
 			<div class="final-four-one">
-				<%= @final_four_one.first.winner.name %>
+				<span class="seed">
+					<%= @final_four_one.first.winner.seed %>
+				</span>
+				<span class="team-name">
+					<%= @final_four_one.first.winner.name %>
+				</span>
 			</div>
 			<div class="final-four-two">
-				<%= @final_four_two.first.winner.name %>
+				<span class="seed">
+					<%= @final_four_two.first.winner.seed %>
+				</span>
+				<span class="team-name">
+					<%= @final_four_two.first.winner.name %>
+				</span>
 			</div>
 			<div class="champion">
 				<div class="champion-inner">

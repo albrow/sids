@@ -7,7 +7,7 @@
 $bracket-width: 1200px;
 $bracket-font-size: 11px;
 $bracket-line-height: 13px;
-$match-padding: 5px 10px 5px 10px;
+$match-padding: 5px 5px 5px 5px;
 $match-width: 95px;
 $region-margin-top: 60px;
 $r1-match-height: 28px;
@@ -266,6 +266,15 @@ li.team1, li.team2 {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	width: 100%;
+}
+
+li.team1, li.team2, li.region-winner, .final-four-one, .final-four-two {
+	.team-name {
+		
+	}
+	.seed {
+		color: lighten(#393939, 45%);
+	}
 }
 
 li.region-winner {
