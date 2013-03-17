@@ -23,13 +23,8 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <%= link_to "My Account", account_path %>
+                  <%= link_to "Brackets", brackets_path %>
                 </li>
-                <% if !Rails.env.production? %>
-                  <li>
-                    <%= link_to "My Brackets", brackets_path %>
-                  </li>
-                <% end %>
                 <li>
                   <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
                 </li>

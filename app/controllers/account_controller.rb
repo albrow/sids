@@ -3,14 +3,15 @@ class AccountController < ApplicationController
   before_filter :authenticate_user!
 
   def myaccount
-  	@user = current_user
-    @should_notify = @user.should_notify_on_sunday
-  	# list all the brackets for the current user
-  	@brackets = current_user.brackets
-  	respond_to do |format|
-	    format.html  { render 'myaccount'}
-	    format.json  { render :json => @brackets }
-    end
+  	# @user = current_user
+   #  @should_notify = @user.should_notify_on_sunday
+  	# # list all the brackets for the current user
+  	# @brackets = current_user.brackets
+  	# respond_to do |format|
+	  #   format.html  { render 'myaccount'}
+	  #   format.json  { render :json => @brackets }
+   #  end
+   redirect_to brackets_path
   end
 
   def update_notification_prefs
