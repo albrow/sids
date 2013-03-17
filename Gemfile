@@ -9,7 +9,7 @@ group :development do
 end
 
 group :production, :staging do
-  gem 'thin'
+  gem 'unicorn'
   gem 'pg'
   gem 'newrelic_rpm'
 end

@@ -61,5 +61,8 @@ module Sids
 
     # fix for devise on heroku
     config.assets.initialize_on_precompile = false
+
+    # enable logging for unicorn
+    config.logger = Logger.new(STDOUT)
   end
 end
