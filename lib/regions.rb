@@ -15,8 +15,8 @@ module Regions
 		# http://espn.go.com/mens-college-basketball/tournament/bracket
 
 		# THESE WILL CHANGE FROM YEAR TO YEAR!!
-		@@regions = ['midwest', 'west', 'east', 'south']
-		@@final_four = ['midwest_west', 'east_south']
+		@@regions = ['midwest', 'west', 'south', 'east']
+		@@final_four = ['midwest_west', 'south_east']
 		##
 
 		def self.get_region_order

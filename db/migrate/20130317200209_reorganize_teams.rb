@@ -35,7 +35,7 @@ class ReorganizeTeams < ActiveRecord::Migration
 		Team.create :name => 'Iowa State', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/iowa_st.png', :id => 30, :seed =>10
 		Team.create :name => 'Ohio State', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/ohio_st.png', :id => 31, :seed => 2
 		Team.create :name => 'Iona', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/iona.png', :id => 32, :seed => 15
-		Team.create :name => 'Kansas University', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/kansas.png', :id => 33, :seed => 1
+		Team.create :name => 'Kansas', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/kansas.png', :id => 33, :seed => 1
 		Team.create :name => 'West Kentucky University', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/w_kentucky.png', :id => 34, :seed => 16
 		Team.create :name => 'UNC', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/north_carolina.png', :id => 35, :seed => 8
 		Team.create :name => 'Villanova', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/villanova.png', :id => 36, :seed => 9
@@ -45,7 +45,7 @@ class ReorganizeTeams < ActiveRecord::Migration
 		Team.create :name => 'South Dakota', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/sdsu.png', :id => 40, :seed => 13
 		Team.create :name => 'UCLA', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/ucla.png', :id => 41, :seed => 6
 		Team.create :name => 'Minnesota', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/minnesota.png', :id => 42, :seed => 11
-		Team.create :name => 'University of Florida', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/florida.png', :id => 43, :seed => 3
+		Team.create :name => 'Florida', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/florida.png', :id => 43, :seed => 3
 		Team.create :name => 'Northwestern State', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/nw_st.png', :id => 44, :seed => 14
 		Team.create :name => 'San Diego State', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/san_diego_st.png', :id => 45, :seed => 7
 		Team.create :name => 'Oklahoma', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/oklahoma.png', :id => 46, :seed => 10
@@ -65,7 +65,7 @@ class ReorganizeTeams < ActiveRecord::Migration
 		Team.create :name => 'Davidson', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/davidson.png', :id => 60, :seed => 14
 		Team.create :name => 'Illinois', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/illinois.png', :id => 61, :seed => 7
 		Team.create :name => 'Colorado', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/colorado.png', :id => 62, :seed => 10
-		Team.create :name => 'Oklahoma', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/miami.png', :id => 63, :seed => 2
+		Team.create :name => 'Miami', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/miami.png', :id => 63, :seed => 2
 		Team.create :name => 'PAC', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/pacific.png', :id => 64, :seed => 15
 
 
