@@ -1,6 +1,6 @@
 class BracketsController < ApplicationController
-  before_filter :authenticate_user!, except: [:edit, :update, :destroy]
-  before_filter :verify_bracket_user, only: [:edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:edit, :update, :destroy, :show]
+  before_filter :verify_bracket_user, only: [:edit, :update, :destroy, :show]
 
 
   def index
