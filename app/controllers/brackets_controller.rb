@@ -17,6 +17,9 @@ class BracketsController < ApplicationController
 
   def new
     # render a new bracket page
+    if flash[:notice] = flash[:notice] = "You don't have any brackets yet. <a href='/brackets/new'>Create One!</a>".html_safe
+      flash[:notice] = nil
+    end
   end
 
   def create
