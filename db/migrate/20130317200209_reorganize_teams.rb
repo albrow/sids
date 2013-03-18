@@ -3,70 +3,70 @@ class ReorganizeTeams < ActiveRecord::Migration
 	
   def up
   	Team.destroy_all
-  	Team.create :name => 'Louisville', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/louisville.png', :id => 1, :seed => 1
-		Team.create :name => 'NCAT/LIB', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/ncat-lib.png', :id => 2, :seed => 16
-		Team.create :name => 'Colorodo State', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/colorado_st.png', :id => 3, :seed => 8
-		Team.create :name => 'Missouri', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/mizz.png', :id => 4, :seed => 9
-		Team.create :name => 'Oklahoma State', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/oklahoma_st.png', :id => 5, :seed => 5
-		Team.create :name => 'Oregon', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/oregon.png', :id => 6, :seed => 12
-		Team.create :name => 'Saint Louis', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/saint_louis.png', :id => 7, :seed => 4
-		Team.create :name => 'New Mexico State', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/new_mexico_st.png', :id => 8, :seed => 13
-		Team.create :name => 'Memphis', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/memphis.png', :id => 9, :seed => 6
-		Team.create :name => 'MTU/SMC', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/mtu-smc.png', :id => 10, :seed => 11
-		Team.create :name => 'Michigan State', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/michigan_st.png', :id => 11, :seed => 3
-		Team.create :name => 'Valparaiso', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/valparaiso.png', :id => 12, :seed => 14
-		Team.create :name => 'Creighton', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/creighton.png', :id => 13, :seed =>7
-		Team.create :name => 'Cincinnati', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/cincinnati.png', :id => 14, :seed => 10
-		Team.create :name => 'Duke', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/thebest.png', :id => 15, :seed =>2
-		Team.create :name => 'Albany', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/albany.png', :id => 16, :seed =>15
-		Team.create :name => 'Gonzaga', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/gonzaga.png', :id => 17, :seed => 1
-		Team.create :name => 'Southern', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/southern.png', :id => 18, :seed => 16
-		Team.create :name => 'Pitt', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/pittsburgh.png', :id => 19, :seed => 8
-		Team.create :name => 'Wichita State', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/wichita_st.png', :id => 20, :seed => 9
-		Team.create :name => 'Wisconsin', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/wisconsin.png', :id => 21, :seed => 5
-		Team.create :name => 'Mississippi', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/ole_miss.png', :id => 22, :seed =>12
-		Team.create :name => 'KSU', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/kansas_st.png', :id => 23, :seed => 4
-		Team.create :name => 'BSU/LAS', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/bsu-las.png', :id => 24, :seed => 13
-		Team.create :name => 'Arizona', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/arizona.png', :id => 25, :seed => 6
-		Team.create :name => 'Belmont', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/belmont.png', :id => 26, :seed => 11
-		Team.create :name => 'UNM', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/new_mexico.png', :id => 27, :seed => 3
-		Team.create :name => 'Harvard', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/harvard.png', :id => 28, :seed => 14
-		Team.create :name => 'Notre Dame', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/notre_dame.png', :id => 29, :seed => 7
-		Team.create :name => 'Iowa State', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/iowa_st.png', :id => 30, :seed =>10
-		Team.create :name => 'Ohio State', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/ohio_st.png', :id => 31, :seed => 2
-		Team.create :name => 'Iona', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/iona.png', :id => 32, :seed => 15
-		Team.create :name => 'Kansas', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/kansas.png', :id => 33, :seed => 1
-		Team.create :name => 'West Kentucky University', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/w_kentucky.png', :id => 34, :seed => 16
-		Team.create :name => 'UNC', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/north_carolina.png', :id => 35, :seed => 8
-		Team.create :name => 'Villanova', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/villanova.png', :id => 36, :seed => 9
-		Team.create :name => 'Virginia Commonwealth', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/vcu.png', :id => 37, :seed => 5
-		Team.create :name => 'Akron', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/akron.png', :id => 38, :seed => 12
-		Team.create :name => 'Michigan', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/michigan.png', :id => 39, :seed => 4
-		Team.create :name => 'South Dakota', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/sdsu.png', :id => 40, :seed => 13
-		Team.create :name => 'UCLA', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/ucla.png', :id => 41, :seed => 6
-		Team.create :name => 'Minnesota', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/minnesota.png', :id => 42, :seed => 11
-		Team.create :name => 'Florida', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/florida.png', :id => 43, :seed => 3
-		Team.create :name => 'Northwestern State', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/nw_st.png', :id => 44, :seed => 14
-		Team.create :name => 'San Diego State', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/san_diego_st.png', :id => 45, :seed => 7
-		Team.create :name => 'Oklahoma', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/oklahoma.png', :id => 46, :seed => 10
-		Team.create :name => 'Georgetown', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/georgetown.png', :id => 47, :seed => 2
-		Team.create :name => 'Florida Gulf Coast', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/fgcu.png', :id => 48, :seed => 15
-		Team.create :name => 'Indiana', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/indiana.png', :id => 49, :seed => 1
-		Team.create :name => 'LIU/JMU', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/liu-jmu.png', :id => 50, :seed => 16
-		Team.create :name => 'NC State', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/nc_state.png', :id => 51, :seed => 8
-		Team.create :name => 'Temple', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/temple.png', :id => 52, :seed => 9
-		Team.create :name => 'UNLV', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/unlv.png', :id => 53, :seed => 5
-		Team.create :name => 'California', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/california.png', :id => 54, :seed => 12
-		Team.create :name => 'Syracuse', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/syracuse.png', :id => 55, :seed => 4
-		Team.create :name => 'Montana', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/montana.png', :id => 56, :seed => 13
-		Team.create :name => 'Butler', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/butler.png', :id => 57, :seed => 6
-		Team.create :name => 'Bucknell', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/bucknell.png', :id => 58, :seed => 11
-		Team.create :name => 'Marquette', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/marquette.png', :id => 59, :seed => 3
-		Team.create :name => 'Davidson', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/davidson.png', :id => 60, :seed => 14
-		Team.create :name => 'Illinois', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/illinois.png', :id => 61, :seed => 7
-		Team.create :name => 'Colorado', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/colorado.png', :id => 62, :seed => 10
-		Team.create :name => 'Miami', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/miami.png', :id => 63, :seed => 2
-		Team.create :name => 'PAC', :image => 'http://d21zi4m0jgpff8.cloudfront.net/teams/pacific.png', :id => 64, :seed => 15
+  	Team.create :name => 'Louisville', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/louisville.png', :id => 1, :seed => 1
+		Team.create :name => 'NCAT/LIB', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/ncat-lib.png', :id => 2, :seed => 16
+		Team.create :name => 'Colorodo State', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/colorado_st.png', :id => 3, :seed => 8
+		Team.create :name => 'Missouri', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/mizz.png', :id => 4, :seed => 9
+		Team.create :name => 'Oklahoma State', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/oklahoma_st.png', :id => 5, :seed => 5
+		Team.create :name => 'Oregon', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/oregon.png', :id => 6, :seed => 12
+		Team.create :name => 'Saint Louis', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/saint_louis.png', :id => 7, :seed => 4
+		Team.create :name => 'New Mexico State', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/new_mexico_st.png', :id => 8, :seed => 13
+		Team.create :name => 'Memphis', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/memphis.png', :id => 9, :seed => 6
+		Team.create :name => 'MTU/SMC', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/mtu-smc.png', :id => 10, :seed => 11
+		Team.create :name => 'Michigan State', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/michigan_st.png', :id => 11, :seed => 3
+		Team.create :name => 'Valparaiso', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/valparaiso.png', :id => 12, :seed => 14
+		Team.create :name => 'Creighton', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/creighton.png', :id => 13, :seed =>7
+		Team.create :name => 'Cincinnati', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/cincinnati.png', :id => 14, :seed => 10
+		Team.create :name => 'Duke', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/thebest.png', :id => 15, :seed =>2
+		Team.create :name => 'Albany', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/albany.png', :id => 16, :seed =>15
+		Team.create :name => 'Gonzaga', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/gonzaga.png', :id => 17, :seed => 1
+		Team.create :name => 'Southern', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/southern.png', :id => 18, :seed => 16
+		Team.create :name => 'Pitt', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/pittsburgh.png', :id => 19, :seed => 8
+		Team.create :name => 'Wichita State', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/wichita_st.png', :id => 20, :seed => 9
+		Team.create :name => 'Wisconsin', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/wisconsin.png', :id => 21, :seed => 5
+		Team.create :name => 'Mississippi', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/ole_miss.png', :id => 22, :seed =>12
+		Team.create :name => 'KSU', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/kansas_st.png', :id => 23, :seed => 4
+		Team.create :name => 'BSU/LAS', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/bsu-las.png', :id => 24, :seed => 13
+		Team.create :name => 'Arizona', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/arizona.png', :id => 25, :seed => 6
+		Team.create :name => 'Belmont', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/belmont.png', :id => 26, :seed => 11
+		Team.create :name => 'UNM', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/new_mexico.png', :id => 27, :seed => 3
+		Team.create :name => 'Harvard', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/harvard.png', :id => 28, :seed => 14
+		Team.create :name => 'Notre Dame', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/notre_dame.png', :id => 29, :seed => 7
+		Team.create :name => 'Iowa State', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/iowa_st.png', :id => 30, :seed =>10
+		Team.create :name => 'Ohio State', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/ohio_st.png', :id => 31, :seed => 2
+		Team.create :name => 'Iona', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/iona.png', :id => 32, :seed => 15
+		Team.create :name => 'Kansas', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/kansas.png', :id => 33, :seed => 1
+		Team.create :name => 'West Kentucky University', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/w_kentucky.png', :id => 34, :seed => 16
+		Team.create :name => 'UNC', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/north_carolina.png', :id => 35, :seed => 8
+		Team.create :name => 'Villanova', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/villanova.png', :id => 36, :seed => 9
+		Team.create :name => 'Virginia Commonwealth', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/vcu.png', :id => 37, :seed => 5
+		Team.create :name => 'Akron', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/akron.png', :id => 38, :seed => 12
+		Team.create :name => 'Michigan', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/michigan.png', :id => 39, :seed => 4
+		Team.create :name => 'South Dakota', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/sdsu.png', :id => 40, :seed => 13
+		Team.create :name => 'UCLA', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/ucla.png', :id => 41, :seed => 6
+		Team.create :name => 'Minnesota', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/minnesota.png', :id => 42, :seed => 11
+		Team.create :name => 'Florida', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/florida.png', :id => 43, :seed => 3
+		Team.create :name => 'Northwestern State', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/nw_st.png', :id => 44, :seed => 14
+		Team.create :name => 'San Diego State', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/san_diego_st.png', :id => 45, :seed => 7
+		Team.create :name => 'Oklahoma', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/oklahoma.png', :id => 46, :seed => 10
+		Team.create :name => 'Georgetown', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/georgetown.png', :id => 47, :seed => 2
+		Team.create :name => 'Florida Gulf Coast', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/fgcu.png', :id => 48, :seed => 15
+		Team.create :name => 'Indiana', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/indiana.png', :id => 49, :seed => 1
+		Team.create :name => 'LIU/JMU', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/liu-jmu.png', :id => 50, :seed => 16
+		Team.create :name => 'NC State', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/nc_state.png', :id => 51, :seed => 8
+		Team.create :name => 'Temple', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/temple.png', :id => 52, :seed => 9
+		Team.create :name => 'UNLV', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/unlv.png', :id => 53, :seed => 5
+		Team.create :name => 'California', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/california.png', :id => 54, :seed => 12
+		Team.create :name => 'Syracuse', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/syracuse.png', :id => 55, :seed => 4
+		Team.create :name => 'Montana', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/montana.png', :id => 56, :seed => 13
+		Team.create :name => 'Butler', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/butler.png', :id => 57, :seed => 6
+		Team.create :name => 'Bucknell', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/bucknell.png', :id => 58, :seed => 11
+		Team.create :name => 'Marquette', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/marquette.png', :id => 59, :seed => 3
+		Team.create :name => 'Davidson', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/davidson.png', :id => 60, :seed => 14
+		Team.create :name => 'Illinois', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/illinois.png', :id => 61, :seed => 7
+		Team.create :name => 'Colorado', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/colorado.png', :id => 62, :seed => 10
+		Team.create :name => 'Miami', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/miami.png', :id => 63, :seed => 2
+		Team.create :name => 'PAC', :image => 'https://d21zi4m0jgpff8.cloudfront.net/teams/pacific.png', :id => 64, :seed => 15
 
 
   end
