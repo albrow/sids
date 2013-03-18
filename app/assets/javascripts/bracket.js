@@ -83,9 +83,9 @@ function doAction(json) {
                 $("#bracket_name").hide();
             }
 
-            if (confirm("Would you like to go to the next level?") === true) {
+            if (confirm("Would you like to go to the next round?") === true) {
                 window.curr_level = window.curr_level + 1;
-                $('h1#bracket_instr').text("Make your picks for round "+window.curr_level+":");
+                $('h1#bracket_instr').text("Make your predictions for round "+window.curr_level+":");
                 $('#level' + type).fadeOut();
                 self.levels[+type+1](bracket);
                 $('#level' + (+type+1)).fadeIn();
