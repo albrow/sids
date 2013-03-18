@@ -24,22 +24,19 @@
   <%= render "shared/navbar" %>
 
   <!-- alerts used for devise, etc. -->
-  <% if(notice) %>
-  <p class="notice"><%= notice %></p>
+  <% if(flash[:notice]) %>
+  <p class="notice"><%= flash[:notice] %></p>
   <% end %>
 
-  <% if(alert) %>
-  <p class="alert"><%= alert %></p>
+  <% if(flash[:alert]) %>
+  <p class="alert"><%= flash[:alert] %></p>
   <% end %>
 
   <%= yield %>
 
   <%= render "shared/footer" %>
 
-  <% if !current_user %>
-    <%= render "shared/sign_in_modal" %>
-  <% end %>
-
+  <%= render "shared/sign_in_modal" %>
 
   <%= javascript_include_tag "application" %>
   <script src="https://checkout.stripe.com/v2/checkout.js"></script>

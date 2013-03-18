@@ -3,15 +3,14 @@ class AccountController < ApplicationController
   before_filter :authenticate_user!
 
   def myaccount
-  	# @user = current_user
-   #  @should_notify = @user.should_notify_on_sunday
-  	# # list all the brackets for the current user
-  	# @brackets = current_user.brackets
-  	# respond_to do |format|
-	  #   format.html  { render 'myaccount'}
-	  #   format.json  { render :json => @brackets }
-   #  end
-   redirect_to brackets_path
+   @brackets = current_user.brackets
+    if @brackets.empty?
+      flash[:notice] = "You don't have any brackets yet. <a href='/brackets/new'>Create One!</a>".html_safe
+    end
+    respond_to do |format|
+      format.html  { render 'brackets/index'}
+      format.json  { render :json => @brackets }
+    end
   end
 
   def update_notification_prefs
