@@ -6,7 +6,7 @@ Sids::Application.routes.draw do
   match '/account' => 'account#myaccount'
   match '/landing' => 'home#landing'
 
-  resources :brackets do
+  resources :brackets, only: [:index, :show, :destroy] do
     resource :payment, only: [:new, :create]
   end
 

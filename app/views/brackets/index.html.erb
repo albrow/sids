@@ -56,8 +56,14 @@
 						</tr>
 						<% end %>
 					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span6 offset3 center">
 					<div class="clearfix"></div>
-					<%= link_to "Create Another Bracket", new_bracket_path, :class => "button button-primary center new-bracket-button cursive" %>
+						<div class="time-expired-explanation">
+							The time window for creating a bracket has ended. We're working on setting up additional ways to donate.
+						</div>
 					<div class="clearfix"></div>
 				</div>
 			</div>
@@ -65,21 +71,20 @@
 		</div>
 		<% else %>
 			
+		<div class="container">
 			<div class="row">
-					<div class="hero center">
-						<h1>Welcome to Brackets for Life!</h1>
-					</div>
-					<section class="dark center">
-						<h2 class="hero">My Brackets</h2>
-						<h3>Oh darn, It seems like you don't have a bracket!</h3>
-						<h3>Why don't you make one now?</h3>
-						<br><br>
-						<div class="clearfix"></div>
-						<%= link_to "Create a Bracket", new_bracket_path, :class => "button button-primary center new-bracket-button cursive" %>
-						<div class="clearfix"></div>
-					</section>
+				<div class="hero center">
+					<h1>Welcome to Brackets for Life!</h1>
 				</div>
 			</div>
+			<div class="row">
+				<div class="span6 offset3 center">
+					<div class="time-expired-explanation">
+						The time window for creating a bracket has ended. We're working on setting up additional ways to donate.
+					</div>
+				</div>
+			</div>
+		</div>
 
 	<% end %>
 

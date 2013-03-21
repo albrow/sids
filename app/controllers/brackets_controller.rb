@@ -6,9 +6,7 @@ class BracketsController < ApplicationController
   def index
     # list all the brackets for the current user
     @brackets = current_user.brackets
-    if @brackets.empty?
-      flash[:notice] = "You don't have any brackets yet. <a href='/brackets/new'>Create One!</a>".html_safe
-    end
+  
     respond_to do |format|
       format.html  # index.html.erb
       format.json  { render :json => @brackets }
@@ -17,9 +15,7 @@ class BracketsController < ApplicationController
 
   def new
     # render a new bracket page
-    if flash[:notice] = flash[:notice] = "You don't have any brackets yet. <a href='/brackets/new'>Create One!</a>".html_safe
-      flash[:notice] = nil
-    end
+   
   end
 
   def create
