@@ -11,8 +11,13 @@ class DonationsController < ApplicationController
 	  	@amt = 500
 	  end
 
+		email = "anonymous@mail.com"
+	  if current_user
+			email = current_user.email if !current_user.email.blank?
+	  end
+
 	  customer = Stripe::Customer.create(
-	    :email => "anonymous@mail.com",
+	    :email => email,
 	    :card  => params[:stripeToken]
 	  )
 
