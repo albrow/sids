@@ -1,5 +1,5 @@
 $(function () {
-    var bill_amt = 700;
+    var bill_amt = 500;
     
     $('#paymentButton').click(function(){
         var token = function(res){
@@ -25,13 +25,12 @@ $(function () {
     });
 
     $('select.opts').on('change', function() {
-        var total = 2 + parseInt(this.value,10);
+        var total = parseInt(this.value,10);
         $('#amt_shown').text("Total: $"+total+".00");
         bill_amt = total * 100;
         $("#payment_amt").val(bill_amt);
     });
 
-    bill_amt = 500;
     $('#donateButton').click(function(){
         var token = function(res){
             $("#stripe_token").val(res.id);

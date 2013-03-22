@@ -8,7 +8,7 @@ class DonationsController < ApplicationController
 	  @amt = params[:payment_amt]
 
 	  if @amt.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil
-	  	@amt = 200
+	  	@amt = 500
 	  end
 
 	  customer = Stripe::Customer.create(
