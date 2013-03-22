@@ -1,16 +1,16 @@
 $(function () {
-  	var bill_amt = 700;
-
-    $('#customButton').click(function(){
+    var bill_amt = 700;
+    
+    $('#paymentButton').click(function(){
         var token = function(res){
-      	    $("#stripe_token").val(res.id);
-      	    $("form").submit();
+         $("#stripe_token").val(res.id);
+         $("form").submit();
             //console.log('Got token ID:', res.id);
 
         };
         <% if ENV['B4L_STRIPE_PUBLISHABLE_KEY'].blank? %>
-            <% raise "ENV variable not set for stripe key! If you're on heroku,
-                    try this: https://devcenter.heroku.com/articles/labs-user-env-compile" %>
+        <% raise "ENV variable not set for stripe key! If you're on heroku,
+        try this: https://devcenter.heroku.com/articles/labs-user-env-compile" %>
         <% end %>
         StripeCheckout.open({
             key:         "<%= ENV['B4L_STRIPE_PUBLISHABLE_KEY'] %>",
@@ -24,12 +24,36 @@ $(function () {
         return false;
     });
 
-	$('select.opts').on('change', function() {
-	    var total = 2 + parseInt(this.value,10);
-	    $('#amt_shown').text("Total: $"+total+".00");
-	    bill_amt = total * 100;
-	    $("#payment_amt").val(bill_amt);
-	});
+    $('select.opts').on('change', function() {
+        var total = 2 + parseInt(this.value,10);
+        $('#amt_shown').text("Total: $"+total+".00");
+        bill_amt = total * 100;
+        $("#payment_amt").val(bill_amt);
+    });
+
+    bill_amt = 500;
+    $('#donateButton').click(function(){
+        var token = function(res){
+            $("#stripe_token").val(res.id);
+            $("form").submit();
+            //console.log('Got token ID:', res.id);
+
+        };
+        <% if ENV['B4L_STRIPE_PUBLISHABLE_KEY'].blank? %>
+        <% raise "ENV variable not set for stripe key! If you're on heroku,
+        try this: https://devcenter.heroku.com/articles/labs-user-env-compile" %>
+        <% end %>
+        StripeCheckout.open({
+            key:         "<%= ENV['B4L_STRIPE_PUBLISHABLE_KEY'] %>",
+            amount:      bill_amt,
+            name:        '1 Donation to Support SIDS Research',
+            image:       "/assets/logo-black.png",
+            panelLabel:  'Donate',
+            token:       token
+        });
+
+        return false;
+    });
 
     $('select.opts_donate').on('change', function() {
         var total = parseInt(this.value,10);
