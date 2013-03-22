@@ -1,93 +1,95 @@
 
 <div class="clearfix"></div>
 <div class="brackets-index">
-		
-		<% if !@brackets.empty? %>
-		<div class="container">
-			
-			<div class="brackets-header">
-				<div class="row">
-					<div class="span12 center">
-						<div class="clearfix"></div>
-						<div class="center">
-							<h1>Brackets</h1>
-						</div>
-					</div>
-				</div>
 
-				<% if @brackets.where(:active => false).count > 0 %>
-				<div class="row">
-					<div class="span8 offset2 unactive-brackets">
-							<p>
-								It looks like you have some brackets that are not active. To activate a bracket,
-								you must make a minimum donation of $2. Unactive brackets will not be eligible to
-								win the contest.
-							</p>
-					</div>
-				</div>
-				<% end %>
-			</div>
-			
+	<% if !@brackets.empty? %>
+	<div class="container">
+
+		<div class="brackets-header">
 			<div class="row">
 				<div class="span12 center">
-					<table class="table center table-bordered brackets-table">
-						<tr>
-							<th class="center">Name</th>
-							<th class="center">Active?</th>
-							<th class="center">Controls</th>
-						</tr>
-						<% @brackets.each do |b| %>
-						<tr>
-							<td>
-								<%= link_to b.name, b, :class => "bracket-link" %>
-							</td>
-							<td class="center">
-								<% if b.active %>
-									<i class="icon icon-ok"></i>
-								<% else %>
-									<%= link_to "activate now!", new_bracket_payment_path(b) %>
-								<% end %>
-							</td>
-							<td class="center">
-								<%= link_to bracket_path(b), :method => "delete", :confirm => "Are you sure you want to delete the bracket called #{b.name}? If you have already donated, we cannot issue a refund.", :class=> "bracket-delete-button" do %>
-								delete
-								<% end %>
-							</td>
-						</tr>
-						<% end %>
-					</table>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span6 offset3 center">
 					<div class="clearfix"></div>
-						<div class="time-expired-explanation">
-							The time window for creating a bracket has ended. We're working on setting up additional ways to donate.
-						</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-
-		</div>
-		<% else %>
-			
-		<div class="container">
-			<div class="row">
-				<div class="hero center">
-					<h1>Welcome to Brackets for Life!</h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span6 offset3 center">
-					<div class="time-expired-explanation">
-						The time window for creating a bracket has ended. We're working on setting up additional ways to donate.
+					<div class="center">
+						<h1>Brackets</h1>
 					</div>
 				</div>
 			</div>
+
+			<% if @brackets.where(:active => false).count > 0 %>
+			<div class="row">
+				<div class="span8 offset2 unactive-brackets">
+					<p>
+						It looks like you have some brackets that are not active. To activate a bracket,
+						you must make a minimum donation of $2. Unactive brackets will not be eligible to
+						win the contest.
+					</p>
+				</div>
+			</div>
+			<% end %>
 		</div>
+
+		<div class="row">
+			<div class="span12 center">
+				<table class="table center table-bordered brackets-table">
+					<tr>
+						<th class="center">Name</th>
+						<th class="center">Active?</th>
+						<th class="center">Controls</th>
+					</tr>
+					<% @brackets.each do |b| %>
+					<tr>
+						<td>
+							<%= link_to b.name, b, :class => "bracket-link" %>
+						</td>
+						<td class="center">
+							<% if b.active %>
+							<i class="icon icon-ok"></i>
+							<% else %>
+							<%= link_to "activate now!", new_bracket_payment_path(b) %>
+							<% end %>
+						</td>
+						<td class="center">
+							<%= link_to bracket_path(b), :method => "delete", :confirm => "Are you sure you want to delete the bracket called #{b.name}? If you have already donated, we cannot issue a refund.", :class=> "bracket-delete-button" do %>
+							delete
+							<% end %>
+						</td>
+					</tr>
+					<% end %>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span6 offset3 center">
+				<div class="clearfix"></div>
+				<div class="time-expired-explanation">
+					The time window for creating a bracket has ended, but you may donate more if you wish!
+				</div>
+				<%= link_to "Donate", '/donations/new', :class => "button button-primary landing-button cursive"%>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+	</div>
+	<% else %>
+
+	<div class="container">
+		<div class="row">
+			<div class="hero center">
+				<h1>Welcome to Brackets for Life!</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span6 offset3 center">
+				<div class="time-expired-explanation">
+					The time window for creating a bracket has ended. But, you can still help fight against Sudden Infant Death Syndrome by donating! We're also working on setting up additional ways for you to join the fun of March Madness!
+				</div>
+				<%= link_to "Donate", '/donations/new', :class => "button button-primary landing-button cursive"%>
+			</div>
+		</div>
+	</div>
 
 	<% end %>
 
-	</div>
+</div>
 </div>
 
