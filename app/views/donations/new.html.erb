@@ -1,0 +1,43 @@
+<div id="load">
+	<section class="center" id="mission">
+		<div class="container">
+			<div class="row">
+				<div class="span8 offset2">
+					<h1>Thank you for supporting SIDS Research</h1>
+					<h2></h2>
+					<h4>Every donation will bring us one step closer to finding a cure for Sudden Infant Death Syndrome</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span5 offset4">
+					<div class="selDiv">
+						<label>Donation Amount</label>
+						<select class="opts_donate">
+							<option value="5">$5</option>
+							<option value="10">$10</option>
+							<option value="20">$20</option>
+							<option value="50">$50</option>
+							<option value="100">$100</option>
+							<option value="500">$500</option>
+							<option value="1000">$1,000</option>
+							<option value="5000">$5,000</option>
+						</select>
+					</div>
+					<%= form_tag donations_path do %>
+					  <input id="stripe_token" name="stripeToken" type="hidden" value="" />
+					  <input id="payment_amt" name="payment_amt" type="hidden" value="" />
+					  <article>
+					    <label class="amount">
+					      <label>Total</label>
+					      <span id="amt_shown">Amount: $5.00</span>
+					    </label>
+					  </article>
+
+					  <button id="customButton" class="btn-success btn">Donate</button>
+
+					<% end %> 
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

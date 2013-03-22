@@ -10,6 +10,8 @@ Sids::Application.routes.draw do
     resource :payment, only: [:new, :create]
   end
 
+  resources :donations
+
   match '/account/update_notification_prefs' => 'account#update_notification_prefs'
 
   # The priority is based upon order of creation:

@@ -30,4 +30,11 @@ $(function () {
 	    bill_amt = total * 100;
 	    $("#payment_amt").val(bill_amt);
 	});
+
+    $('select.opts_donate').on('change', function() {
+        var total = parseInt(this.value,10);
+        $('#amt_shown').text("Total: $"+total+".00");
+        bill_amt = total * 100;
+        $("#payment_amt").val(bill_amt);
+    });
 });
