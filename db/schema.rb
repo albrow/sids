@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130401030234) do
+ActiveRecord::Schema.define(:version => 20130401034657) do
 
   create_table "brackets", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20130401030234) do
     t.datetime "updated_at",                    :null => false
     t.integer  "user_id"
     t.boolean  "active",     :default => false
+    t.integer  "score"
   end
 
   add_index "brackets", ["user_id"], :name => "index_brackets_on_user_id"

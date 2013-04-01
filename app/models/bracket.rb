@@ -1,5 +1,5 @@
 class Bracket < ActiveRecord::Base
-  attr_accessible :name, :user_id
+  attr_accessible :name, :user_id, :score
   belongs_to :user
   has_many :predictions, :dependent => :destroy
 
@@ -50,25 +50,35 @@ class Bracket < ActiveRecord::Base
   # - 16 for correct prediction in the final four
   # - 32 for correct prediction in the semi-finals
   # - 64 for correct prediction in the championship game
-  def score
+  def update_score
     games = Hash.new([])
     predictions.each do |prediction|
-      key = [prediction.match_id, prediction.round_id]
-      games[key] += [prediction.winner_id]
-    end
-    Game.includes(:team1, :team2).find_each do |game|
-      key = [game.match_id, game.round_id]
-      games[key] += [game.winner.id] unless game.winner.nil?
-    end
-
-    score = 0
-    games.each do |key, winners|
-      _, round = key
-      if winners.length == 2 and winners.first == winners.last
-        score += 2 ** (round - 1)
+      key = prediction.match_id
+      games[key] = {}
+      games[key][:teams] = []
+      games[key][:round] = prediction.round_id
+      unless prediction.winner.nil?
+        games[key][:teams] << prediction.winner.id
       end
     end
-    score
+    Game.includes(:team1, :team2).find_each do |game|
+      key = game.match_id
+      unless game.winner.nil?
+        games[key][:teams] << game.winner.id
+      end
+    end
+
+    puts games.inspect
+
+    score = 0
+    games.each do |key, data|
+      round = games[key][:round]
+      winners = games[key][:teams]
+      if winners.length == 2 and winners.first == winners.last
+        score += (2 ** (round))
+      end
+    end
+    self.update_attributes :score => score
   end
 
 end
