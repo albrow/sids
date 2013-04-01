@@ -34,6 +34,7 @@
 					<tr>
 						<th class="center">Name</th>
 						<th class="center">Active?</th>
+						<th class="center">Score</th>
 						<th class="center">Controls</th>
 					</tr>
 					<% @brackets.each do |b| %>
@@ -47,6 +48,9 @@
 							<% else %>
 							<%= link_to "activate now!", new_bracket_payment_path(b) %>
 							<% end %>
+						</td>
+						<td class="center">
+							<%= b.score %>
 						</td>
 						<td class="center">
 							<%= link_to bracket_path(b), :method => "delete", :confirm => "Are you sure you want to delete the bracket called #{b.name}? If you have already donated, we cannot issue a refund.", :class=> "bracket-delete-button" do %>
