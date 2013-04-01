@@ -35,8 +35,5 @@ class AddRound2Games < ActiveRecord::Migration
   	Game.find_by_match_id(46).destroy
   	Game.find_by_match_id(47).destroy
   	Game.find_by_match_id(48).destroy
-
-
-
   end
 end
