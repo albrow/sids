@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130401034657) do
+ActiveRecord::Schema.define(:version => 20130409202806) do
 
   create_table "brackets", :force => true do |t|
     t.string   "name"

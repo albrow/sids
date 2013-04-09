@@ -1,7 +1,7 @@
 class AddRound3Games < ActiveRecord::Migration
   def up
   	Game.create :team1_id => 1, :team1_score => 77, :team2_id => 6, :team2_score => 69, :round_id => 2, :match_id => 47
-   Game.create :team1_id => 11, :team1_score => 61, :team2_id => 15, :team2_score => 71, :round_id => 2, :match_id => 48
+    Game.create :team1_id => 11, :team1_score => 61, :team2_id => 15, :team2_score => 71, :round_id => 2, :match_id => 48
   	Game.create :team1_id => 20, :team1_score => 72, :team2_id => 24, :team2_score => 58, :round_id => 2, :match_id => 49
   	Game.create :team1_id => 25, :team1_score => 70, :team2_id => 31, :team2_score => 73, :round_id => 2, :match_id => 50
 
